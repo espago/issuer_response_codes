@@ -1,0 +1,75 @@
+Style/StringLiterals:
+  Enabled: false
+
+Layout/LineLength:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+
+Style/ModuleFunction:
+  EnforcedStyle: 'extend_self'
+
+Style/MissingElse:
+  Enabled: false
+
+Lint/NumberConversion:
+  Enabled: false
+
+Lint/ConstantResolution:
+  Enabled: false
+
+Style/RescueStandardError:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/FormatString:
+  Enabled: false
+
+Style/DocumentationMethod:
+  Enabled: false
+
+Style/Copyright:
+  Enabled: false
+
+Style/StringHashKeys:
+  Enabled: false
+
+Style/InlineComment:
+  Enabled: false
+
+Layout/FirstHashElementLineBreak:
+  Enabled: false
+
+Layout/FirstMethodArgumentLineBreak:
+  Enabled: false
+
+Style/ConstantVisibility:
+  Enabled: false
+
+Layout/FirstArrayElementLineBreak:
+  Enabled: false
+
+Layout/MultilineMethodArgumentLineBreaks:
+  Enabled: false
+
+Layout/MultilineAssignmentLayout:
+  Enabled: false
+
+Bundler/GemComment:
+  Enabled: false
+
+AllCops:
+  EnabledByDefault: true
+  Exclude:
+    - 'bin/*'
+    - 'spec/**/*'
+    - 'test/**/*'
