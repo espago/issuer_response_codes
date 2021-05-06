@@ -34,7 +34,7 @@ en:
     'R1': "Refused by Issuer because Customer requested stop of all recurring payments."
   issuer_response_codes:
     suggestion: 'Suggestion'
-    fraud_notice: 'IMPORTANT NOTICE: It is forbidden to retry transactions that ended with this code. It may be recognized as fraud attempt!'
+    fraud_notice: 'IMPORTANT NOTICE: It is forbidden to retry transactions that ended with this code. It may be recognized as a fraud attempt!'
     behaviour:
       unknown: "Please contact our support team."
       '00': "Check the card's data or please try again later."
