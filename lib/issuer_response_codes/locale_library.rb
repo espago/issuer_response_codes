@@ -58,7 +58,8 @@ module IssuerResponseCodes
     def load_locale(name)
       name_str = name.to_s
 
-      single_locale_hash = self.class.symbolize_keys(::YAML.load_file("lib/locale/#{name_str}.yml")[name_str])
+      raw_hash = ::YAML.load_file(::File.join(::File.dirname(::File.expand_path(__FILE__)), "../locale/#{name_str}.yml"))[name_str]
+      single_locale_hash = self.class.symbolize_keys(raw_hash)
       @locale_hash[name] = single_locale_hash
     end
   end
