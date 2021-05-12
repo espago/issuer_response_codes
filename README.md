@@ -194,12 +194,12 @@ ISSUER_RESPONSE_CODES = ::IssuerResponseCodes::Context.new(
 )
 
 # now just use this object as a proxy
-code = ISSUER_RESPONSE_CODE.code(id: '43')
+code = ISSUER_RESPONSE_CODES.code(id: '43')
 code.reason #=> "Bank odrzucił autoryzację."
 code.behaviour #=> "Skontaktuj się z Twoim bankiem w celu wyjaśnienia przyczyny problemu. UWAGA: Nie należy powtarzać obciążeń dla tej karty! Może to zostać uznane za próbę oszustwa!"
 
 # these can always be overridden
-code = ISSUER_RESPONSE_CODE.code(id: '43', locale: :en, target: :merchant, fraud_notice: false)
+code = ISSUER_RESPONSE_CODES.code(id: '43', locale: :en, target: :merchant, fraud_notice: false)
 code.reason #=> "Stolen card."
 code.behaviour #=> "Please contact your card issuer to get more details and try again later."
 ```
