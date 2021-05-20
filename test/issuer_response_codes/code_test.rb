@@ -188,5 +188,15 @@ module IssuerResponseCodes
       code = IssuerResponseCodes::Code.new(id: "XX")
       assert_equal 'Unknown reason.', code.reason
     end
+
+    def test_id_empty_string
+      code = IssuerResponseCodes::Code.new(id: "")
+      assert_equal 'Unknown reason.', code.reason
+    end
+
+    def test_id_nil
+      code = IssuerResponseCodes::Code.new(id: nil)
+      assert_equal 'Unknown reason.', code.reason
+    end
   end
 end

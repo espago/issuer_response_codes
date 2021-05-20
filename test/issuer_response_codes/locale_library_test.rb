@@ -34,6 +34,9 @@ module IssuerResponseCodes
       assert_equal 'unknown', @library.dig(path: 'issuer_response_codes.targeted.merchant.100', default: :unknown)
       assert_equal 'Unknown reason.', @library.dig(path: '100', scope: 'issuer_response_codes.targeted.merchant', default: :unknown)
       assert_nil @library.dig(path: '100', scope: 'issuer_response_codes.targeted.merchant', default: :doesnt_exist)
+
+      assert_equal 'Unknown reason.', @library.dig(path: '', scope: 'issuer_response_codes.targeted.merchant', default: :unknown)
+      assert_equal 'Unknown reason.', @library.dig(path: nil, scope: 'issuer_response_codes.targeted.merchant', default: :unknown)
     end
   end
 end

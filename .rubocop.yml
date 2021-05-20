@@ -1,6 +1,9 @@
 Style/StringLiterals:
   Enabled: false
 
+Style/SingleArgumentDig:
+  Enabled: false
+
 Layout/LineLength:
   Enabled: false
 

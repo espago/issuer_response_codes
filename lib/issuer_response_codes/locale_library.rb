@@ -48,6 +48,8 @@ module IssuerResponseCodes
     end
 
     def dig_provided_path(path, scope, locale)
+      return if path.nil? || path.empty?
+
       full_path_array = [locale]
       full_path_array.append(*scope.split('.').map(&:to_sym))
       full_path_array.append(*path.split('.').map(&:to_sym))
