@@ -32,9 +32,15 @@ module IssuerResponseCodes
       LOCALE_LIBRARY.dig(path: id, scope: "issuer_response_codes.targeted.#{target}", locale: locale, default: :unknown)
     end
 
+    def fraudulent_code?
+      @fraudulent_code ||= LOCALE_LIBRARY.dig(path: id, scope: "issuer_response_codes.fraudulent_codes", locale: locale)
+    end
+
     def behaviour
-      fraud_notice_str = fraud_notice ? LOCALE_LIBRARY.dig(path: 'issuer_response_codes.fraud_notice') : ''
-      LOCALE_LIBRARY.dig(path: id, substitute: fraud_notice_str, scope: "issuer_response_codes.behaviour", locale: locale, default: :unknown)
+      behaviour_str = LOCALE_LIBRARY.dig(path: id, scope: "issuer_response_codes.behaviour", locale: locale, default: :unknown)
+      return behaviour_str unless fraud_notice && fraudulent_code?
+
+      "#{behaviour_str} #{LOCALE_LIBRARY.dig(path: 'issuer_response_codes.fraud_notice')}"
     end
   end
 end

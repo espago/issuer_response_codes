@@ -31,7 +31,7 @@ module IssuerResponseCodes
       assert_equal :cardholder, code.target
       assert_equal :en, code.locale
       assert !code.fraud_notice
-      assert_equal 'Your bank has declined this transaction. Please contact your card issuer to get more details and try again later. ', code.humanize
+      assert_equal 'Your bank has declined this transaction. Please contact your card issuer to get more details and try again later.', code.humanize
     end
 
     def test_humanize_return_unknown_notice
@@ -71,7 +71,7 @@ module IssuerResponseCodes
       assert_equal :cardholder, code.target
       assert_equal :en, code.locale
       assert !code.fraud_notice
-      assert_equal 'Your bank has declined this transaction. Please contact your card issuer to get more details and try again later. ', code.description
+      assert_equal 'Your bank has declined this transaction. Please contact your card issuer to get more details and try again later.', code.description
     end
 
     def test_description_return_unknown_notice
@@ -105,13 +105,13 @@ module IssuerResponseCodes
       assert_equal :merchant, code.target
       assert_equal :en, code.locale
       assert !code.fraud_notice
-      assert_equal 'Please contact your card issuer to get more details and try again later. ', code.behaviour
+      assert_equal 'Please contact your card issuer to get more details and try again later.', code.behaviour
 
       code = IssuerResponseCodes::Code.new(id: "43", target: :cardholder)
       assert_equal :cardholder, code.target
       assert_equal :en, code.locale
       assert !code.fraud_notice
-      assert_equal 'Please contact your card issuer to get more details and try again later. ', code.behaviour
+      assert_equal 'Please contact your card issuer to get more details and try again later.', code.behaviour
 
       code = IssuerResponseCodes::Code.new(id: "43")
       assert_equal :merchant, code.target
