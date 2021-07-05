@@ -1,4 +1,46 @@
 lt:
+  tds_status_codes:
+    fraudulent_codes:
+      '09': true
+      '10': true
+      '11': true
+    universal: &universal_tds_status_codes
+      unknown: "Unknown reason."
+      '01': Card authentication failed
+      '02': Unknown Device
+      '03': Unsupported Device
+      '04': Exceeds authentication frequency limit
+      '05': Expired card
+      '06': Invalid card number
+      '07': Invalid transaction
+      '08': No Card record
+      '12': Transaction not permitted to cardholder
+      '13': Cardholder not enrolled in service
+      '14': Transaction timed out at the ACS
+      '15': Low confidence
+      '16': Medium confidence
+      '17': High confidence
+      '18': Very High confidence
+      '19': Exceeds ACS maximum challenges
+      '20': Non-Payment transaction not supported
+      '21': 3RI transaction not supported
+      '22': ACS technical issue
+      '23': Decoupled Authentication required by ACS but not requested by 3DS Requestor
+      '24': 3DS Requestor Decoupled Max Expiry Time exceeded
+      '25': Decoupled Authentication was provided insufficient time to authenticate cardholder. ACS will not make attempt
+      '26': Authentication attempted but not performed by the cardholder
+
+    targeted:
+      cardholder:
+        <<: *universal_tds_status_codes
+        '09': Card authentication failed # Security failure
+        '10': Card authentication failed # Stolen card
+        '11': Card authentication failed # Suspected fraud
+      merchant:
+        <<: *universal_tds_status_codes
+        '09': Security failure
+        '10': Stolen card
+        '11': Suspected fraud
   issuer_response_codes:
     suggestion: 'Suggestion'
     fraud_notice: 'IMPORTANT NOTICE: It is forbidden to retry transactions that ended with this code. It may be recognized as a fraud attempt!'

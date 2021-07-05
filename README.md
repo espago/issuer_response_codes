@@ -1,9 +1,9 @@
 # IssuerResponseCodes
 
-This gem provides a quite comprehensive library of Issuer Response Code descriptions (for both cardholders and merchants) with suggested actions in 7 languages:
+This gem provides a quite comprehensive library of Issuer Response Code and 3D-Secure Status Code descriptions (for both cardholders and merchants) with suggested actions in 7 languages:
 - Complete locales:
-    - en
-    - pl
+  - en
+  - pl
 
 - Incomplete locales:
   - da
@@ -59,11 +59,22 @@ def response_code_description
     ::ISSUER_RESPONSE_CODES.code(id: '43', locale: :pl).description
     #=> "Karta oznaczona jako skradziona. Skontaktuj się z Twoim bankiem w celu wyjaśnienia przyczyny problemu."
 end
+
+def tds_code_description
+    ::ISSUER_RESPONSE_CODES.tds_code(id: '09').description
+    #=> "Security failure"
+
+    ::ISSUER_RESPONSE_CODES.tds_code(id: '09', target: :cardholder).description
+    #=> "Card authentication failed"
+
+    ::ISSUER_RESPONSE_CODES.tds_code(id: '09', locale: :pl).description
+    #=> "Niepowodzenie autoryzacji karty"
+end
 ```
 
 ## Usage
 
-This gem provides an easy way of handling Issuer Response Codes. Whether you need detailed descriptions, short reasons or suggestions of what to do when a certain Code appeared, we've got you covered. Certain more explicit codes like `Stolen card' are masked behind more generic terms when you choose to target cardholders.
+This gem provides an easy way of handling Issuer Response Codes and 3D-Secure Status Codes. Whether you need detailed descriptions, short reasons or suggestions of what to do when a certain Code appeared, we've got you covered. Certain more explicit codes like `Stolen card' are masked behind more generic terms when you choose to target cardholders.
 
 ### IssuerResponseCodes::Code
 #### Creation options
@@ -135,7 +146,7 @@ code.reason #=> "Karta utraciła ważność."
 
 #### Methods
 
-##### Reason
+##### reason
 
 The `reason` method returns a relatively short description of the main reason why the Issuer Response Code appeared in the first place.
 
@@ -150,7 +161,7 @@ code = ::IssuerResponseCodes::Code.new(id: '59')
 code.reason #=> "Your bank has declined this transaction"
 ```
 
-##### Behaviour
+##### behaviour
 
 The `behaviour` method returns a suggestion of what to do when the Issuer Response Code appeared. Mainly for cardholders.
 
@@ -165,9 +176,9 @@ code = ::IssuerResponseCodes::Code.new(id: '59')
 code.behaviour #=> "Please contact your card issuer to get more details and try again later."
 ```
 
-##### Description
+##### description
 
-The `description` method is a combination of both the `reason` and `behaviour` of a Issuer Response Code
+The `description` method (aliased as `humanize`) is a combination of both the `reason` and `behaviour` of a Issuer Response Code
 
 ```ruby
 code = ::IssuerResponseCodes::Code.new(id: '14')
@@ -178,6 +189,91 @@ code.description #=> "Insufficient funds. Please check funds on your account and
 
 code = ::IssuerResponseCodes::Code.new(id: '59')
 code.description #=> "Your bank has declined this transaction. Please contact your card issuer to get more details and try again later."
+```
+
+##### fraudulent_code?
+
+The `fraudulent_code?` method returns `true` when the Code indicates fraud.
+
+```ruby
+code = ::IssuerResponseCodes::Code.new(id: '14')
+code.fraudulent_code? #=> false
+
+code = ::IssuerResponseCodes::Code.new(id: '04')
+code.fraudulent_code? #=> true
+
+code = ::IssuerResponseCodes::Code.new(id: '43')
+code.fraudulent_code? #=> true
+```
+
+### IssuerResponseCodes::TdsCode
+#### Creation options
+
+##### Targets
+
+You can choose the main target of these descriptions (certain details are hidden for cardholders)
+
+```ruby
+# Default values are as follows:
+# target: :merchant, locale: :en
+
+# fraud_notice is set to true by default when target = :merchant
+code = ::IssuerResponseCodes::TdsCode.new(id: '11')
+code.reason #=> "Suspected fraud"
+
+code = ::IssuerResponseCodes::TdsCode.new(id: '11', target: :merchant)
+code.reason #=> "Suspected fraud"
+
+# fraud_notice is set to false by default when target = :cardholder
+code = ::IssuerResponseCodes::TdsCode.new(id: '11', target: :cardholder)
+code.reason #=> "Card authentication failed"
+```
+
+##### Locale
+
+The default locale is `:en`. There are 7 in total: `%i[en pl da ee lt lv sv]`. Only the first two are complete, the rest are partially in English.
+
+```ruby
+code = ::IssuerResponseCodes::TdsCode.new(id: '11')
+code.reason #=> "Suspected fraud"
+
+code = ::IssuerResponseCodes::TdsCode.new(id: '11', locale: :en)
+code.reason #=> "Suspected fraud"
+
+code = ::IssuerResponseCodes::TdsCode.new(id: '11', locale: :pl)
+code.reason #=> "Podejrzenie oszustwa"
+```
+
+#### Methods
+
+##### description/reason
+
+The `description` (also aliased as `reason`) method returns a relatively short description of the main reason why the Issuer Response Code appeared in the first place.
+
+```ruby
+code = ::IssuerResponseCodes::TdsCode.new(id: '08')
+code.description #=> "No Card record"
+
+code = ::IssuerResponseCodes::TdsCode.new(id: '22')
+code.description #=> "ACS technical issue"
+
+code = ::IssuerResponseCodes::TdsCode.new(id: '26')
+code.description #=> "Authentication attempted but not performed by the cardholder"
+```
+
+##### fraudulent_code?
+
+The `fraudulent_code?` method returns `true` when the TdsCode indicates fraud.
+
+```ruby
+code = ::IssuerResponseCodes::TdsCode.new(id: '11')
+code.fraudulent_code? #=> true
+
+code = ::IssuerResponseCodes::TdsCode.new(id: '22')
+code.fraudulent_code? #=> false
+
+code = ::IssuerResponseCodes::TdsCode.new(id: '26')
+code.fraudulent_code? #=> false
 ```
 
 ### Custom default configuration
@@ -197,6 +293,9 @@ ISSUER_RESPONSE_CODES = ::IssuerResponseCodes::Context.new(
 code = ISSUER_RESPONSE_CODES.code(id: '43')
 code.reason #=> "Bank odrzucił autoryzację."
 code.behaviour #=> "Skontaktuj się z Twoim bankiem w celu wyjaśnienia przyczyny problemu. UWAGA: Nie należy powtarzać obciążeń dla tej karty! Może to zostać uznane za próbę oszustwa!"
+
+tds_code = ISSUER_RESPONSE_CODES.tds_code(id: '11')
+tds_code.reason #=> "Niepowodzenie autoryzacji karty"
 
 # these can always be overridden
 code = ISSUER_RESPONSE_CODES.code(id: '43', locale: :en, target: :merchant, fraud_notice: false)

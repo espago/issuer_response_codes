@@ -104,6 +104,32 @@ module IssuerResponseCodes
       assert_equal context.default_target, code.target
       assert_equal context.default_locale, code.locale
       assert_equal false, code.fraud_notice
+
+      # tds codes
+
+      code = context.tds_code(id: "00")
+      assert code.is_a? IssuerResponseCodes::TdsCode
+      assert_equal context.default_target, code.target
+      assert_equal context.default_locale, code.locale
+      assert_equal context.fraud_notice_by_default, code.fraud_notice
+
+      code = context.tds_code(id: "00", target: :cardholder)
+      assert code.is_a? IssuerResponseCodes::TdsCode
+      assert_equal :cardholder, code.target
+      assert_equal context.default_locale, code.locale
+      assert_equal context.fraud_notice_by_default, code.fraud_notice
+
+      code = context.tds_code(id: "00", locale: :lv)
+      assert code.is_a? IssuerResponseCodes::TdsCode
+      assert_equal context.default_target, code.target
+      assert_equal :lv, code.locale
+      assert_equal context.fraud_notice_by_default, code.fraud_notice
+
+      code = context.tds_code(id: "00", fraud_notice: false)
+      assert code.is_a? IssuerResponseCodes::TdsCode
+      assert_equal context.default_target, code.target
+      assert_equal context.default_locale, code.locale
+      assert_equal false, code.fraud_notice
     end
   end
 end

@@ -24,5 +24,9 @@ module IssuerResponseCodes
     def code(id:, target: default_target, locale: default_locale, fraud_notice: fraud_notice_by_default)
       Code.new(id: id, target: target, locale: locale, fraud_notice: fraud_notice)
     end
+
+    def tds_code(id:, target: default_target, locale: default_locale, fraud_notice: fraud_notice_by_default)
+      TdsCode.new(id: id, target: target, locale: locale, fraud_notice: fraud_notice)
+    end
   end
 end

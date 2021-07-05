@@ -4,6 +4,7 @@ require "issuer_response_codes/version"
 require "issuer_response_codes/locale_library"
 require "issuer_response_codes/context"
 require "issuer_response_codes/code"
+require "issuer_response_codes/tds_code"
 
 module IssuerResponseCodes
   class IllegalTarget < StandardError; end

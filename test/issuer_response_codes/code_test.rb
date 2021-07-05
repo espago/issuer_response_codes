@@ -7,30 +7,35 @@ module IssuerResponseCodes
       assert_equal :merchant, code.target
       assert_equal :en, code.locale
       assert code.fraud_notice
+      assert !code.fraudulent_code?
       assert_equal "Transaction rejected due to no response from issuer/bank, inactive Merchant account, used not supported card or incorrect card data. Check the card's data or please try again later.", code.humanize
       
       code = IssuerResponseCodes::Code.new(id: "12")
       assert_equal :merchant, code.target
       assert_equal :en, code.locale
       assert code.fraud_notice
+      assert !code.fraudulent_code?
       assert_equal 'No privileges to execute this transaction for your card. Please contact your card issuer to get more details and try again later.', code.humanize
       
       code = IssuerResponseCodes::Code.new(id: "54")
       assert_equal :merchant, code.target
       assert_equal :en, code.locale
       assert code.fraud_notice
+      assert !code.fraudulent_code?
       assert_equal 'Expired card. Please check your card or try another.', code.humanize
 
       code = IssuerResponseCodes::Code.new(id: "43")
       assert_equal :merchant, code.target
       assert_equal :en, code.locale
       assert code.fraud_notice
+      assert code.fraudulent_code?
       assert_equal 'Stolen card. Please contact your card issuer to get more details and try again later. IMPORTANT NOTICE: It is forbidden to retry transactions that ended with this code. It may be recognized as a fraud attempt!', code.humanize
       
       code = IssuerResponseCodes::Code.new(id: "43", target: :cardholder)
       assert_equal :cardholder, code.target
       assert_equal :en, code.locale
       assert !code.fraud_notice
+      assert code.fraudulent_code?
       assert_equal 'Your bank has declined this transaction. Please contact your card issuer to get more details and try again later.', code.humanize
     end
 
