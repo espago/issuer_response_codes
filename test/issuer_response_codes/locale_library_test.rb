@@ -13,6 +13,8 @@ module IssuerResponseCodes
     end
 
     def test_dig_method
+      @library.locale_hash[:en][:issuer_response_codes][:behaviour][:'04'] = 'Please contact your card issuer and try again later. %{substitute}'
+
       assert_equal 'Pickup card.', @library.dig(path: 'issuer_response_codes.targeted.merchant.04')
       assert_equal 'Pickup card.', @library.dig(path: '04', scope: 'issuer_response_codes.targeted.merchant')
 

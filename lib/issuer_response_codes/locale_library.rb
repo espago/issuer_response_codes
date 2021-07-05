@@ -18,6 +18,7 @@ module IssuerResponseCodes
     def dig(path:, locale: :en, scope: '', default: nil, substitute: '')
       result = __dig__(path: path, locale: locale, scope: scope, default: default)
       return result unless result
+      return result unless result.is_a? ::String
 
       result.gsub(/%{substitute}/, substitute)
     end
