@@ -1,13 +1,15 @@
 # IssuerResponseCodes
 
-This gem provides a quite comprehensive library of Issuer Response Code and 3D-Secure Status Code descriptions (for both cardholders and merchants) with suggested actions in 7 languages:
+This gem provides a quite comprehensive library of Issuer Response Code and 3D-Secure Status Code descriptions (for both cardholders and merchants) with suggested actions in 9 languages:
 - Complete locales:
   - en
   - pl
 
 - Incomplete locales:
   - da
+  - de
   - ee
+  - it
   - lt
   - lv
   - sv
