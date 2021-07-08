@@ -4,43 +4,106 @@ ee:
       '09': true
       '10': true
       '11': true
+    behaviour:
+      unknown: 'Please contact our support team.'
+      '01': Please try again.
+      '02': Please try again using a different device.
+      '03': Please try again using a different device.
+      '04': Please use a different card or contact your card issuer.
+      '05': Please use a different card.
+      '06': Please use a different card or check the card number.
+      '07': Please use a different card.
+      '08': Please use a different card.
+      '09': Please use a different card or contact issuer.
+      '10': Please use a different card or contact issuer.
+      '11': Please use a different card or contact issuer.
+      '12': Please use a different card or contact issuer.
+      '13': Please use a different card or contact issuer.
+      '14': Please try again or use a different card.
+      '15': Please use a different card or contact issuer.
+      '16': Please use a different card or contact issuer.
+      '17': Please use a different card or contact issuer.
+      '18': Please use a different card or contact issuer.
+      '19': Please use a different card or contact issuer.
+      '20': Please use a different card.
+      '21': Please use a different card.
+      '22': Please try again or use a different card.
+      '23': Please use a different card or contact issuer.
+      '24': Please try again or use a different card.
+      '25': Please try again or use a different card.
+      '26': Please try again or use a different card.
+      '80': Please use a different card.
+      '81': Please try again or use a different card.
+      '82': Please use a different card.
+      '83': Please use a different card.
+      '84': Please try again or use a different card.
+      '85': Please use a different card.
+      '86': Please use a different card.
+      '87': Please use a different card.
+      '88': Please use a different card.
     universal: &universal_tds_status_codes
       unknown: "Unknown reason."
-      '01': Card authentication failed
-      '02': Unknown Device
-      '03': Unsupported Device
-      '04': Exceeds authentication frequency limit
-      '05': Expired card
-      '06': Invalid card number
-      '07': Invalid transaction
-      '08': No Card record
-      '12': Transaction not permitted to cardholder
-      '13': Cardholder not enrolled in service
-      '14': Transaction timed out at the ACS
-      '15': Low confidence
-      '16': Medium confidence
-      '17': High confidence
-      '18': Very High confidence
-      '19': Exceeds ACS maximum challenges
-      '20': Non-Payment transaction not supported
-      '21': 3RI transaction not supported
-      '22': ACS technical issue
-      '23': Decoupled Authentication required by ACS but not requested by 3DS Requestor
-      '24': 3DS Requestor Decoupled Max Expiry Time exceeded
-      '25': Decoupled Authentication was provided insufficient time to authenticate cardholder. ACS will not make attempt
-      '26': Authentication attempted but not performed by the cardholder
-
+      '01': Card authentication failed.
+      '02': Unknown Device.
+      '03': Unsupported Device.
+      '04': Exceeds authentication frequency limit.
+      '05': Expired card.
+      '06': Invalid card number.
+      '07': Invalid transaction.
+      '08': No Card record.
+      '15': Low confidence.
+      '16': Medium confidence.
+      '17': High confidence.
+      '18': Very High confidence.
+      '19': Exceeds ACS maximum challenges.
+      '20': Non-Payment transaction not supported.
     targeted:
-      cardholder:
-        <<: *universal_tds_status_codes
-        '09': Card authentication failed # Security failure
-        '10': Card authentication failed # Stolen card
-        '11': Card authentication failed # Suspected fraud
       merchant:
         <<: *universal_tds_status_codes
-        '09': Security failure
-        '10': Stolen card
-        '11': Suspected fraud
+        '09': Security failure.
+        '10': Stolen card.
+        '11': Suspected fraud.
+        '12': Transaction not permitted to cardholder.
+        '13': Cardholder not enrolled in service.
+        '14': Transaction timed out at the ACS.
+        '21': 3RI transaction not supported.
+        '22': ACS technical issue.
+        '23': Decoupled Authentication required by ACS but not requested by 3DS Requestor.
+        '24': 3DS Requestor Decoupled Max Expiry Time exceeded.
+        '25': Decoupled Authentication was provided insufficient time to authenticate cardholder. ACS will not make attempt.
+        '26': Authentication attempted but not performed by the cardholder.
+        '80': Error Connecting to ACS.
+        '81': ACS Timed Out.
+        '82': Invalid Response from ACS.
+        '83': System Error Response from ACS.
+        '84': Internal Error While Generating CAVV.
+        '85': VMID not eligible for requested program.
+        '86': Protocol Version Not Supported by ACS.
+        '87': Transaction is excluded from Attempts Processing (includes non- reloadable pre-paid cards and Non- Payments (NPA)).
+        '88': Requested program not supported by the ACS.
+      cardholder:
+        <<: *universal_tds_status_codes
+        '09': Card authentication failed. # Security failure
+        '10': Card authentication failed. # Stolen card
+        '11': Card authentication failed. # Suspected fraud
+        '12': Transaction not permitted to cardholder.
+        '13': Cardholder not enrolled in service.
+        '14': Card authentication failed.
+        '21': Card authentication failed.
+        '22': Issuer technical issue.
+        '23': Card authentication failed
+        '24': Card authentication failed
+        '25': Card authentication failed.
+        '26': Card authentication failed.
+        '80': Card authentication failed.
+        '81': Card authentication failed.
+        '82': Card authentication failed.
+        '83': Card authentication failed.
+        '84': Card authentication failed.
+        '85': Card authentication failed.
+        '86': Card authentication failed.
+        '87': Card authentication failed.
+        '88': Card authentication failed.
 
   issuer_response_codes:
     suggestion: 'Suggestion'
@@ -50,40 +113,6 @@ ee:
       '07': true
       '41': true
       '43': true
-    universal: &issuer_response_code
-      '00': "Tekkis viga. Tehing lükati Elavoni poolt tagasi sobimatu kaardiliigi, valede kaardiandmete, väljaandja / panga loa puudumise või kaupmehe suletud konto tõttu."
-      '05': "Pank lükkas tehingu tagasi, kuna turvalisuskontrollis avastati puudusi (kasutatud kaardiga ei saa teostada korduvtehinguid / makseid ilma CVV-koodita), rahalised vahendid on külmutatud, limiidid ületatud või kaart ei toeta MOTO-/internetitehinguid."
-      '13': "MOTO/eCommerce mitteaktiivne või summa limiit ületatud."
-      '14': "Kehtetu kaardi number."
-      'N7': "Vale CVV-kood."
-      '51': "Puuduvad piisavad vahendid."
-      '54': "Kehtivuse kaotanud kaart."
-      '57': "Pank lükkas tehingu tagasi, kuna antud krediitkaarti ei saa seda liiki tehingu teostamiseks kasutada (eCommerce, MOTO või korduvtehing)."
-      '61': "MOTO/eCommerce mitteaktiivne või summa limiit ületatud."
-      '82': "Vale CVV-kood."
-      # incomplete translations
-      unknown: "Unknown reason."
-      '01': "Authorization Error."
-      '02': "Authorization Error."
-      '03': "Authorization Error."
-      '12': "No privileges to execute this transaction for your card."
-      '30': "Your bank has declined this transaction"
-      '58': "Your bank has declined this transaction as this credit card cannot be used for this type of transaction (eccommerce, MOTO or recurring)."
-      '59': "Your bank has declined this transaction"
-      '62': "Your card can be not supported due to restrictions placed on the card or Seller country exclusion (imposition an embargo), or bank blocked a card eg. due to unacceptable debit balance."
-      '65': "Activity count limit exceeded."
-      '75': "Invalid activity count limit exceeded."
-      '78': "Inactive card."
-      '91': "Temporary issuer error."
-      '92': "Temporary issuer error."
-      '94': "Temporary issuer error."
-      '96': "Temporary issuer error."
-      '98': "Temporary issuer error."
-      'E3': "Transaction not executed due to a 3D-Secure error."
-      'E4': "Transaction not executed due to a negative 3D-Secure confirmation from your bank."
-      'E5': "Temporary 3D-Secure error."
-      'R0': "Refused by Issuer because Customer requested stop of specific recurring payments."
-      'R1': "Refused by Issuer because Customer requested stop of all recurring payments."
     behaviour:
       '00': "Palun proovige hiljem uuesti, võtke ühendust müüja või Espago klienditoega."
       '05': "Palun kontrollige oma antud liiki tehinguid käsitlevaid kaardi seadeid või kasutage teist kaarti."
@@ -122,6 +151,40 @@ ee:
       'E5': "Please try again later or contact your card issuer to get more details"
       'R0': "Please contact your card issuer to get more details and try again later."
       'R1': "Please contact your card issuer to get more details and try again later."
+    universal: &issuer_response_code
+      '00': "Tekkis viga. Tehing lükati Elavoni poolt tagasi sobimatu kaardiliigi, valede kaardiandmete, väljaandja / panga loa puudumise või kaupmehe suletud konto tõttu."
+      '05': "Pank lükkas tehingu tagasi, kuna turvalisuskontrollis avastati puudusi (kasutatud kaardiga ei saa teostada korduvtehinguid / makseid ilma CVV-koodita), rahalised vahendid on külmutatud, limiidid ületatud või kaart ei toeta MOTO-/internetitehinguid."
+      '13': "MOTO/eCommerce mitteaktiivne või summa limiit ületatud."
+      '14': "Kehtetu kaardi number."
+      'N7': "Vale CVV-kood."
+      '51': "Puuduvad piisavad vahendid."
+      '54': "Kehtivuse kaotanud kaart."
+      '57': "Pank lükkas tehingu tagasi, kuna antud krediitkaarti ei saa seda liiki tehingu teostamiseks kasutada (eCommerce, MOTO või korduvtehing)."
+      '61': "MOTO/eCommerce mitteaktiivne või summa limiit ületatud."
+      '82': "Vale CVV-kood."
+      # incomplete translations
+      unknown: "Unknown reason."
+      '01': "Authorization Error."
+      '02': "Authorization Error."
+      '03': "Authorization Error."
+      '12': "No privileges to execute this transaction for your card."
+      '30': "Your bank has declined this transaction"
+      '58': "Your bank has declined this transaction as this credit card cannot be used for this type of transaction (eccommerce, MOTO or recurring)."
+      '59': "Your bank has declined this transaction"
+      '62': "Your card can be not supported due to restrictions placed on the card or Seller country exclusion (imposition an embargo), or bank blocked a card eg. due to unacceptable debit balance."
+      '65': "Activity count limit exceeded."
+      '75': "Invalid activity count limit exceeded."
+      '78': "Inactive card."
+      '91': "Temporary issuer error."
+      '92': "Temporary issuer error."
+      '94': "Temporary issuer error."
+      '96': "Temporary issuer error."
+      '98': "Temporary issuer error."
+      'E3': "Transaction not executed due to a 3D-Secure error."
+      'E4': "Transaction not executed due to a negative 3D-Secure confirmation from your bank."
+      'E5': "Temporary 3D-Secure error."
+      'R0': "Refused by Issuer because Customer requested stop of specific recurring payments."
+      'R1': "Refused by Issuer because Customer requested stop of all recurring payments."
     targeted:
       merchant:
         <<: *issuer_response_code

@@ -1,0 +1,292 @@
+de:
+  tds_status_codes:
+    fraudulent_codes:
+      '09': true
+      '10': true
+      '11': true
+    behaviour:
+      unknown: 'Please contact our support team.'
+      '01': Please try again.
+      '02': Please try again using a different device.
+      '03': Please try again using a different device.
+      '04': Please use a different card or contact your card issuer.
+      '05': Please use a different card.
+      '06': Please use a different card or check the card number.
+      '07': Please use a different card.
+      '08': Please use a different card.
+      '09': Please use a different card or contact issuer.
+      '10': Please use a different card or contact issuer.
+      '11': Please use a different card or contact issuer.
+      '12': Please use a different card or contact issuer.
+      '13': Please use a different card or contact issuer.
+      '14': Please try again or use a different card.
+      '15': Please use a different card or contact issuer.
+      '16': Please use a different card or contact issuer.
+      '17': Please use a different card or contact issuer.
+      '18': Please use a different card or contact issuer.
+      '19': Please use a different card or contact issuer.
+      '20': Please use a different card.
+      '21': Please use a different card.
+      '22': Please try again or use a different card.
+      '23': Please use a different card or contact issuer.
+      '24': Please try again or use a different card.
+      '25': Please try again or use a different card.
+      '26': Please try again or use a different card.
+      '80': Please use a different card.
+      '81': Please try again or use a different card.
+      '82': Please use a different card.
+      '83': Please use a different card.
+      '84': Please try again or use a different card.
+      '85': Please use a different card.
+      '86': Please use a different card.
+      '87': Please use a different card.
+      '88': Please use a different card.
+    universal: &universal_tds_status_codes
+      unknown: "Unknown reason."
+      '01': Card authentication failed.
+      '02': Unknown Device.
+      '03': Unsupported Device.
+      '04': Exceeds authentication frequency limit.
+      '05': Expired card.
+      '06': Invalid card number.
+      '07': Invalid transaction.
+      '08': No Card record.
+      '15': Low confidence.
+      '16': Medium confidence.
+      '17': High confidence.
+      '18': Very High confidence.
+      '19': Exceeds ACS maximum challenges.
+      '20': Non-Payment transaction not supported.
+    targeted:
+      merchant:
+        <<: *universal_tds_status_codes
+        '09': Security failure.
+        '10': Stolen card.
+        '11': Suspected fraud.
+        '12': Transaction not permitted to cardholder.
+        '13': Cardholder not enrolled in service.
+        '14': Transaction timed out at the ACS.
+        '21': 3RI transaction not supported.
+        '22': ACS technical issue.
+        '23': Decoupled Authentication required by ACS but not requested by 3DS Requestor.
+        '24': 3DS Requestor Decoupled Max Expiry Time exceeded.
+        '25': Decoupled Authentication was provided insufficient time to authenticate cardholder. ACS will not make attempt.
+        '26': Authentication attempted but not performed by the cardholder.
+        '80': Error Connecting to ACS.
+        '81': ACS Timed Out.
+        '82': Invalid Response from ACS.
+        '83': System Error Response from ACS.
+        '84': Internal Error While Generating CAVV.
+        '85': VMID not eligible for requested program.
+        '86': Protocol Version Not Supported by ACS.
+        '87': Transaction is excluded from Attempts Processing (includes non- reloadable pre-paid cards and Non- Payments (NPA)).
+        '88': Requested program not supported by the ACS.
+      cardholder:
+        <<: *universal_tds_status_codes
+        '09': Card authentication failed. # Security failure
+        '10': Card authentication failed. # Stolen card
+        '11': Card authentication failed. # Suspected fraud
+        '12': Transaction not permitted to cardholder.
+        '13': Cardholder not enrolled in service.
+        '14': Card authentication failed.
+        '21': Card authentication failed.
+        '22': Issuer technical issue.
+        '23': Card authentication failed
+        '24': Card authentication failed
+        '25': Card authentication failed.
+        '26': Card authentication failed.
+        '80': Card authentication failed.
+        '81': Card authentication failed.
+        '82': Card authentication failed.
+        '83': Card authentication failed.
+        '84': Card authentication failed.
+        '85': Card authentication failed.
+        '86': Card authentication failed.
+        '87': Card authentication failed.
+        '88': Card authentication failed.
+
+  issuer_response_codes:
+    suggestion: 'Suggestion'
+    fraud_notice: 'IMPORTANT NOTICE: It is forbidden to retry transactions that ended with this code. It may be recognized as a fraud attempt!'
+    fraudulent_codes:
+      '04': true
+      '07': true
+      '12': true
+      '14': true
+      '15': true
+      '41': true
+      '43': true
+      '54': true
+      '57': true
+      '59': true
+      '63': true
+      'R0': true
+      'R1': true
+      'R3': true
+    behaviour:
+      unknown: Please contact our support team.
+      '00': "Bitte versuchen Sie es später noch einmal oder kontaktieren Sie mit  dem Verkäufer"
+      '1A': "Der Karteninhaber sollte sich mit seiner Bank in
+Verbindung setzen um ggf. das Limit
+erhöhen zu lassen oder  pruefen ob Ihre ausstellende Bank besondere Richtlinien für elektronische oder Internet-Einkäufe hat."
+      '01': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '02': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '03': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '04': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '05': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '06': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '07': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '12': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '13': "Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen um ggf. das Limit erhöhen zu lassen."
+      '14': "Verwenden Sie eine andere Karte."
+      '15': "Verwenden Sie eine andere Karte."
+      '19': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '21': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '30': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '39': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '41': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '43': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '51': "Verwenden Sie eine andere Karte. Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen um ggf. Das Limit erhöhen zu lassen."
+      '52': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '53': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '54': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '55': "Please use a different card or verify your CVV/CVC or contact the issuer for clarification."
+      '57': "Verwenden Sie eine andere Karte. er Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '58': "Please use a different card or contact the issuer to check the ecommerce payment settings."
+      '59': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '61': "Verwenden Sie eine andere Karte. Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen um ggf. das Limit erhöhen zu lassen."
+      '62': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '63': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '65': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '70': "Please use a different card or contact the issuer to check the ecommerce payment settings."
+      '76': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '77': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '78': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '82': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      'N7': "Verwenden Sie eine andere Karte; Prüfen  Sie CVVKartenprüfnummer. Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      'R0': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      'R1': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      'R3': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      'E3': "Please try again or contact the issuer for clarification."
+      'E4': "Please try again or contact the issuer for clarification."
+      'E5': "Please try again or contact the issuer for clarification."
+      '75': "Please try again and check the CVV/CVC or contact the issuer for clarification."
+      '85': "The issuer has confirmed this transaction."
+      '86': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '91': "Please use a different card or try again later"
+      '92': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '93': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '94': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '96': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      '98': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      'N3': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      'P5': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+      'R2': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
+    universal: &issuer_response_code
+      unknown: "Unknown reason."
+      '75': "Zahlung wurde von Bank abgelehnt. Zulässige Anzahl von PIN-Eintrittsprüfungen überschritten."
+      '86': "Zahlung wurde von Bank abgelehnt Die eingegebene Geheimzahl ist falsch."
+      '91': "Issuer not available."
+      '92': "Financial institution or intermediate network facility cannot be found for routing (receiving institution ID is invalid)."
+      '93': "Transaction cannot be completed - violation of law."
+      '94': "Temporary issuer error."
+      '96': "Temporary issuer error."
+      '98': "Temporary issuer error."
+      'N3': "Zahlung wurde von Bank abgelehnt."
+      'P5': "Denied PIN unblock - PIN change or unblock request declined by issuer."
+      'R2': "Zahlung wurde von Bank abgelehnt."
+      'E3': "Transaction not executed due to a 3D-Secure error."
+      'E4': "Transaction not executed due to a negative 3D-Secure confirmation from your bank."
+      'E5': "Temporary 3D-Secure error."
+    targeted:
+      merchant:
+        <<: *issuer_response_code
+        '00': "Ablehnung der Transaktion durch den Bezahldienstleister .Die Zahlung wurde abgelehnt, weil
+        1) das Bankautorisierungssystem antwortet nicht;
+        2) Das Konto des Händlers gesperrt ist;
+        3) Die Kartendaten  nicht korrekt sind, oder die verwendete Kartet für diese Zahlung nicht zugelassen ist.
+        Außerdem ist nachzuprüfen ob das Konto des Händlers  bei einem Acquirer aktiv ist  und bei Espago korrekt konfiguriert wurde."
+        '1A': "Weiche Zahlungsablehung"
+        '01': "Eigener Code des Kartenausstellers."
+        '02': "Eigener Code des Kartenausstellers."
+        '03': "Unvollständige Daten  des Händlers oder unaktiviertes Konto
+        Zahlung nicht wiederholen."
+        '04': "Die verwendete Karte ist gesperrt (aus anderen Gründen als Diebstahl / Verlust) Zahlung nicht wiederholen."
+        '05': "Zahlung wurde von Bank ohne Angabe von Gründen abgelehnt Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen ob Ihre ausstellende Bank besondere Richtlinien für elektronische oder Internet-Einkäufe hat."
+        '06': "Error."
+        '07': "Die verwendete Karte gegen den Missbrauch  gesperrt wurde. Zahlung nicht wiederholen."
+        '12': "Ungültige Zahlungstransaktion oder die verwendete Karte ist für diese Zahlung nicht zugelassen. Zahlung nicht wiederholen."
+        '13': "IDer Betrag ist falsch eventuell ist das Limit der Karte überschritten oder Falsche Währungsumrechnung."
+        '14': "Die Kartendaten oder Kontonummer sind nicht korrekt. Zahlung nicht wiederholen."
+        '15': "Kartenherausgeber unbekannt. Zahlung nicht wiederholen."
+        '19': "Re-enter transaction."
+        '21': "No action taken."
+        '30': "Die Datenübertragung ist fehlerhaft."
+        '39': "No credit account."
+        '41': "Die Karte ist als verloren gemeldet. Zahlung nicht wiederholen."
+        '43': "Die Karte ist als gestohlen gemeldet. Zahlung nicht wiederholen."
+        '51': "Das Kartenlimit ist überschritten oder nicht ausreichende Mittel auf dem Konto."
+        '52': "No checking account."
+        '53': "No savings account."
+        '54': "Zahlung nicht wiederholen."
+        '55': "Incorrect PIN or PIN missing."
+        '57': "Die verwendete Kreditkarte ist für diese Zahlung nicht zugelassen. Zahlung nicht wiederholen."
+        '58': "Transaction not allowed at terminal."
+        '59': "Betrugsverdacht."
+        '61': "Das Kartenlimit ist überschritten."
+        '62': "Land des Kartenausstellers wird nicht akzeptiert."
+        '63': "Security Violation."
+        '65': "Exceeds withdrawal frequency limit."
+        '70': "PIN data required."
+        '76': "Unsolicited reversal."
+        '77': "Duplicate reversal or duplicate transaction."
+        '78': "Neue, nicht aktivierte Karte."
+        '82': "CVV-Kartenprüfnummer ungültig."
+        '85': "Not declined."
+        'N7': "CVV-Kartenprüfnummer .ungültig."
+        'R0': "Zahlung nicht wiederholen."
+        'R1': "Zahlung nicht wiederholen."
+        'R3': "Zahlung nicht wiederholen."
+      cardholder:
+        <<: *issuer_response_code
+        '00': "Zahlung ist abgehlent."
+        '1A': "Starke Authentifizierung (SCA) erforderlich."
+        '01': "Zahlung wurde von Bank abgelehnt."
+        '02': "Zahlung wurde von Bank abgelehnt."
+        '03': "Bei diesem Händler kann mit dieser Karte nicht bezahlt werden."
+        '04': "Zahlung wurde von Bank abgelehnt."
+        '05': "Zahlung wurde von Bank abgelehnt."
+        '06': "Zahlung wurde von Bank abgelehnt."
+        '07': "Zahlung wurde von Bank abgelehnt."
+        '12': "Zahlung wurde abgelehnt - ungültige Zahlungstransaktion."
+        '13': "Zahlung wurde abgelehnt - Der Betrag ist falsch oder Falsche Währungsumrechnung."
+        '14': "Zahlung wurde abgelehnt - Die Kartendaten sind nicht korrekt."
+        '15': "Zahlung wurde abgelehnt - Kartenherausgeber unbekannt."
+        '19': "Zahlung wurde von Bank abgelehnt."
+        '21': "Payment rejected by the issuer."
+        '30': "Zahlung wurde von Bank abgelehnt - Die Datenübertragung ist fehlerhaft."
+        '39': "Payment rejected by the issuer - no credit account."
+        '41': "Zahlung wurde von Bank abgelehnt."
+        '43': "Zahlung wurde von Bank abgelehnt."
+        '51': "Zahlung wurde von Bank abgelehnt Das Kartenlimit ist überschritten oder nicht ausreichende Mittel auf dem Konto."
+        '52': "Payment rejected by the issuer."
+        '53': "Payment rejected by the issuer."
+        '54': "Zahlung wurde von Bank abgelehnt - Die verwendete Karte ist ungültig."
+        '55': "Payment rejected by the issuer - Incorrect PIN or PIN missing."
+        '57': "Zahlung wurde von Bank abgelehnt. Unzulässige Transaktion."
+        '58': "Payment rejected by the issuer - transaction not allowed at terminal."
+        '59': "Zahlung wurde von Bank abgelehnt."
+        '61': "Zahlung wurde von Bank abgelehnt Das Kartenlimit ist überschritten."
+        '62': "Zahlung wurde von Bank abgelehnt. die Karte kann in dieser Region oder diesem Land nicht verwendet werden."
+        '63': "Payment rejected by the issuer"
+        '65': "Zahlung wurde abgelehnt Das Limit der Transaktionsfrequenz ist überschritten."
+        '70': "Starke Authentifizierung (SCA) erforderlich."
+        '76': "Payment rejected by the issuer - unsolicited reversal."
+        '77': "Payment declined by the issuer."
+        '78': "Zahlung wurde von Bank abgelehnt. Die Karte wurde nicht aktiviert."
+        '82': "Zahlung wurde von Bank abgelehnt der CVV. Wert der Kreditkarte ist falsch."
+        '85': "Authorization succeeded."
+        'N7': "Zahlung wurde von Bank abgelehnt der CVV. Wert der Kreditkarte ist falsch."
+        'R0': "Zahlung wurde von Bank abgelehnt Automatisches Sicherheitssystem hat die Zahlung gestoppt."
+        'R1': "Zahlung wurde von Bank abgelehnt Automatisches Sicherheitssystem hat die Zahlung gestoppt."
+        'R3': "Zahlung wurde von Bank abgelehnt Automatisches Sicherheitssystem hat die Zahlung gestoppt."

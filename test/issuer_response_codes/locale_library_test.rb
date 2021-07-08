@@ -15,17 +15,17 @@ module IssuerResponseCodes
     def test_dig_method
       @library.locale_hash[:en][:issuer_response_codes][:behaviour][:'04'] = 'Please contact your card issuer and try again later. %{substitute}'
 
-      assert_equal 'Pickup card.', @library.dig(path: 'issuer_response_codes.targeted.merchant.04')
-      assert_equal 'Pickup card.', @library.dig(path: '04', scope: 'issuer_response_codes.targeted.merchant')
+      assert_equal 'Pick up card (no fraud).', @library.dig(path: 'issuer_response_codes.targeted.merchant.04')
+      assert_equal 'Pick up card (no fraud).', @library.dig(path: '04', scope: 'issuer_response_codes.targeted.merchant')
 
       assert_equal 'Please contact your card issuer and try again later. ', @library.dig(path: '04', scope: 'issuer_response_codes.behaviour')
       assert_equal 'Please contact your card issuer and try again later. dupa', @library.dig(path: '04', scope: 'issuer_response_codes.behaviour', substitute: 'dupa')
 
-      assert_equal 'Pickup card.', @library.dig(path: 'issuer_response_codes.targeted.merchant.04', locale: :en)
-      assert_equal 'Pickup card.', @library.dig(path: '04', scope: 'issuer_response_codes.targeted.merchant', locale: :en)
+      assert_equal 'Pick up card (no fraud).', @library.dig(path: 'issuer_response_codes.targeted.merchant.04', locale: :en)
+      assert_equal 'Pick up card (no fraud).', @library.dig(path: '04', scope: 'issuer_response_codes.targeted.merchant', locale: :en)
 
-      assert_equal 'Karta zastrzeżona.', @library.dig(path: 'issuer_response_codes.targeted.merchant.04', locale: :pl)
-      assert_equal 'Karta zastrzeżona.', @library.dig(path: '04', scope: 'issuer_response_codes.targeted.merchant', locale: :pl)
+      assert_equal 'Karta zastrzeżona (z powodów innych niż kradzież/zgubienie).', @library.dig(path: 'issuer_response_codes.targeted.merchant.04', locale: :pl)
+      assert_equal 'Karta zastrzeżona (z powodów innych niż kradzież/zgubienie).', @library.dig(path: '04', scope: 'issuer_response_codes.targeted.merchant', locale: :pl)
 
       assert_nil @library.dig(path: 'issuer_response_codes.targeted.merchant.100')
       assert_nil @library.dig(path: '100', scope: 'issuer_response_codes.targeted.merchant')
