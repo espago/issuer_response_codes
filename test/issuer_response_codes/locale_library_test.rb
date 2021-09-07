@@ -42,16 +42,28 @@ module IssuerResponseCodes
     end
 
     def test_issuer_response_codes_method
-      @library.locale_hash[:en][:issuer_response_codes] = { behaviour: {}, targeted: { merchant: {}, cardholder: {} } }
+      @library.locale_hash[:en][:issuer_response_codes] = { behaviour: {}, targeted: { merchant: {}, cardholder: {} }, fraudulent_codes: {} }
+      @library.locale_hash[:en][:issuer_response_codes][:fraudulent_codes][:'04'] = true
       @library.locale_hash[:en][:issuer_response_codes][:behaviour][:'04'] = 'Please contact your card issuer and try again later.'
       @library.locale_hash[:en][:issuer_response_codes][:targeted][:merchant][:'04'] = 'Pick up card.'
       @library.locale_hash[:en][:issuer_response_codes][:targeted][:cardholder][:'04'] = 'Card authentication failed.'
+
+      @library.locale_hash[:en][:issuer_response_codes][:behaviour][:'03'] = 'Please contact your card issuer and try again later.'
+      @library.locale_hash[:en][:issuer_response_codes][:targeted][:merchant][:'03'] = 'Card authentication failed.'
+      @library.locale_hash[:en][:issuer_response_codes][:targeted][:cardholder][:'03'] = 'Card authentication failed.'
 
       model_issuer_response_codes = {
         :'04' => {
           behaviour: 'Please contact your card issuer and try again later.',
           merchant_reason: 'Pick up card.',
-          cardholder_reason: 'Card authentication failed.'
+          cardholder_reason: 'Card authentication failed.',
+          fraudulent: true
+        },
+        :'03' => {
+          behaviour: 'Please contact your card issuer and try again later.',
+          merchant_reason: 'Card authentication failed.',
+          cardholder_reason: 'Card authentication failed.',
+          fraudulent: false
         }
       }
 
@@ -61,16 +73,28 @@ module IssuerResponseCodes
     end
 
     def test_tds_codes_method
-      @library.locale_hash[:en][:tds_status_codes] = { behaviour: {}, targeted: { merchant: {}, cardholder: {} } }
+      @library.locale_hash[:en][:tds_status_codes] = { behaviour: {}, targeted: { merchant: {}, cardholder: {} }, fraudulent_codes: {} }
+      @library.locale_hash[:en][:tds_status_codes][:fraudulent_codes][:'04'] = true
       @library.locale_hash[:en][:tds_status_codes][:behaviour][:'04'] = 'Please contact your card issuer and try again later.'
       @library.locale_hash[:en][:tds_status_codes][:targeted][:merchant][:'04'] = 'Pick up card.'
       @library.locale_hash[:en][:tds_status_codes][:targeted][:cardholder][:'04'] = 'Card authentication failed.'
+
+      @library.locale_hash[:en][:tds_status_codes][:behaviour][:'03'] = 'Please contact your card issuer and try again later.'
+      @library.locale_hash[:en][:tds_status_codes][:targeted][:merchant][:'03'] = 'Card authentication failed.'
+      @library.locale_hash[:en][:tds_status_codes][:targeted][:cardholder][:'03'] = 'Card authentication failed.'
 
       model_tds_codes = {
         :'04' => {
           behaviour: 'Please contact your card issuer and try again later.',
           merchant_reason: 'Pick up card.',
-          cardholder_reason: 'Card authentication failed.'
+          cardholder_reason: 'Card authentication failed.',
+          fraudulent: true
+        },
+        :'03' => {
+          behaviour: 'Please contact your card issuer and try again later.',
+          merchant_reason: 'Card authentication failed.',
+          cardholder_reason: 'Card authentication failed.',
+          fraudulent: false
         }
       }
 

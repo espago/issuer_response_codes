@@ -23,6 +23,7 @@ module IssuerResponseCodes
     end
 
     def issuer_response_codes(locale: :en)
+      fraudulent_codes = locale_hash.dig(locale, :issuer_response_codes, :fraudulent_codes)
       behaviours = locale_hash.dig(locale, :issuer_response_codes, :behaviour)
       cardholder_reasons = locale_hash.dig(locale, :issuer_response_codes, :targeted, :cardholder)
       merchant_reasons = locale_hash.dig(locale, :issuer_response_codes, :targeted, :merchant)
@@ -33,13 +34,15 @@ module IssuerResponseCodes
           {
             merchant_reason: merchant_reason,
             cardholder_reason: cardholder_reasons[code],
-            behaviour: behaviours[code]
+            behaviour: behaviours[code],
+            fraudulent: fraudulent_codes[code] == true
           }
         ]
       end.to_h
     end
 
     def tds_codes(locale: :en)
+      fraudulent_codes = locale_hash.dig(locale, :tds_status_codes, :fraudulent_codes)
       behaviours = locale_hash.dig(locale, :tds_status_codes, :behaviour)
       cardholder_reasons = locale_hash.dig(locale, :tds_status_codes, :targeted, :cardholder)
       merchant_reasons = locale_hash.dig(locale, :tds_status_codes, :targeted, :merchant)
@@ -50,7 +53,8 @@ module IssuerResponseCodes
           {
             merchant_reason: merchant_reason,
             cardholder_reason: cardholder_reasons[code],
-            behaviour: behaviours[code]
+            behaviour: behaviours[code],
+            fraudulent: fraudulent_codes[code] == true
           }
         ]
       end.to_h
