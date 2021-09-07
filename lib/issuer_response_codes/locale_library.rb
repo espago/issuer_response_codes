@@ -22,6 +22,40 @@ module IssuerResponseCodes
       result.gsub(/%{substitute}/, substitute)
     end
 
+    def issuer_response_codes(locale: :en)
+      behaviours = locale_hash.dig(locale, :issuer_response_codes, :behaviour)
+      cardholder_reasons = locale_hash.dig(locale, :issuer_response_codes, :targeted, :cardholder)
+      merchant_reasons = locale_hash.dig(locale, :issuer_response_codes, :targeted, :merchant)
+
+      merchant_reasons.map do |code, merchant_reason|
+        [
+          code,
+          {
+            merchant_reason: merchant_reason,
+            cardholder_reason: cardholder_reasons[code],
+            behaviour: behaviours[code]
+          }
+        ]
+      end.to_h
+    end
+
+    def tds_codes(locale: :en)
+      behaviours = locale_hash.dig(locale, :tds_status_codes, :behaviour)
+      cardholder_reasons = locale_hash.dig(locale, :tds_status_codes, :targeted, :cardholder)
+      merchant_reasons = locale_hash.dig(locale, :tds_status_codes, :targeted, :merchant)
+
+      merchant_reasons.map do |code, merchant_reason|
+        [
+          code,
+          {
+            merchant_reason: merchant_reason,
+            cardholder_reason: cardholder_reasons[code],
+            behaviour: behaviours[code]
+          }
+        ]
+      end.to_h
+    end
+
     def self.symbolize_keys(hash)
       h = hash.map do |k, v|
         v_sym = if v.instance_of? Hash

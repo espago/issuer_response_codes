@@ -40,5 +40,43 @@ module IssuerResponseCodes
       assert_equal 'Unknown reason.', @library.dig(path: '', scope: 'issuer_response_codes.targeted.merchant', default: :unknown)
       assert_equal 'Unknown reason.', @library.dig(path: nil, scope: 'issuer_response_codes.targeted.merchant', default: :unknown)
     end
+
+    def test_issuer_response_codes_method
+      @library.locale_hash[:en][:issuer_response_codes] = { behaviour: {}, targeted: { merchant: {}, cardholder: {} } }
+      @library.locale_hash[:en][:issuer_response_codes][:behaviour][:'04'] = 'Please contact your card issuer and try again later.'
+      @library.locale_hash[:en][:issuer_response_codes][:targeted][:merchant][:'04'] = 'Pick up card.'
+      @library.locale_hash[:en][:issuer_response_codes][:targeted][:cardholder][:'04'] = 'Card authentication failed.'
+
+      model_issuer_response_codes = {
+        :'04' => {
+          behaviour: 'Please contact your card issuer and try again later.',
+          merchant_reason: 'Pick up card.',
+          cardholder_reason: 'Card authentication failed.'
+        }
+      }
+
+      assert_equal model_issuer_response_codes, @library.issuer_response_codes
+      assert_equal model_issuer_response_codes, @library.issuer_response_codes(locale: :en)
+      assert model_issuer_response_codes != @library.issuer_response_codes(locale: :pl)
+    end
+
+    def test_tds_codes_method
+      @library.locale_hash[:en][:tds_status_codes] = { behaviour: {}, targeted: { merchant: {}, cardholder: {} } }
+      @library.locale_hash[:en][:tds_status_codes][:behaviour][:'04'] = 'Please contact your card issuer and try again later.'
+      @library.locale_hash[:en][:tds_status_codes][:targeted][:merchant][:'04'] = 'Pick up card.'
+      @library.locale_hash[:en][:tds_status_codes][:targeted][:cardholder][:'04'] = 'Card authentication failed.'
+
+      model_tds_codes = {
+        :'04' => {
+          behaviour: 'Please contact your card issuer and try again later.',
+          merchant_reason: 'Pick up card.',
+          cardholder_reason: 'Card authentication failed.'
+        }
+      }
+
+      assert_equal model_tds_codes, @library.tds_codes
+      assert_equal model_tds_codes, @library.tds_codes(locale: :en)
+      assert model_tds_codes != @library.tds_codes(locale: :pl)
+    end
   end
 end
