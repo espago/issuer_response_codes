@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    issuer_response_codes (0.2.4)
+    issuer_response_codes (0.2.5)
 
 GEM
   remote: https://rubygems.org/
