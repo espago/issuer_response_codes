@@ -11,7 +11,7 @@ module IssuerResponseCodes
       @target = target
       @locale = locale
 
-      raise IllegalLocale, "No such locale: #{locale.inspect}" unless AVAILABLE_LOCALES.include?(locale)
+      @locale = :en unless AVAILABLE_LOCALES.include?(locale)
       raise IllegalTarget, "No such target: #{target.inspect}" unless AVAILABLE_TARGETS.include?(target)
 
       if fraud_notice != NOT_PROVIDED

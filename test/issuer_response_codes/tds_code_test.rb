@@ -9,14 +9,14 @@ module IssuerResponseCodes
       assert code.fraud_notice
       assert !code.fraudulent_code?
       assert_equal "Card authentication failed. Please try again.", code.humanize
-      
+
       code = IssuerResponseCodes::TdsCode.new(id: "09")
       assert_equal :merchant, code.target
       assert_equal :en, code.locale
       assert code.fraud_notice
       assert code.fraudulent_code?
       assert_equal 'Security failure. Please use a different card or contact issuer. Transactions with this code may be considered fraudulent.', code.humanize
-      
+
       code = IssuerResponseCodes::TdsCode.new(id: "10")
       assert_equal :merchant, code.target
       assert_equal :en, code.locale
@@ -30,7 +30,7 @@ module IssuerResponseCodes
       assert code.fraud_notice
       assert code.fraudulent_code?
       assert_equal 'Suspected fraud. Please use a different card or contact issuer. Transactions with this code may be considered fraudulent.', code.humanize
-      
+
       code = IssuerResponseCodes::TdsCode.new(id: "11", target: :cardholder)
       assert_equal :cardholder, code.target
       assert_equal :en, code.locale
@@ -53,14 +53,14 @@ module IssuerResponseCodes
       assert_equal :en, code.locale
       assert code.fraud_notice
       assert_equal "Card authentication failed. Please try again.", code.description
-      
+
       code = IssuerResponseCodes::TdsCode.new(id: "09")
       assert_equal :merchant, code.target
       assert_equal :en, code.locale
       assert code.fraud_notice
       assert code.fraudulent_code?
       assert_equal 'Security failure. Please use a different card or contact issuer. Transactions with this code may be considered fraudulent.', code.description
-      
+
       code = IssuerResponseCodes::TdsCode.new(id: "10")
       assert_equal :merchant, code.target
       assert_equal :en, code.locale
@@ -74,7 +74,7 @@ module IssuerResponseCodes
       assert code.fraud_notice
       assert code.fraudulent_code?
       assert_equal 'Suspected fraud. Please use a different card or contact issuer. Transactions with this code may be considered fraudulent.', code.description
-      
+
       code = IssuerResponseCodes::TdsCode.new(id: "11", target: :cardholder)
       assert_equal :cardholder, code.target
       assert_equal :en, code.locale
@@ -196,9 +196,9 @@ module IssuerResponseCodes
     end
 
     def test_no_such_locale
-      assert_raises IssuerResponseCodes::IllegalLocale do
-        IssuerResponseCodes::TdsCode.new(id: "11", locale: :dupa)
-      end
+      code = IssuerResponseCodes::TdsCode.new(id: "11", locale: :dupa)
+      assert_equal :en, code.locale
+      assert_equal 'Suspected fraud.', code.reason
     end
 
     def test_reason_return_unknown_notice

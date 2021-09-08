@@ -9,14 +9,14 @@ module IssuerResponseCodes
       assert code.fraud_notice
       assert !code.fraudulent_code?
       assert_equal "Transaction rejected due to no response from issuer/bank, inactive Merchant account, used not supported card or incorrect card data. Please try again or contact the seller.", code.humanize
-      
+
       code = IssuerResponseCodes::Code.new(id: "12")
       assert_equal :merchant, code.target
       assert_equal :en, code.locale
       assert code.fraud_notice
       assert code.fraudulent_code?
       assert_equal 'Invalid transaction. Please use a different card or contact the issuer for clarification. IMPORTANT NOTICE: It is forbidden to retry transactions that ended with this code. It may be recognized as a fraud attempt!', code.humanize
-      
+
       code = IssuerResponseCodes::Code.new(id: "54")
       assert_equal :merchant, code.target
       assert_equal :en, code.locale
@@ -30,7 +30,7 @@ module IssuerResponseCodes
       assert code.fraud_notice
       assert code.fraudulent_code?
       assert_equal 'Stolen card, pick up (fraud account). Please use a different card or contact the issuer for clarification. IMPORTANT NOTICE: It is forbidden to retry transactions that ended with this code. It may be recognized as a fraud attempt!', code.humanize
-      
+
       code = IssuerResponseCodes::Code.new(id: "43", target: :cardholder)
       assert_equal :cardholder, code.target
       assert_equal :en, code.locale
@@ -53,14 +53,14 @@ module IssuerResponseCodes
       assert_equal :en, code.locale
       assert code.fraud_notice
       assert_equal "Transaction rejected due to no response from issuer/bank, inactive Merchant account, used not supported card or incorrect card data. Please try again or contact the seller.", code.description
-      
+
       code = IssuerResponseCodes::Code.new(id: "12")
       assert_equal :merchant, code.target
       assert_equal :en, code.locale
       assert code.fraud_notice
       assert code.fraudulent_code?
       assert_equal 'Invalid transaction. Please use a different card or contact the issuer for clarification. IMPORTANT NOTICE: It is forbidden to retry transactions that ended with this code. It may be recognized as a fraud attempt!', code.description
-      
+
       code = IssuerResponseCodes::Code.new(id: "54")
       assert_equal :merchant, code.target
       assert_equal :en, code.locale
@@ -74,7 +74,7 @@ module IssuerResponseCodes
       assert code.fraud_notice
       assert code.fraudulent_code?
       assert_equal 'Stolen card, pick up (fraud account). Please use a different card or contact the issuer for clarification. IMPORTANT NOTICE: It is forbidden to retry transactions that ended with this code. It may be recognized as a fraud attempt!', code.description
-      
+
       code = IssuerResponseCodes::Code.new(id: "43", target: :cardholder)
       assert_equal :cardholder, code.target
       assert_equal :en, code.locale
@@ -190,9 +190,9 @@ module IssuerResponseCodes
     end
 
     def test_no_such_locale
-      assert_raises IssuerResponseCodes::IllegalLocale do
-        IssuerResponseCodes::Code.new(id: "43", locale: :dupa)
-      end
+      code = IssuerResponseCodes::Code.new(id: "43", locale: :dupa)
+      assert_equal :en, code.locale
+      assert_equal 'Stolen card, pick up (fraud account).', code.reason
     end
 
     def test_reason_return_unknown_notice
