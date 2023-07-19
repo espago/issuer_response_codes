@@ -1,0 +1,300 @@
+nl:
+  tds_status_codes:
+    fraudulent_codes:
+      '09': waar
+      '10': waar
+      '11': waar
+    behaviour:
+      unknown: 'Neem contact op met onze supportafdeling.'
+      '01': Probeer opnieuw.
+      '02': Gebruik een ander apparaat.
+      '03': Gebruik een ander apparaat.
+      '04': Gebruik een andere kaart of neem contact op met de bank.
+      '05': Gebruik een andere kaart.
+      '06': Gebruik een andere kaart of controleer of de ingevoerde gegevens juist zijn.
+      '07': Gebruik een andere kaart.
+      '08': Gebruik een andere kaart.
+      '09': Gebruik een andere kaart of neem contact op met de bank.
+      '10': Gebruik een andere kaart of neem contact op met de bank.
+      '11': Gebruik een andere kaart of neem contact op met de bank.
+      '12': Gebruik een andere kaart of neem contact op met de bank.
+      '13': Gebruik een andere kaart of neem contact op met de bank.
+      '14': Probeer het later nog eens of gebruik een andere kaart.
+      '15': Gebruik een andere kaart of neem contact op met de bank.
+      '16': Gebruik een andere kaart of neem contact op met de bank.
+      '17': Gebruik een andere kaart of neem contact op met de bank.
+      '18': Gebruik een andere kaart of neem contact op met de bank.
+      '19': Gebruik een andere kaart of neem contact op met de bank.
+      '20': Gebruik een andere kaart.
+      '21': Gebruik een andere kaart.
+      '22': Probeer het later nog eens of gebruik een andere kaart.
+      '23': Gebruik een andere kaart of neem contact op met de bank.
+      '24': Probeer het later nog eens of gebruik een andere kaart.
+      '25': Probeer het later nog eens of gebruik een andere kaart.
+      '26': Probeer het later nog eens of gebruik een andere kaart.
+      '80': Gebruik een andere kaart.
+      '81': Probeer het later nog eens of gebruik een andere kaart.
+      '82': Gebruik een andere kaart.
+      '83': Gebruik een andere kaart.
+      '84': Probeer het later nog eens of gebruik een andere kaart.
+      '85': Gebruik een andere kaart.
+      '86': Gebruik een andere kaart.
+      '87': Gebruik een andere kaart.
+      '88': Gebruik een andere kaart.
+    universal: &universal_tds_status_codes
+      unknown: "Onbekende reden."
+    targeted:
+      merchant:
+        <<: *universal_tds_status_codes
+        '01': Authenticatie van de kaart is mislukt.
+        '02': Onbekend apparaat.
+        '03': Apparaat wordt niet ondersteund.
+        '04': Overschrijdt de frequentielimiet voor authenticatie.
+        '05': Verlopen kaart.
+        '06': Ongeldig kaartnummer.
+        '07': Ongeldige transactie.
+        '08': Geen kaartgegevens.
+        '09': Beveiligingsfout.
+        '10': Gestolen kaart.
+        '11': Vermoedelijke fraude.
+        '12': Transactie niet toegestaan voor kaarthouder.
+        '13': Kaarthouder niet ingeschreven voor de dienst.
+        '14': Transactie is afgebroken bij de ACS.
+        '15': Laag vertrouwen.
+        '16': Gemiddeld vertrouwen.
+        '17': Hoog vertrouwen.
+        '18': Zeer hoog vertrouwen.
+        '19': Overtreft ACS maximale uitdagingen.
+        '20': Transactie zonder betaling niet ondersteund.
+        '21': 3RI-transactie niet ondersteund.
+        '22': Technisch probleem ACS.
+        '23': Ontkoppelde authenticatie vereist door ACS, maar niet aangevraagd door 3DS-verzoeker.
+        '24': 3DS- verzoeker ontkoppeld max. verlooptijd overschreden.
+        '25': Ontkoppelde authenticatie verleend, onvoldoende tijd om de kaarthouder te authenticeren. ACS zal geen poging doen.
+        '26': Poging gedaan tot authenticatie, maar niet uitgevoerd door de kaarthouder.
+        '80': Fout bij het verbinden met ACS.
+        '81': Time-out ACS.
+        '82': Ongeldig antwoord van ACS.
+        '83': Systeemfoutmelding van ACS.
+        '84': Interne fout bij het genereren van CAVV.
+        '85': VMID komt niet in aanmerking voor het aangevraagde programma.
+        '86': Protocolversie niet ondersteund door ACS.
+        '87': Transactie is uitgesloten van Verwerkingspogingen (incl. niet-oplaadbare prepaid kaarten en Non-Payments (NPA)).
+        '88': Aangevraagd programma wordt niet ondersteund door ACS.
+      cardholder:
+        <<: *universal_tds_status_codes
+        '01': Negatief resultaat van sterke authenticatie in het banksysteem.
+        '02': Het apparaat waarop de authenticatiepoging werd uitgevoerd, is niet herkend door het verificatiesysteem van de bank.
+        '03': Het apparaat waarop de authenticatiepoging werd uitgevoerd, wordt niet ondersteund door het verificatiesysteem van de bank.
+        '04': De limiet voor het aantal authenticatiepogingen bij de bank is overschreden.
+        '05': De kaart is verlopen.
+        '06': Onjuist kaartnummer.
+        '07': Onjuist transactietype.
+        '08': Geen kaart gevonden in het systeem van de bank.
+        '09': Negatief resultaat van sterke authenticatie in het banksysteem.
+        '10': Negatief resultaat van sterke authenticatie in het banksysteem.
+        '11': Negatief resultaat van sterke authenticatie in het banksysteem.
+        '12': Transactie niet toegestaan voor deze kaart.
+        '13': Geen kaart gevonden in het systeem van de bank.
+        '14': Sterke authenticatie mislukt.
+        '15': Negatief resultaat van sterke authenticatie in het banksysteem.
+        '16': Negatief resultaat van sterke authenticatie in het banksysteem.
+        '17': Negatief resultaat van sterke authenticatie in het banksysteem.
+        '18': Negatief resultaat van sterke authenticatie in het banksysteem.
+        '19': Negatief resultaat van sterke authenticatie in het banksysteem.
+        '20': Transacties van het type "non-payment" worden door deze kaart niet ondersteund.
+        '21': Sterke authenticatie mislukt.
+        '22': Er heeft zich een technisch probleem voorgedaan in het verificatiesysteem van de bank.
+        '23': Sterke authenticatie mislukt.
+        '24': Sterke authenticatie mislukt.
+        '25': Sterke authenticatie mislukt.
+        '26': Sterke authenticatie mislukt.
+        '80': Sterke authenticatie mislukt.
+        '81': Sterke authenticatie mislukt.
+        '82': Sterke authenticatie mislukt.
+        '83': Sterke authenticatie mislukt.
+        '84': Sterke authenticatie mislukt.
+        '85': Sterke authenticatie mislukt.
+        '86': Sterke authenticatie mislukt.
+        '87': Sterke authenticatie mislukt.
+        '88': Sterke authenticatie mislukt.
+
+  issuer_response_codes:
+    suggestion: 'Suggestie'
+    fraud_notice: 'LET OP: Herhaal geen betalingen met deze kaart! Dit kan worden beschouwd als een poging tot fraude!'
+    fraudulent_codes:
+      '04': waar
+      '07': waar
+      '12': waar
+      '14': waar
+      '15': waar
+      '41': waar
+      '43': waar
+      '54': waar
+      '57': waar
+      '59': waar
+      '63': waar
+      'R0': waar
+      'R1': waar
+      'R3': waar
+    behaviour:
+      unknown: Neem contact op met onze supportafdeling.
+      '00': "Probeer het later nog eens of neem contact op met de verkoper."
+      '1A': "Probeer het opnieuw of neem contact op met uw bank om uw instellingen voor online betalingen te controleren."
+      '01': "Gebruik een andere kaart of neem contact op met de bank."
+      '02': "Gebruik een andere kaart of neem contact op met de bank."
+      '03': "Gebruik een andere kaart of neem contact op met de bank."
+      '04': "Gebruik een andere kaart of neem contact op met de bank."
+      '05': "Gebruik een andere kaart of neem contact op met uw bank om uw instellingen voor online betalingen te controleren."
+      '06': "Gebruik een andere kaart of neem contact op met uw bank om uw instellingen voor online betalingen te controleren."
+      '07': "Gebruik een andere kaart of neem contact op met de bank."
+      '12': "Gebruik een andere kaart of neem contact op met de bank."
+      '13': "Gebruik een andere kaart of neem contact op met de bank om online betalingslimieten te controleren."
+      '14': "Gebruik een andere kaart."
+      '15': "Gebruik een andere kaart."
+      '19': "Gebruik een andere kaart of neem contact op met de bank."
+      '21': "Gebruik een andere kaart of neem contact op met de bank."
+      '30': "Gebruik een andere kaart of neem contact op met de bank."
+      '39': "Gebruik een andere kaart of neem contact op met de bank."
+      '41': "Gebruik een andere kaart of neem contact op met de bank."
+      '43': "Gebruik een andere kaart of neem contact op met de bank."
+      '51': "Gebruik een andere kaart, controleer de beschikbare geldmiddelen of neem contact op met de bank om de limieten voor online betalingen te controleren."
+      '52': "Gebruik een andere kaart of neem contact op met de bank."
+      '53': "Gebruik een andere kaart of neem contact op met de bank."
+      '54': "Gebruik een andere kaart."
+      '55': "Gebruik een andere kaart, controleer of de CVV/CVC-code juist is of neem contact op met de bank."
+      '57': "Gebruik een andere kaart of neem contact op met uw bank om uw instellingen voor online betalingen te controleren."
+      '58': "Gebruik een andere kaart of neem contact op met uw bank om uw instellingen voor online betalingen te controleren."
+      '59': "Gebruik een andere kaart of neem contact op met de bank."
+      '61': "Gebruik een andere kaart of neem contact op met de bank om online betalingslimieten te controleren."
+      '62': "Gebruik een andere kaart of neem contact op met de bank."
+      '63': "Gebruik een andere kaart of neem contact op met de bank."
+      '65': "Gebruik een andere kaart of neem contact op met de bank."
+      '70': "Probeer het opnieuw of neem contact op met uw bank om uw instellingen voor online betalingen te controleren."
+      '76': "Gebruik een andere kaart of neem contact op met de bank."
+      '77': "Gebruik een andere kaart of neem contact op met de bank."
+      '78': "Gebruik een andere kaart of neem contact op met de bank om de kaart te activeren."
+      '82': "Gebruik een andere kaart of neem contact op met de bank."
+      'N7': "Gebruik een andere kaart, controleer of de CVV/CVC-code juist is of neem contact op met de bank."
+      'R0': "Gebruik een andere kaart of neem contact op met de bank."
+      'R1': "Gebruik een andere kaart of neem contact op met de bank."
+      'R3': "Gebruik een andere kaart of neem contact op met de bank."
+      'E3': "Probeer het later nog eens of neem contact op met de bank."
+      'E4': "Probeer het later nog eens of neem contact op met de bank."
+      'E5': "Probeer het later nog eens of neem contact op met de bank."
+      '75': "Gebruik een andere kaart, controleer of de CVV/CVC-code juist is of neem contact op met de bank."
+      '85': "De bank heeft de autorisatie  bevestigd."
+      '86': "Gebruik een andere kaart of neem contact op met de bank."
+      '91': "Gebruik een andere kaart of probeer het later nog eens."
+      '92': "Gebruik een andere kaart of neem contact op met de bank."
+      '93': "Gebruik een andere kaart of neem contact op met de bank."
+      '94': "Gebruik een andere kaart of neem contact op met de bank."
+      '96': "Gebruik een andere kaart of neem contact op met de bank."
+      '98': "Gebruik een andere kaart of neem contact op met de bank."
+      'N3': "Gebruik een andere kaart of neem contact op met de bank."
+      'P5': "Gebruik een andere kaart of neem contact op met de bank."
+      'R2': "Gebruik een andere kaart of neem contact op met de bank."
+    universal: &issuer_response_code
+      unknown: Onbekende oorzaak
+      '75': "Limiet van foutieve CVV/CVC/PIN invoerpogingen overschreden."
+      '85': "Autorisatie was succesvol"
+      '86': "Betaling afgewezen door de bank - PIN-code kan niet worden geverifieerd"
+      '91': "Betaling geweigerd - bankautorisatiesysteem tijdelijk niet beschikbaar."
+      '92': "Betaling kan niet worden verwerkt - niet-geïdentificeerde kaartverstrekker."
+      '93': "Betaling geweigerd door de bank."
+      '94': "Tijdelijke fout bij de bank."
+      '96': "Tijdelijke fout bij de bank."
+      '98': "Tijdelijke fout bij de bank."
+      'N3': "Betaling geweigerd door de bank."
+      'P5': "Betaling geweigerd door de bank."
+      'R2': "Betaling geweigerd door de bank."
+      'E3': "Onjuiste 3D-Secure verificatie: bankfout."
+      'E4': "Onjuiste 3D-Secure verificatie: Transactie afgewezen door de bank vanwege mislukte autorisatie."
+      'E5': "Tijdelijke fout bij 3D-Secure verificatie."
+    targeted:
+      merchant:
+        <<: *issuer_response_code
+        '00': "Afwijzing van transacties op operatorniveau. De betaling is geweigerd vanwege: 1) geen reactie van de bank; 2) blokkering van de rekening van de verkoper; 3) gebruik van een niet-ondersteunde kaartsoort of onjuiste kaartgegevens. 
+
+Controleer of de betaalrekening bij de aqcuirer actief is en correct is geconfigureerd in Espago."
+        '1A': "Sterke authenticatie (SCA) vereist."
+        '01': "Eigen code van de kaartverstrekker."
+        '02': "Eigen code van de kaartverstrekker."
+        '03': "Onjuiste/onvolledige verkopersgegevens of inactief account."
+        '04': "Gelimiteerde kaart (om andere redenen dan diefstal/verlies)."
+        '05': "De betaling is zonder specifieke reden door de bank geweigerd. De klant dient contact op te nemen met de bank voor opheldering. Waarschijnlijk zijn de betaalvormen MOTO/eCommerce/abonnementsbetalingen niet actief of worden deze niet ondersteund. "
+        '06': "De bank heeft een fout gemeld tijdens het verwerken van de betaling."
+        '07': "Gelimiteerde kaart (vermoeden van fraude)."
+        '12': "Ongeldige transactie of niet beschikbaar voor deze kaart."
+        '13': "Onjuist transactiebedrag (boven limiet) of onjuiste valutaomrekening."
+        '14': "Onjuist kaart- of rekeningnummer."
+        '15': "De kaartverstrekker kan niet worden geïdentificeerd."
+        '19': "De bank heeft de betaling geweigerd met een bericht waarin wordt gesuggereerd het opnieuw te proberen."
+        '21': "De bank heeft het betalingsverzoek niet in behandeling genomen."
+        '30': "Onjuist gegevensformaat van het autorisatiebericht."
+        '39': "De kaart is niet gekoppeld aan een kredietrekening."
+        '41': "Kaart gemarkeerd als verloren."
+        '43': "Kaart gemarkeerd als gestolen"
+        '51': "Onvoldoende saldo op de rekening of overschrijding van de limiet voor dit type betaling."
+        '52': "De kaart is niet gekoppeld aan een rekening die gedebiteerd kan worden."
+        '53': "De kaart is niet gekoppeld aan een rekening die gedebiteerd kan worden."
+        '54': "De kaart is verlopen of heeft geen vervaldatum."
+        '55': "Onjuiste CVV-code."
+        '57': "Transactietype is niet toegestaan voor de kaart."
+        '58': "Transactietype is niet toegestaan op deze terminal."
+        '59': "Vermoedelijke fraude."
+        '61': "Overschrijding van de limiet voor een dit type betaling."
+        '62': "Kaartgebruik is beperkt, uitgesloten vanwege het land van de verstrekker."
+        '63': "De bank heeft de betaling geweigerd vanwege een geconstateerd beveiligingslek."
+        '65': "De dagelijkse transactielimiet voor deze kaart is overschreden."
+        '70': "Sterke authenticatie vereist."
+        '76': "De gegevens van de weergegeven betaling komen niet overeen met de gegevens die bij de bank bekend zijn."
+        '77': "Dubbele terugbetaling of dubbele betaling."
+        '78': "Nieuwe kaart, nog niet geactiveerd."
+        '82': "Onjuiste CVV-code."
+        'N7': "Onjuiste CVV-code."
+        'R0': "Er is verzocht om verdere betalingen te blokkeren."
+        'R1': "Er is verzocht om verdere betalingen te blokkeren."
+        'R3': "Er is verzocht om alle betalingen te blokkeren."
+      cardholder:
+        <<: *issuer_response_code
+        '00': "De betaling is mislukt."
+        '1A': "Sterke authenticatie (SCA) vereist."
+        '01': "Betaling geweigerd door de bank."
+        '02': "Betaling geweigerd door de bank."
+        '03': "Betalen met deze kaart is niet mogelijk bij deze verkoper."
+        '04': "Betaling geweigerd door de bank."
+        '05': "Betaling geweigerd door de bank."
+        '06': "Betaling geweigerd door de bank."
+        '07': "Betaling geweigerd door de bank."
+        '12': "Betaling geweigerd - de transactie is ongeldig."
+        '13': "Betaling geweigerd - het bedrag is onjuist of er heeft een onjuiste valutaomrekening plaatsgevonden."
+        '14': "Betaling geweigerd - kaartgegevens zijn onjuist."
+        '15': "Betaling geweigerd - kaartverstrekker onbekend."
+        '19': "Betaling geweigerd door de bank."
+        '21': "Betaling geweigerd door de bank."
+        '30': "Betaling geweigerd - verkeerd formaat autorisatiebericht."
+        '39': "Betaling geweigerd door de bank."
+        '41': "Betaling geweigerd door de bank."
+        '43': "Betaling geweigerd door de bank."
+        '51': "Betaling geweigerd - geen geldmiddelen aanwezig of limiet overschreden."
+        '52': "Betaling geweigerd door de bank."
+        '53': "Betaling geweigerd door de bank."
+        '54': "Betaling geweigerd - de kaart is verlopen."
+        '55': "Betaling geweigerd - PIN-code onjuist of ontbreekt."
+        '57': "Betaling geweigerd - transactietype is niet toegestaan."
+        '58': "Betaling geweigerd - transactietype is niet toegestaan."
+        '59': "Betaling geweigerd door de bank."
+        '61': "Betaling geweigerd - bedrag betalingslimiet overschreden."
+        '62': "Betaling geweigerd  door de bank - de kaart kan niet worden gebruikt in deze regio of dit land."
+        '63': "Betaling om veiligheidsredenen geweigerd door de bank."
+        '65': "Betaling geweigerd - de gebruikslimiet is overschreden."
+        '70': "Sterke authenticatie (SCA) vereist."
+        '76': "De betaling kan niet worden teruggedraaid."
+        '77': "De transactie kan niet worden voltooid."
+        '78': "Betaling geweigerd - kaart is niet geactiveerd."
+        '82': "Betaling geweigerd door de bank - negatieve verificatie van CAM, dCVV, iCVV of CVV."
+        'N7': "Betaling geweigerd door de bank - negatieve CVV-verificatie."
+        'R0': "Betaling geweigerd door de bank - er is verzocht om de autorisatie te blokkeren."
+        'R1': "Betaling geweigerd door de bank - er is verzocht om de autorisatie te blokkeren."
+        'R3': "Betaling geweigerd door de bank - er is verzocht om de autorisatie te blokkeren."

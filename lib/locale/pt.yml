@@ -1,0 +1,300 @@
+pt:
+  tds_status_codes:
+    fraudulent_codes:
+      '09': true
+      '10': true
+      '11': true
+    behaviour:
+      unknown: 'Contacte o nosso departamento de assistência.'
+      '01': Por favor tente novamente.
+      '02': Utilize um dispositivo diferente.
+      '03': Utilize um dispositivo diferente.
+      '04': Utilize outro cartão ou contacte o seu banco.
+      '05': Por favor, utilize um cartão diferente.
+      '06': Utilize um cartão diferente ou verifique se os dados introduzidos estão corretos.
+      '07': Por favor, utilize um cartão diferente.
+      '08': Por favor, utilize um cartão diferente.
+      '09': Utilize outro cartão ou contacte o seu banco.
+      '10': Utilize outro cartão ou contacte o seu banco.
+      '11': Utilize outro cartão ou contacte o seu banco.
+      '12': Utilize outro cartão ou contacte o seu banco.
+      '13': Utilize outro cartão ou contacte o seu banco.
+      '14': Tente novamente mais tarde ou utilize um cartão diferente.
+      '15': Utilize outro cartão ou contacte o seu banco.
+      '16': Utilize outro cartão ou contacte o seu banco.
+      '17': Utilize outro cartão ou contacte o seu banco.
+      '18': Utilize outro cartão ou contacte o seu banco.
+      '19': Utilize outro cartão ou contacte o seu banco.
+      '20': Por favor, utilize um cartão diferente.
+      '21': Por favor, utilize um cartão diferente.
+      '22': Tente novamente mais tarde ou utilize um cartão diferente.
+      '23': Utilize outro cartão ou contacte o seu banco.
+      '24': Tente novamente mais tarde ou utilize um cartão diferente.
+      '25': Tente novamente mais tarde ou utilize um cartão diferente.
+      '26': Tente novamente mais tarde ou utilize um cartão diferente.
+      '80': Por favor, utilize um cartão diferente.
+      '81': Tente novamente mais tarde ou utilize um cartão diferente.
+      '82': Por favor, utilize um cartão diferente.
+      '83': Por favor, utilize um cartão diferente.
+      '84': Tente novamente mais tarde ou utilize um cartão diferente.
+      '85': Por favor, utilize um cartão diferente.
+      '86': Por favor, utilize um cartão diferente.
+      '87': Por favor, utilize outro cartão...
+      '88': Por favor, utilize um cartão diferente.
+    universal: &universal_tds_status_codes
+      unknown: "Motivo desconhecido."
+    targeted:
+      merchant:
+        <<: *universal_tds_status_codes
+        '01': A autenticação do cartão falhou.
+        '02': Dispositivo desconhecido.
+        '03': Dispositivo não suportado.
+        '04': Excede o limite de frequência de autenticação
+        '05': Cartão expirado.
+        '06': Número de cartão inválido.
+        '07': Transação inválida.
+        '08': Não há registo deste cartão
+        '09': Falha de segurança.
+        '10': Cartão roubado.
+        '11': Suspeita de fraude.
+        '12': Transação não permitida ao titular do cartão
+        '13': Titular do cartão não inscrito no serviço
+        '14': A transação expirou no controle de acesso ACS
+        '15': Pouca confiança.
+        '16': Confiança média.
+        '17': Confiança elevada.
+        '18': Confiança muito elevada.
+        '19': Excede os desafios máximos do controle de acesso ACS
+        '20': Transação sem pagamento não suportada
+        '21': Transação 3RI não suportada
+        '22': Problema técnico no controle de acesso ACS
+        '23': Autenticação dissociada exigida pelo ACS mas não solicitada pelo Requerente 3DS
+        '24': Tempo máximo de expiração dissociada do solicitante do 3DS foi excedido
+        '25': A autenticação dissociada não teve tempo suficiente para autenticar o titular do cartão. O ACS não fará mais nenhuma tentativa
+        '26': Autenticação solicitada, mas não efetuada pelo titular do cartão
+        '80': Erro na conexão com o ACS.
+        '81': O ACS expirou.
+        '82': Resposta inválida do ACS.
+        '83': Erro de sistema como resposta do ACS.
+        '84': Erro interno na geração de CAVV.
+        '85': A VMID não é elegível para o programa solicitado.
+        '86': Versão do protocolo não suportada pelo ACS.
+        '87': A transação está excluída do processamento de tentativas (inclui cartões pré-pagos não recarregáveis e não-pagamentos (NPA)).
+        '88': Programa solicitado não apoiado pela ACS.
+      cardholder:
+        <<: *universal_tds_status_codes
+        '01': Resultado negativo da autenticação forte no sistema do banco.
+        '02': O dispositivo em que foi efetuada a tentativa de autenticação não foi reconhecido pelo sistema de verificação do banco.
+        '03': O dispositivo no qual foi efetuada a tentativa de autenticação não é suportado pelo sistema de verificação do banco.
+        '04': Houve um excesso de tentativas de autenticação no banco.
+        '05': O cartão expirou.
+        '06': Número de cartão incorreto.
+        '07': Tipo de transação incorreto.
+        '08': Nenhum cartão no sistema do banco.
+        '09': Resultado negativo da autenticação forte no sistema do banco.
+        '10': Resultado negativo da autenticação forte no sistema do banco.
+        '11': Resultado negativo da autenticação forte no sistema do banco.
+        '12': Transação não permitida para este cartão.
+        '13': Nenhum cartão no sistema do banco.
+        '14': Falha na autenticação forte.
+        '15': Resultado negativo da autenticação forte no sistema do banco.
+        '16': Resultado negativo da autenticação forte no sistema do banco.
+        '17': Resultado negativo da autenticação forte no sistema do banco.
+        '18': Resultado negativo da autenticação forte no sistema do banco.
+        '19': Resultado negativo da autenticação forte no sistema do banco.
+        '20': A transação de do tipo non-payment (sem pagamento) não é suportada por este cartão.
+        '21': Falha na autenticação forte.
+        '22': Houve um problema técnico no sistema de verificação do banco.
+        '23': Falha na autenticação forte.
+        '24': Falha na autenticação forte.
+        '25': Falha na autenticação forte.
+        '26': Falha na autenticação forte.
+        '80': Falha na autenticação forte.
+        '81': Falha na autenticação forte.
+        '82': Falha na autenticação forte.
+        '83': Falha na autenticação forte.
+        '84': Falha na autenticação forte.
+        '85': Falha na autenticação forte.
+        '86': Falha na autenticação forte.
+        '87': Falha na autenticação forte.
+        '88': Falha na autenticação forte.
+
+  issuer_response_codes:
+    suggestion: 'Sugestão'
+    fraud_notice: 'NOTA: Não repetir cobranças para este cartão! Isto pode ser considerado uma tentativa de fraude!'
+    fraudulent_codes:
+      '04': true
+      '07': true
+      '12': true
+      '14': true
+      '15': true
+      '41': true
+      '43': true
+      '54': true
+      '57': true
+      '59': true
+      '63': true
+      'R0': true
+      'R1': true
+      'R3': true
+    behaviour:
+      unknown: Contacte o nosso departamento de assistência.
+      '00': "Tente novamente mais tarde ou contate o seu revendedor."
+      '1A': "Tente novamente ou contacte o seu banco para verificar as suas definições de pagamento online."
+      '01': "Utilize outro cartão ou contacte o seu banco."
+      '02': "Utilize outro cartão ou contacte o seu banco."
+      '03': "Utilize outro cartão ou contacte o seu banco."
+      '04': "Utilize outro cartão ou contacte o seu banco."
+      '05': "Utilize um cartão diferente ou contate o seu banco para verificar as suas configurações de pagamento online."
+      '06': "Utilize um cartão diferente ou contate o seu banco para verificar as suas configurações de pagamento online."
+      '07': "Utilize outro cartão ou contacte o seu banco."
+      '12': "Utilize outro cartão ou contacte o seu banco."
+      '13': "Utilize um cartão diferente ou contate o seu banco para verificar o seu limite para pagamento online."
+      '14': "Por favor, utilize um cartão diferente."
+      '15': "Por favor, utilize um cartão diferente."
+      '19': "Utilize outro cartão ou contacte o seu banco."
+      '21': "Utilize outro cartão ou contacte o seu banco."
+      '30': "Utilize outro cartão ou contacte o seu banco."
+      '39': "Utilize outro cartão ou contacte o seu banco."
+      '41': "Utilize outro cartão ou contacte o seu banco."
+      '43': "Utilize outro cartão ou contacte o seu banco."
+      '51': "Utilize um cartão diferente, verifique a disponibilidade de fundos ou contacte o seu banco para verificar os limites de pagamento online."
+      '52': "Utilize outro cartão ou contacte o seu banco."
+      '53': "Utilize outro cartão ou contacte o seu banco."
+      '54': "Por favor, utilize um cartão diferente."
+      '55': "Utilize outro cartão, verifique se o código CVV/CVC está correto ou contate o seu banco."
+      '57': "Utilize um cartão diferente ou contate o seu banco para verificar as suas configurações de pagamento online."
+      '58': "Utilize um cartão diferente ou contate o seu banco para verificar as suas configurações de pagamento online."
+      '59': "Utilize outro cartão ou contacte o seu banco."
+      '61': "Utilize um cartão diferente ou contate o seu banco para verificar o seu limite para pagamento online."
+      '62': "Utilize outro cartão ou contacte o seu banco."
+      '63': "Utilize outro cartão ou contacte o seu banco."
+      '65': "Utilize outro cartão ou contacte o seu banco."
+      '70': "Tente novamente ou contacte o seu banco para verificar as suas definições de pagamento online."
+      '76': "Utilize outro cartão ou contacte o seu banco."
+      '77': "Utilize outro cartão ou contacte o seu banco."
+      '78': "Utilize outro cartão ou contate o seu banco para ativar o seu cartão."
+      '82': "Utilize outro cartão ou contacte o seu banco."
+      'N7': "Utilize outro cartão, verifique se o código CVV/CVC está correto ou contate o seu banco."
+      'R0': "Utilize outro cartão ou contacte o seu banco."
+      'R1': "Utilize outro cartão ou contacte o seu banco."
+      'R3': "Utilize outro cartão ou contacte o seu banco."
+      'E3': "Tente novamente mais tarde ou contate o seu banco."
+      'E4': "Tente novamente mais tarde ou contate o seu banco."
+      'E5': "Tente novamente mais tarde ou contate o seu banco."
+      '75': "Utilize outro cartão, verifique se o código CVV/CVC está correto ou contate o seu banco."
+      '85': "O banco confirmou a autorização."
+      '86': "Utilize outro cartão ou contacte o seu banco."
+      '91': "Utilize outro cartão ou tente novamente mais tarde."
+      '92': "Utilize outro cartão ou contacte o seu banco."
+      '93': "Utilize outro cartão ou contacte o seu banco."
+      '94': "Utilize outro cartão ou contacte o seu banco."
+      '96': "Utilize outro cartão ou contacte o seu banco."
+      '98': "Utilize outro cartão ou contacte o seu banco."
+      'N3': "Utilize outro cartão ou contacte o seu banco."
+      'P5': "Utilize outro cartão ou contacte o seu banco."
+      'R2': "Utilize outro cartão ou contacte o seu banco."
+    universal: &issuer_response_code
+      unknown: Causa desconhecida
+      '75': "Limite de tentativas incorretas de inserir o código CVV/CVC/PIN excedido."
+      '85': "A autorização foi bem sucedida"
+      '86': "Pagamento rejeitado pelo banco - o PIN não pode ser verificado"
+      '91': "Pagamento rejeitado - o sistema de autorização bancária está temporariamente indisponível."
+      '92': "O pagamento não pode ser processado - emissor do cartão não identificado."
+      '93': "Pagamento rejeitado pelo banco."
+      '94': "Erro temporário por parte do banco."
+      '96': "Erro temporário por parte do banco."
+      '98': "Erro temporário por parte do banco."
+      'N3': "Pagamento rejeitado pelo banco."
+      'P5': "Pagamento rejeitado pelo banco."
+      'R2': "Pagamento rejeitado pelo banco."
+      'E3': "Verificação incorrecta do 3D-Secure: erro do banco."
+      'E4': "Verificação incorrecta do 3D-Secure: Transação rejeitada pelo banco devido a falha na autorização."
+      'E5': "Erro temporário com a verificação 3D-Secure."
+    targeted:
+      merchant:
+        <<: *issuer_response_code
+        '00': "Transação rejeitada a nível do operador. O pagamento foi rejeitado devido a: 1) ausência de resposta do banco; 2) bloqueio da conta do vendedor; 3) utilização de um tipo de cartão não suportado ou de dados incorrectos. 
+
+Verifique se a conta do vendedor junto ao agente de cobrança está ativa e configurada corretamente no Espago."
+        '1A': "É necessária uma autenticação forte (SCA)."
+        '01': "Código próprio do emissor do cartão."
+        '02': "Código próprio do emissor do cartão."
+        '03': "Dados do comerciante inválidos/incompletos ou conta inativa."
+        '04': "Restrição do cartão (por motivos que não sejam roubo/perda)."
+        '05': "O pagamento foi rejeitado pelo banco sem qualquer motivo específico. O cliente precisa entrar em contato com o banco para esclarecimentos. Provavelmente MOTO/eCommerce/pagamentos por assinatura não estão ativos ou não são suportados. "
+        '06': "O banco relatou um erro ao processar o pagamento."
+        '07': "Cartão restrito (suspeita de fraude)."
+        '12': "Transação inválida ou não disponível para este cartão."
+        '13': "Montante de transação incorreto (acima do limite) ou conversão incorreta de moeda."
+        '14': "Número de cartão ou de conta incorreto."
+        '15': "A entidade emissora do cartão não foi identificada."
+        '19': "O pagamento foi rejeitado pelo banco com uma mensagem sugerindo uma nova tentativa."
+        '21': "O banco não aceitou o pedido de cobrança."
+        '30': "Formato de dados de mensagem de autorização inválido."
+        '39': "O cartão não está ligado a uma conta de crédito."
+        '41': "Cartão marcado como perdido."
+        '43': "Cartão marcado como roubado"
+        '51': "Fundos insuficientes na conta ou o valor excede o limite para um determinado tipo de pagamento."
+        '52': "O cartão não está ligado a uma conta que possa ser debitada."
+        '53': "O cartão não está ligado a uma conta que possa ser debitada."
+        '54': "Cartão expirado ou sem data de validade."
+        '55': "Código CVV incorreto."
+        '57': "Tipo de transação não permitido para o cartão."
+        '58': "Tipo de transação não permitido neste terminal."
+        '59': "Suspeita de fraude."
+        '61': "Exceder o limite para um determinado tipo de pagamento."
+        '62': "Restrição do cartão, exclusão por país emissor."
+        '63': "O banco rejeitou o pagamento devido a uma violação de segurança identificada."
+        '65': "O limite diário do número de transacções deste cartão foi ultrapassado."
+        '70': "É necessária uma autenticação forte."
+        '76': "Os dados do pagamento indicado não coincidem com os dados do banco."
+        '77': "Duplo reembolso ou duplo pagamento."
+        '78': "Cartão novo e não ativado."
+        '82': "Código CVV incorreto."
+        'N7': "Código CVV incorreto."
+        'R0': "Foi exigida a retenção de novos pagamentos."
+        'R1': "Foi exigida a retenção de novos pagamentos."
+        'R3': "Foi exigida a suspensão de todos os pagamentos."
+      cardholder:
+        <<: *issuer_response_code
+        '00': "O pagamento não foi efetuado."
+        '1A': "É necessária uma autenticação forte (SCA)."
+        '01': "Pagamento rejeitado pelo banco."
+        '02': "Pagamento rejeitado pelo banco."
+        '03': "O pagamento com este cartão não pode ser efectuado neste comerciante."
+        '04': "Pagamento rejeitado pelo banco."
+        '05': "Pagamento rejeitado pelo banco."
+        '06': "Pagamento rejeitado pelo banco."
+        '07': "Pagamento rejeitado pelo banco."
+        '12': "Pagamento rejeitado - a transação é inválida."
+        '13': "Pagamento rejeitado - o montante está incorreto ou houve uma conversão incorreta de moeda."
+        '14': "Pagamento rejeitado - os dados do cartão estão incorretos."
+        '15': "Pagamento rejeitado - emissor de cartão desconhecido."
+        '19': "Pagamento rejeitado pelo banco."
+        '21': "Pagamento rejeitado pelo banco."
+        '30': "Pagamento rejeitado - formato incorreto da mensagem de autorização."
+        '39': "Pagamento rejeitado pelo banco."
+        '41': "Pagamento rejeitado pelo banco."
+        '43': "Pagamento rejeitado pelo banco."
+        '51': "Pagamento rejeitado - falta de fundos ou excede o limite."
+        '52': "Pagamento rejeitado pelo banco."
+        '53': "Pagamento rejeitado pelo banco."
+        '54': "Pagamento rejeitado - o cartão já não é válido."
+        '55': "Pagamento rejeitado - PIN inválido ou ausente."
+        '57': "Pagamento rejeitado - tipo de transação não permitido."
+        '58': "Pagamento rejeitado - tipo de transação não permitido."
+        '59': "Pagamento rejeitado pelo banco."
+        '61': "Pagamento rejeitado - valor limite para pagamentos excedido."
+        '62': "Pagamento rejeitado pelo banco - o cartão não pode ser utilizado nessa região ou país."
+        '63': "Pagamento rejeitado pelo banco por razões de segurança."
+        '65': "Pagamento rejeitado - o limite do número de utilizações foi ultrapassado."
+        '70': "É necessária uma autenticação forte (SCA)."
+        '76': "O pagamento não pode ser revertido."
+        '77': "A transação não pode ser concluída."
+        '78': "Pagamento rejeitado - cartão não ativado."
+        '82': "Pagamento rejeitado pelo banco - verificação negativa de CAM, dCVV, iCVV ou CVV."
+        'N7': "Pagamento rejeitado pelo banco - verificação negativa do CVV."
+        'R0': "Pagamento rejeitado pelo banco - houve um pedido de suspensão da autorização."
+        'R1': "Pagamento rejeitado pelo banco - houve um pedido de suspensão da autorização."
+        'R3': "Pagamento rejeitado pelo banco - houve um pedido de suspensão da autorização."

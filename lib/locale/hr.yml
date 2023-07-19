@@ -1,0 +1,300 @@
+hr:
+  tds_status_codes:
+    fraudulent_codes:
+      '09': true
+      '10': true
+      '11': true
+    behaviour:
+      unknown: 'Obratite se našem timu za podršku.'
+      '01': Pokušajte ponovno.
+      '02': Upotrijebite drugi uređaj.
+      '03': Upotrijebite drugi uređaj.
+      '04': Upotrijebite drugu karticu ili se obratite svojoj banci.
+      '05': Upotrijebite drugu karticu.
+      '06': Upotrijebite drugu karticu ili provjerite točnost unesenih podataka.
+      '07': Upotrijebite drugu karticu.
+      '08': Upotrijebite drugu karticu.
+      '09': Upotrijebite drugu karticu ili se obratite svojoj banci.
+      '10': Upotrijebite drugu karticu ili se obratite svojoj banci.
+      '11': Upotrijebite drugu karticu ili se obratite svojoj banci.
+      '12': Upotrijebite drugu karticu ili se obratite svojoj banci.
+      '13': Upotrijebite drugu karticu ili se obratite svojoj banci.
+      '14': Pokušajte ponovno kasnije ili upotrijebite drugu karticu.
+      '15': Upotrijebite drugu karticu ili se obratite svojoj banci.
+      '16': Upotrijebite drugu karticu ili se obratite svojoj banci.
+      '17': Upotrijebite drugu karticu ili se obratite svojoj banci.
+      '18': Upotrijebite drugu karticu ili se obratite svojoj banci.
+      '19': Upotrijebite drugu karticu ili se obratite svojoj banci.
+      '20': Upotrijebite drugu karticu.
+      '21': Upotrijebite drugu karticu.
+      '22': Pokušajte ponovno kasnije ili upotrijebite drugu karticu.
+      '23': Upotrijebite drugu karticu ili se obratite svojoj banci.
+      '24': Pokušajte ponovno kasnije ili upotrijebite drugu karticu.
+      '25': Pokušajte ponovno kasnije ili upotrijebite drugu karticu.
+      '26': Pokušajte ponovno kasnije ili upotrijebite drugu karticu.
+      '80': Upotrijebite drugu karticu.
+      '81': Pokušajte ponovno kasnije ili upotrijebite drugu karticu.
+      '82': Upotrijebite drugu karticu.
+      '83': Upotrijebite drugu karticu.
+      '84': Pokušajte ponovno kasnije ili upotrijebite drugu karticu.
+      '85': Upotrijebite drugu karticu.
+      '86': Upotrijebite drugu karticu.
+      '87': Upotrijebite drugu karticu.
+      '88': Upotrijebite drugu karticu.
+    universal: &universal_tds_status_codes
+      unknown: "Nepoznat razlog."
+    targeted:
+      merchant:
+        <<: *universal_tds_status_codes
+        '01': Provjera autentičnosti kartice nije uspjela.
+        '02': Nepoznat uređaj.
+        '03': Nepodržavani uređaj.
+        '04': Prekoračuje ograničenje frekvencije autentikacije.
+        '05': Kartica je istekla.
+        '06': Neispravan broj kartice.
+        '07': Nevažeća transakcija.
+        '08': Nema zapisa o kartici.
+        '09': Sigurnosni kvar.
+        '10': Ukradena kartica.
+        '11': Sumnja na prijevaru.
+        '12': Transakcija nije dopuštena vlasniku kartice.
+        '13': Vlasnik kartice nije upisan u uslugu.
+        '14': Isteklo je vrijeme transakcije na ACS-u.
+        '15': Niska pouzdanost.
+        '16': Srednja pouzdanost.
+        '17': Visoka pouzdanost.
+        '18': Vrlo visoka pouzdanost.
+        '19': Premašuje maksimalne izazove ACS-a.
+        '20': Transakcija bez plaćanja nije podržana.
+        '21': 3RI transakcija nije podržana.
+        '22': Tehnički problem ACS-a.
+        '23': Odvojena provjera autentičnosti koju zahtijeva ACS, ali ne traži 3DS podnositelj zahtjeva.
+        '24': Prekoračeno je odvojeno maksimalno vrijeme isteka 3DS podnositelja zahtjeva.
+        '25': Odvojena provjera autentičnosti nije imala dovoljno vremena za provjeru autentičnosti vlasnika kartice. ACS neće izvršiti pokušaja.
+        '26': Vlasnik kartice pokušao je izvršiti provjeru autentičnosti, ali je nije izvršio.
+        '80': Pogreška pri povezivanju s ACS-om.
+        '81': Isteklo je vrijeme ACS-a.
+        '82': Nevažeći odgovor ACS-a.
+        '83': Odgovor na pogrešku sustava od ACS-a.
+        '84': Unutarnja pogreška tijekom generiranja CAVV-a.
+        '85': VMID ne ispunjava uvjete za zatraženi program.
+        '86': Verzija protokola nije podržana od strane ACS-a.
+        '87': Transakcija je isključena iz obrađivanja pokušaja (uključuje pretplatne kartice koje se ne mogu ponovno dopuniti i Neplaćanja (NPA)).
+        '88': ACS ne podržava zatraženi program.
+      cardholder:
+        <<: *universal_tds_status_codes
+        '01': Negativan rezultat snažne autentikacije u bankovnom sustavu.
+        '02': Sustav verifikacije banke nije prepoznao uređaj na kojem je izvršen pokušaj autentikacije.
+        '03': Sustav verifikacije banke ne podržava uređaj na kojem je izvršen pokušaj autentikacije.
+        '04': Prekoračeno je ograničenje pokušaja autentikacije u banci.
+        '05': Kartica je istekla.
+        '06': Neispravan broj kartice.
+        '07': Nevažeća vrsta transakcije.
+        '08': Nema kartice u bankovnom sustavu.
+        '09': Negativan rezultat snažne autentikacije u bankovnom sustavu.
+        '10': Negativan rezultat snažne autentikacije u bankovnom sustavu.
+        '11': Negativan rezultat snažne autentikacije u bankovnom sustavu.
+        '12': Transakcija nije dopuštena za ovu karticu.
+        '13': Nema kartice u bankovnom sustavu.
+        '14': Snažna autentikacija nije uspjela.
+        '15': Negativan rezultat snažne autentikacije u bankovnom sustavu.
+        '16': Negativan rezultat snažne autentikacije u bankovnom sustavu.
+        '17': Negativan rezultat snažne autentikacije u bankovnom sustavu.
+        '18': Negativan rezultat snažne autentikacije u bankovnom sustavu.
+        '19': Negativan rezultat snažne autentikacije u bankovnom sustavu.
+        '20': Ova kartica ne podržava transakciju tipa non-payment.
+        '21': Snažna autentikacija nije uspjela.
+        '22': Došlo je do tehničkog problema sa sustavom autentikacije banke.
+        '23': Snažna autentikacija nije uspjela.
+        '24': Snažna autentikacija nije uspjela.
+        '25': Snažna autentikacija nije uspjela.
+        '26': Snažna autentikacija nije uspjela.
+        '80': Snažna autentikacija nije uspjela.
+        '81': Snažna autentikacija nije uspjela.
+        '82': Snažna autentikacija nije uspjela.
+        '83': Snažna autentikacija nije uspjela.
+        '84': Snažna autentikacija nije uspjela.
+        '85': Snažna autentikacija nije uspjela.
+        '86': Snažna autentikacija nije uspjela.
+        '87': Snažna autentikacija nije uspjela.
+        '88': Snažna autentikacija nije uspjela.
+
+  issuer_response_codes:
+    suggestion: 'Prijedlog'
+    fraud_notice: 'NAPOMENA: ne ponavljajte terećenja za ovu karticu! Ovo se može smatrati pokušajem prijevare!'
+    fraudulent_codes:
+      '04': true
+      '07': true
+      '12': true
+      '14': true
+      '15': true
+      '41': true
+      '43': true
+      '54': true
+      '57': true
+      '59': true
+      '63': true
+      'R0': true
+      'R1': true
+      'R3': true
+    behaviour:
+      unknown: Obratite se našem timu za podršku.
+      '00': "Pokušajte ponovno kasnije ili se obratite prodavaču."
+      '1A': "Pokušajte ponovno ili se obratite svojoj banci za provjeru postavki plaćanja na mreži."
+      '01': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '02': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '03': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '04': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '05': "Upotrijebite drugu karticu ili se obratite svojoj banci za provjeru postavki plaćanja na mreži."
+      '06': "Upotrijebite drugu karticu ili se obratite svojoj banci za provjeru postavki plaćanja na mreži."
+      '07': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '12': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '13': "Upotrijebite drugu karticu ili se obratite svojoj banci za provjeru ograničenja za plaćanje putem interneta."
+      '14': "Upotrijebite drugu karticu."
+      '15': "Upotrijebite drugu karticu."
+      '19': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '21': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '30': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '39': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '41': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '43': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '51': "Upotrijebite drugu karticu, provjerite dostupnost sredstava ili se obratite svojoj banci kako biste provjerili ograničenja za plaćanje putem interneta."
+      '52': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '53': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '54': "Upotrijebite drugu karticu."
+      '55': "Upotrijebite drugu karticu, provjerite je li CVV/CVC kod točan ili se obratite svojoj banci."
+      '57': "Upotrijebite drugu karticu ili se obratite svojoj banci za provjeru postavki plaćanja na mreži."
+      '58': "Upotrijebite drugu karticu ili se obratite svojoj banci za provjeru postavki plaćanja na mreži."
+      '59': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '61': "Upotrijebite drugu karticu ili se obratite svojoj banci za provjeru ograničenja za plaćanje putem interneta."
+      '62': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '63': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '65': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '70': "Pokušajte ponovno ili se obratite svojoj banci za provjeru postavki plaćanja na mreži."
+      '76': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '77': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '78': "Za aktivaciju kartice upotrijebite drugu karticu ili se obratite svojoj banci."
+      '82': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      'N7': "Upotrijebite drugu karticu, provjerite je li CVV/CVC kod točan ili se obratite svojoj banci."
+      'R0': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      'R1': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      'R3': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      'E3': "Pokušajte ponovno kasnije ili se obratite svojoj banci."
+      'E4': "Pokušajte ponovno kasnije ili se obratite svojoj banci."
+      'E5': "Pokušajte ponovno kasnije ili se obratite svojoj banci."
+      '75': "Upotrijebite drugu karticu, provjerite je li CVV/CVC kod točan ili se obratite svojoj banci."
+      '85': "Banka je potvrdila autorizaciju."
+      '86': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '91': "Upotrijebite drugu karticu ili pokušajte ponovno kasnije."
+      '92': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '93': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '94': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '96': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      '98': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      'N3': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      'P5': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+      'R2': "Upotrijebite drugu karticu ili se obratite svojoj banci."
+    universal: &issuer_response_code
+      unknown: Nepoznat uzrok
+      '75': "Prekoračeno je ograničenje pogrešnih pokušaja unosa CVV/CVC/PIN koda."
+      '85': "Autorizacija je uspjela"
+      '86': "Banka je odbila plaćanje - nije moguće potvrditi PIN"
+      '91': "Plaćanje je odbijeno - sustav autorizacije banke privremeno nije dostupan."
+      '92': "Plaćanje se ne može obraditi - neidentificirani izdavatelj kartice."
+      '93': "Banka je odbila plaćanje."
+      '94': "Privremena pogreška sa strane banke."
+      '96': "Privremena pogreška sa strane banke."
+      '98': "Privremena pogreška sa strane banke."
+      'N3': "Banka je odbila plaćanje."
+      'P5': "Banka je odbila plaćanje."
+      'R2': "Banka je odbila plaćanje."
+      'E3': "3D-Secure pogreška pri provjeri: pogreška banke."
+      'E4': "Pogrešna verifikacija 3D-Secure: banka je odbila transakciju zbog neuspjele autorizacije."
+      'E5': "Privremena pogreška u 3D-Secure verifikaciji."
+    targeted:
+      merchant:
+        <<: *issuer_response_code
+        '00': "Odbijanje transakcije na razini operatera. Plaćanje je odbijeno zbog: 1) izostanka odgovora banke; 2) suspenzije računa Trgovca; 3) uporabe nepodržane vrste kartice ili netočnih podataka o kartici. 
+
+Provjerite je li račun prodavatelja kod agenta za namiru aktivan i pravilno konfiguriran u Espago-u."
+        '1A': "Potrebna je snažna autentikacija (SCA)."
+        '01': "Vlastiti kod izdavatelja kartice."
+        '02': "Vlastiti kod izdavatelja kartice."
+        '03': "Nevažeći/nepotpuni podaci o trgovini ili neaktivan račun."
+        '04': "Kartica je blokirana (iz razloga koji nisu krađa/gubitak)."
+        '05': "Banka je odbila plaćanje bez navođenja konkretnog razloga. Klijent se mora obratiti banci radi pojašnjenja. Vjerojatno su plaćanja tipa MOTO/e-Commerce/supskripciona neaktivna ili nisu podržana. "
+        '06': "Banka je prijavila pogrešku tijekom obrade plaćanja."
+        '07': "Kartica je blokirana (sumnja na zloupotrebu)."
+        '12': "Transakcija nije pravilna ili nije dostupna za ovu karticu."
+        '13': "Nepravilan iznos transakcije (prekoračeno ograničenje) ili netočna konverzija valute."
+        '14': "Neispravan broj kartice ili računa."
+        '15': "Nije identificiran izdavatelj kartice."
+        '19': "Banka je odbila uplatu s porukom u kojoj se predlaže ponovni pokušaj."
+        '21': "Banka nije prihvatila zahtjev za naplatu."
+        '30': "Pogrešan format podataka poruke za autorizaciju."
+        '39': "Kartica nije povezana s kreditnim računom."
+        '41': "Kartica je označena kao izgubljena."
+        '43': "Kartica označena kao ukradena"
+        '51': "Nedovoljno sredstava na računu ili prekoračenje ograničenja za određenu vrstu plaćanja."
+        '52': "Kartica nije povezana s računom koji se može teretiti."
+        '53': "Kartica nije povezana s računom koji se može teretiti."
+        '54': "Kartica je istekla ili nema datum isteka."
+        '55': "Nevažeći kod CVV."
+        '57': "Vrsta transakcije nije dopuštena za karticu."
+        '58': "Vrsta transakcije nije dopuštena za ovaj terminal."
+        '59': "Sumnja na prijevaru."
+        '61': "Prekoračenje ograničenja za određenu vrstu plaćanja."
+        '62': "Ograničenje kartice, isključenje zbog zemlje izdavatelja."
+        '63': "Banka je odbila plaćanje zbog otkrivenog kršenja sigurnosti."
+        '65': "Premašeno je dnevno ograničenje transakcija za ovu karticu."
+        '70': "Potrebna je snažna autentikacija (SCA)."
+        '76': "Podaci o navedenoj uplati ne podudaraju se s podacima sa strane banke."
+        '77': "Dvostruki povrat novca ili dvostruko plaćanje."
+        '78': "Nova, neaktivna kartica."
+        '82': "Nevažeći kod CVV."
+        'N7': "Nevažeći kod CVV."
+        'R0': "Došlo je do zahtjeva za zadržavanje daljnjih plaćanja."
+        'R1': "Došlo je do zahtjeva za zadržavanje daljnjih plaćanja."
+        'R3': "Došlo je do zahtjeva za zadržavanje svih plaćanja."
+      cardholder:
+        <<: *issuer_response_code
+        '00': "Plaćanje nije uspjelo."
+        '1A': "Potrebna je snažna autentikacija (SCA)."
+        '01': "Banka je odbila plaćanje."
+        '02': "Banka je odbila plaćanje."
+        '03': "Plaćanje ovom karticom ne može se obraditi kod ovog trgovca."
+        '04': "Banka je odbila plaćanje."
+        '05': "Banka je odbila plaćanje."
+        '06': "Banka je odbila plaćanje."
+        '07': "Banka je odbila plaćanje."
+        '12': "Plaćanje je odbijeno - transakcija je nevažeća."
+        '13': "Plaćanje je odbijeno - iznos je netočan ili je došlo do netočne konverzije valute."
+        '14': "Plaćanje je odbijeno - podaci o kartici nisu točni."
+        '15': "Plaćanje je odbijeno - nepoznati izdavatelj kartice."
+        '19': "Banka je odbila plaćanje."
+        '21': "Banka je odbila plaćanje."
+        '30': "Plaćanje je odbijeno - pogrešan format poruke za autorizaciju."
+        '39': "Banka je odbila plaćanje."
+        '41': "Banka je odbila plaćanje."
+        '43': "Banka je odbila plaćanje."
+        '51': "Uplata je odbijena - nema sredstava ili je premašen limit."
+        '52': "Banka je odbila plaćanje."
+        '53': "Banka je odbila plaćanje."
+        '54': "Plaćanje je odbijeno - kartica je istekla."
+        '55': "Plaćanje je odbijeno - PIN je nevažeći ili ga nema."
+        '57': "Plaćanje je odbijeno - vrsta transakcije nije dopuštena."
+        '58': "Plaćanje je odbijeno - vrsta transakcije nije dopuštena."
+        '59': "Banka je odbila plaćanje."
+        '61': "Plaćanje je odbijeno - premašen je iznos limita za plaćanje."
+        '62': "Banka je odbila plaćanje - kartica se ne može koristiti u ovoj regiji ili zemlji."
+        '63': "Banka je odbila uplatu iz sigurnosnih razloga."
+        '65': "Plaćanje je odbijeno - premašeno je ograničenje broja upotreba."
+        '70': "Potrebna je snažna autentikacija (SCA)."
+        '76': "Plaćanje se ne može poništiti."
+        '77': "Transakcija se ne može dovršiti."
+        '78': "Plaćanje je odbijeno - kartica nije aktivirana."
+        '82': "Banka je odbila plaćanje - negativna verifikacija CAM, dCVV, iCVV ili CVV."
+        'N7': "Banka je odbila plaćanje - negativna verifikacija CVV-a."
+        'R0': "Banka je odbila plaćanje - podnesen je zahtjev za obustavu autorizacije."
+        'R1': "Banka je odbila plaćanje - podnesen je zahtjev za obustavu autorizacije."
+        'R3': "Banka je odbila plaćanje - podnesen je zahtjev za obustavu autorizacije."
