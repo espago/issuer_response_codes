@@ -5,109 +5,109 @@ it:
       '10': true
       '11': true
     behaviour:
-      unknown: 'Please contact our support team.'
-      '01': Please try again.
-      '02': Please try again using a different device.
-      '03': Please try again using a different device.
-      '04': Please use a different card or contact your card issuer.
-      '05': Please use a different card.
-      '06': Please use a different card or check the card number.
-      '07': Please use a different card.
-      '08': Please use a different card.
-      '09': Please use a different card or contact issuer.
-      '10': Please use a different card or contact issuer.
-      '11': Please use a different card or contact issuer.
-      '12': Please use a different card or contact issuer.
-      '13': Please use a different card or contact issuer.
-      '14': Please try again or use a different card.
-      '15': Please use a different card or contact issuer.
-      '16': Please use a different card or contact issuer.
-      '17': Please use a different card or contact issuer.
-      '18': Please use a different card or contact issuer.
-      '19': Please use a different card or contact issuer.
-      '20': Please use a different card.
-      '21': Please use a different card.
-      '22': Please try again or use a different card.
-      '23': Please use a different card or contact issuer.
-      '24': Please try again or use a different card.
-      '25': Please try again or use a different card.
-      '26': Please try again or use a different card.
-      '80': Please use a different card.
-      '81': Please try again or use a different card.
-      '82': Please use a different card.
-      '83': Please use a different card.
-      '84': Please try again or use a different card.
-      '85': Please use a different card.
-      '86': Please use a different card.
-      '87': Please use a different card.
-      '88': Please use a different card.
+      unknown: 'Si prega di contattare il nostro team di supporto.'
+      '01': Si prega di riprovare.
+      '02': Si prega di riprovare utilizzando un dispositivo diverso.
+      '03': Si prega di riprovare utilizzando un dispositivo diverso.
+      '04': Si prega di utilizzare una carta diversa o contattare l'emittente della carta.
+      '05': Si prega di utilizzare una carta diversa.
+      '06': Si prega di utilizzare una carta diversa o controllare il numero della carta.
+      '07': Si prega di utilizzare una carta diversa.
+      '08': Si prega di utilizzare una carta diversa.
+      '09': Si prega di utilizzare una carta diversa o contattare l'emittente.
+      '10': Si prega di utilizzare una carta diversa o contattare l'emittente.
+      '11': Si prega di utilizzare una carta diversa o contattare l'emittente.
+      '12': Si prega di utilizzare una carta diversa o contattare l'emittente.
+      '13': Si prega di utilizzare una carta diversa o contattare l'emittente.
+      '14': Si prega di riprovare o utilizzare una carta diversa.
+      '15': Si prega di utilizzare una carta diversa o contattare l'emittente.
+      '16': Si prega di utilizzare una carta diversa o contattare l'emittente.
+      '17': Si prega di utilizzare una carta diversa o contattare l'emittente.
+      '18': Si prega di utilizzare una carta diversa o contattare l'emittente.
+      '19': Si prega di utilizzare una carta diversa o contattare l'emittente.
+      '20': Si prega di utilizzare una carta diversa.
+      '21': Si prega di utilizzare una carta diversa.
+      '22': Si prega di riprovare o utilizzare una carta diversa.
+      '23': Si prega di utilizzare una carta diversa o contattare l'emittente.
+      '24': Si prega di riprovare o utilizzare una carta diversa.
+      '25': Si prega di riprovare o utilizzare una carta diversa.
+      '26': Si prega di riprovare o utilizzare una carta diversa.
+      '80': Si prega di utilizzare una carta diversa.
+      '81': Si prega di riprovare o utilizzare una carta diversa.
+      '82': Si prega di utilizzare una carta diversa.
+      '83': Si prega di utilizzare una carta diversa.
+      '84': Si prega di riprovare o utilizzare una carta diversa.
+      '85': Si prega di utilizzare una carta diversa.
+      '86': Si prega di utilizzare una carta diversa.
+      '87': Si prega di utilizzare una carta diversa.
+      '88': Si prega di utilizzare una carta diversa.
     universal: &universal_tds_status_codes
-      unknown: "Unknown reason."
-      '01': Card authentication failed.
-      '02': Unknown Device.
-      '03': Unsupported Device.
-      '04': Exceeds authentication frequency limit.
-      '05': Expired card.
-      '06': Invalid card number.
-      '07': Invalid transaction.
-      '08': No Card record.
-      '15': Low confidence.
-      '16': Medium confidence.
-      '17': High confidence.
-      '18': Very High confidence.
-      '19': Exceeds ACS maximum challenges.
-      '20': Non-Payment transaction not supported.
+      unknown: "Motivo sconosciuto."
+      '01': Autenticazione della carta non riuscita.
+      '02': Dispositivo sconosciuto.
+      '03': Dispositivo non supportato.
+      '04': Superato il limite di frequenza di autenticazione.
+      '05': Carta scaduta.
+      '06': Numero di carta non valido.
+      '07': Transazione non valida.
+      '08': Nessun record di carta.
+      '15': Bassa affidabilità.
+      '16': Affidabilità media.
+      '17': Affidabilità alta.
+      '18': Affidabilità molto alta.
+      '19': Superato il numero massimo di sfide ACS.
+      '20': Transazione non di pagamento non supportata.
     targeted:
       merchant:
         <<: *universal_tds_status_codes
-        '09': Security failure.
-        '10': Stolen card.
-        '11': Suspected fraud.
-        '12': Transaction not permitted to cardholder.
-        '13': Cardholder not enrolled in service.
-        '14': Transaction timed out at the ACS.
-        '21': 3RI transaction not supported.
-        '22': ACS technical issue.
-        '23': Decoupled Authentication required by ACS but not requested by 3DS Requestor.
-        '24': 3DS Requestor Decoupled Max Expiry Time exceeded.
-        '25': Decoupled Authentication was provided insufficient time to authenticate cardholder. ACS will not make attempt.
-        '26': Authentication attempted but not performed by the cardholder.
-        '80': Error Connecting to ACS.
-        '81': ACS Timed Out.
-        '82': Invalid Response from ACS.
-        '83': System Error Response from ACS.
-        '84': Internal Error While Generating CAVV.
-        '85': VMID not eligible for requested program.
-        '86': Protocol Version Not Supported by ACS.
-        '87': Transaction is excluded from Attempts Processing (includes non- reloadable pre-paid cards and Non- Payments (NPA)).
-        '88': Requested program not supported by the ACS.
+        '09': Errore di sicurezza.
+        '10': Carta rubata.
+        '11': Sospetto di frode.
+        '12': Transazione non consentita al titolare della carta.
+        '13': Titolare della carta non iscritto al servizio.
+        '14': Timeout della transazione presso ACS.
+        '21': Transazione 3RI non supportata.
+        '22': Problema tecnico ACS.
+        '23': Autenticazione decoupled richiesta da ACS ma non richiesta da 3DS Requestor.
+        '24': Superato il tempo massimo di scadenza decoupled per 3DS Requestor.
+        '25': L'autenticazione decoupled ha fornito un tempo insufficiente per autenticare il titolare della carta. ACS non effettuerà il tentativo.
+        '26': Autenticazione tentata ma non eseguita dal titolare della carta.
+        '80': Errore di connessione a ACS.
+        '81': Timeout ACS.
+        '82': Risposta non valida da ACS.
+        '83': Risposta di errore di sistema da ACS.
+        '84': Errore interno durante la generazione di CAVV.
+        '85': VMID non idoneo per il programma richiesto.
+        '86': Versione di protocollo non supportata da ACS.
+        '87': La transazione è esclusa dall'elaborazione degli attempt (include carte prepagate non ricaricabili e non pagamenti (NPA)).
+        '88': Il programma richiesto non è supportato da ACS.
       cardholder:
         <<: *universal_tds_status_codes
-        '09': Card authentication failed. # Security failure
-        '10': Card authentication failed. # Stolen card
-        '11': Card authentication failed. # Suspected fraud
-        '12': Transaction not permitted to cardholder.
-        '13': Cardholder not enrolled in service.
-        '14': Card authentication failed.
-        '21': Card authentication failed.
-        '22': Issuer technical issue.
-        '23': Card authentication failed
-        '24': Card authentication failed
-        '25': Card authentication failed.
-        '26': Card authentication failed.
-        '80': Card authentication failed.
-        '81': Card authentication failed.
-        '82': Card authentication failed.
-        '83': Card authentication failed.
-        '84': Card authentication failed.
-        '85': Card authentication failed.
-        '86': Card authentication failed.
-        '87': Card authentication failed.
-        '88': Card authentication failed.
+        '09': Autenticazione della carta non riuscita. # Errore di sicurezza
+        '10': Autenticazione della carta non riuscita. # Carta rubata
+        '11': Autenticazione della carta non riuscita. # Sospetto di frode
+        '12': Transazione non consentita al titolare della carta.
+        '13': Titolare della carta non iscritto al servizio.
+        '14': Autenticazione della carta non riuscita.
+        '21': Autenticazione della carta non riuscita.
+        '22': Problema tecnico dell'emittente.
+        '23': Autenticazione della carta non riuscita.
+        '24': Autenticazione della carta non riuscita.
+        '25': Autenticazione della carta non riuscita.
+        '26': Autenticazione della carta non riuscita.
+        '80': Autenticazione della carta non riuscita.
+        '81': Autenticazione della carta non riuscita.
+        '82': Autenticazione della carta non riuscita.
+        '83': Autenticazione della carta non riuscita.
+        '84': Autenticazione della carta non riuscita.
+        '85': Autenticazione della carta non riuscita.
+        '86': Autenticazione della carta non riuscita.
+        '87': Autenticazione della carta non riuscita.
+        '88': Autenticazione della carta non riuscita.
 
   issuer_response_codes:
-    suggestion: 'Suggestion'
-    fraud_notice: 'IMPORTANT NOTICE: It is forbidden to retry transactions that ended with this code. It may be recognized as a fraud attempt!'
+    suggestion: 'Suggerimento'
+    fraud_notice: 'AVVISO IMPORTANTE: È vietato ripetere le transazioni che terminano con questo codice. Potrebbe essere riconosciuto come un tentativo di frode!'
     fraudulent_codes:
       '04': true
       '07': true
@@ -124,7 +124,7 @@ it:
       'R1': true
       'R3': true
     behaviour:
-      unknown: Please contact our support team.
+      unknown: Si prega di contattare il nostro team di supporto.
       '00': "Riprova a eseguire la transazione oppure.."
       '1A': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
       '01': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
@@ -148,7 +148,7 @@ it:
       '52': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
       '53': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
       '54': "Chiedi al cliente di fornire un’altra carta."
-      '55': "Please use a different card or verify your CVV/CVC or contact the issuer for clarification."
+      '55': "Si prega di utilizzare una carta diversa o verificare il vostro CVV/CVC o contattare l'emittente per chiarimenti."
       '57': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
       '58': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
       '59': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
@@ -161,17 +161,17 @@ it:
       '77': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
       '78': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
       '82': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
-      'N7': "Please try again and check the CVV/CVC or contact the issuer for clarification."
+      'N7': "Si prega di riprovare e controllare il CVV/CVC o contattare l'emittente per chiarimenti."
       'R0': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
       'R1': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
       'R3': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
-      'E3': "Please try again or contact the issuer for clarification."
-      'E4': "Please try again or contact the issuer for clarification."
-      'E5': "Please try again or contact the issuer for clarification."
-      '75': "Please try again and check the CVV/CVC or contact the issuer for clarification."
-      '85': "The issuer has confirmed this transaction."
+      'E3': "Si prega di riprovare o contattare l'emittente per chiarimenti."
+      'E4': "Si prega di riprovare o contattare l'emittente per chiarimenti."
+      'E5': "Si prega di riprovare o contattare l'emittente per chiarimenti."
+      '75': "Si prega di riprovare e controllare il CVV/CVC o contattare l'emittente per chiarimenti."
+      '85': "L'emittente ha confermato questa transazione."
       '86': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
-      '91': "Please use a different card or try again later."
+      '91': "Si prega di utilizzare una carta diversa o riprovare più tardi."
       '92': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
       '93': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
       '94': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
@@ -182,20 +182,20 @@ it:
       'R2': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
     universal: &issuer_response_code
       unknown: "Unknown reason."
-      '75': "Allowable number of PIN entry tries exceeded."
-      '86': "Cannot verify PIN."
-      '91': "Issuer not available."
-      '92': "Financial institution or intermediate network facility cannot be found for routing (receiving institution ID is invalid)."
-      '93': "Transaction cannot be completed - violation of law."
-      '94': "Temporary issuer error."
-      '96': "Temporary issuer error."
-      '98': "Temporary issuer error."
+      '75': "È stato superato il numero consentito di tentativi di inserimento del PIN."
+      '86': "Impossibile verificare il PIN"
+      '91': "Emittente non disponibile."
+      '92': "L'istituzione finanziaria o la struttura di rete intermedia non può essere trovata per l'instradamento (l'ID dell'istituzione beneficiaria non è valido)."
+      '93': "La transazione non può essere completata - violazione di legge."
+      '94': "Errore temporaneo dell'emittente."
+      '96': "Errore temporaneo dell'emittente."
+      '98': "Errore temporaneo dell'emittente."
       'N3': "Transazione non autorizzata dall’emittente."
-      'P5': "Denied PIN unblock - PIN change or unblock request declined by issuer."
+      'P5': "Sblocco PIN rifiutato - richiesta di cambio o sblocco PIN respinta dall'emittente."
       'R2': "Transazione non autorizzata dall’emittente."
-      'E3': "Transaction not executed due to a 3D-Secure error."
-      'E4': "Transaction not executed due to a negative 3D-Secure confirmation from your bank."
-      'E5': "Temporary 3D-Secure error."
+      'E3': "Transazione non eseguita a causa di un errore di 3D Secure."
+      'E4': "Transazione non eseguita a causa di una conferma negativa 3D Secure dalla tua banca."
+      'E5': "Errore temporaneo di 3D Secure."
     targeted:
       merchant:
         <<: *issuer_response_code
@@ -217,33 +217,33 @@ Verifica che il conto del venditore dall'acquirente è attivo e correttamente co
         '14': "Un numero carta non valido; non riprovare a eseguire la transazione."
         '15': "La carta inviata non appartiene a nessuna banca emittente esistente; non riprovare a eseguire la transazione."
         '19': "Transazione rifiutata dall’emittente, riprovare a eseguire la transazione."
-        '21': "No action taken."
+        '21': "Nessuna azione intrapresa.."
         '30': "Formato scorretto del messaggio di autorizzazione."
-        '39': "No credit account."
+        '39': "Nessun conto di credito disponibile."
         '41': "La carta risulta persa; non riprovare a eseguire la transazione."
         '43': "La carta risulta rubata; non riprovare a eseguire la transazione."
         '51': "I fondi della carta non sono sufficienti a coprire il pagamento, oppure Il limite per la carta è stato superato."
-        '52': "No checking account."
-        '53': "No savings account."
+        '52': "Nessun conto corrente disponibile."
+        '53': "Nessun conto di risparmio disponibile."
         '54': "Non riprovare a eseguire la transazione."
-        '55': "Incorrect PIN or PIN missing."
-        '57': "Transaction not permitted to cardholder."
-        '58': "Transaction not allowed at terminal."
-        '59': "Suspected fraud."
+        '55': "PIN errato o PIN mancante."
+        '57': "Transazione non consentita al titolare della carta."
+        '58': "Transazione non consentita al terminale."
+        '59': "Sospetto di frode."
         '61': "La transazione eccede il limite di prelievo dal conto del cliente."
-        '62': "Restricted card (card invalid in this region or country)."
-        '63': "Security Violation."
-        '65': "Exceeds withdrawal frequency limit."
-        '70': "PIN data required."
-        '76': "Unsolicited reversal."
-        '77': "Duplicate reversal or duplicate transaction."
-        '78': "Blocked, first used."
-        '82': "Negative CAM, dCVV, iCVV, or CVV results."
-        '85': "Not declined."
-        'N7': "Decline for CVV2 failure."
-        'R0': "Stop Payment Order."
-        'R1': "Revocation of authorization order."
-        'R3': "Revocation of all authorizations order."
+        '62': "Carta limitata (carta non valida in questa regione o paese)."
+        '63': "Violazione di sicurezza."
+        '65': "Superato il limite di frequenza di prelievo."
+        '70': "Richiesti dati PIN."
+        '76': "Annullamento non richiesto."
+        '77': "Annullamento duplicato o transazione duplicata."
+        '78': "Bloccata, prima utilizzata."
+        '82': "Risultati CAM, dCVV, iCVV o CVV negativi."
+        '85': "Non rifiutata."
+        'N7': "Rifiuto per fallimento CVV2."
+        'R0': "Ordine di blocco dei pagamenti."
+        'R1': "Ordine di revoca dell'autorizzazione."
+        'R3': "Ordine di revoca di tutte le autorizzazioni."
       cardholder:
         <<: *issuer_response_code
         '00': "Transazione rifiutata."
@@ -260,30 +260,30 @@ Verifica che il conto del venditore dall'acquirente è attivo e correttamente co
         '14': "Transazione rifiutata.  un numero carta non valido."
         '15': "Transazione rifiutata .La carta non appartiene a nessuna banca emittente esistente."
         '19': "Transazione non autorizzata dall’emittente."
-        '21': "Payment rejected by the issuer."
+        '21': "Pagamento rifiutato dall'emittente."
         '30': "Transazione rifiutata. La trasmissione dei dati non è corretta."
-        '39': "Payment rejected by the issuer - no credit account."
+        '39': "Pagamento rifiutato dall'emittente - nessun conto di credito disponibile."
         '41': "Transazione rifiutata dall’emittente."
         '43': "Transazione rifiutata dall’emittente."
         '51': "Transazione non autorizzata dall’emittente. Il cliente non dispone di fondi a sufficienza sul suo conto per pagare oppure limite di prelievo superato."
-        '52': "Payment rejected by the issuer."
-        '53': "Payment rejected by the issuer."
+        '52': "Pagamento rifiutato dall'emittente."
+        '53': "Pagamento rifiutato dall'emittente."
         '54': "Transazione rifiutata dall’emittente, la carta è scaduta."
-        '55': "Payment rejected by the issuer - Incorrect PIN or PIN missing."
-        '57': "Payment rejected by the issuer - transaction not permitted to cardholder."
-        '58': "Payment rejected by the issuer - transaction not allowed at terminal."
+        '55': "Pagamento rifiutato dall'emittente - PIN errato o PIN mancante."
+        '57': "Pagamento rifiutato dall'emittente - transazione non consentita al titolare della carta."
+        '58': "Pagamento rifiutato dall'emittente - transazione non consentita al terminale."
         '59': "Transazione non autorizzata dall’emittente."
         '61': "Limite di prelievo superato."
-        '62': "Payment rejected by the issuer - card invalid in this region or country."
-        '63': "Payment rejected by the issuer."
-        '65': "Payment rejected by the issuer - exceeds withdrawal frequency limit."
-        '70': "Strong authentication required (SCA)."
-        '76': "Payment rejected by the issuer - unsolicited reversal."
-        '77': "Payment declined by the issuer."
-        '78': "Payment rejected by the issuer - card used for the first time."
-        '82': "Payment rejected by the issuer - negative CAM, dCVV, iCVV, or CVV results."
-        '85': "Authorization succeeded."
-        'N7': "Transazione non autorizzata dall’emittente. Codice di sicurezza (CVV2/CVC2) errati."
-        'R0': "Payment rejected by the issuer - Stop Payment Order."
-        'R1': "Payment rejected by the issuer - Revocation of authorization order."
-        'R3': "Payment rejected by the issuer - Revocation of all authorizations order."
+        '62': "Pagamento rifiutato dall'emittente - carta non valida in questa regione o paese."
+        '63': "Pagamento rifiutato dall'emittente."
+        '65': "Pagamento rifiutato dall'emittente - supera il limite di frequenza di prelievo."
+        '70': "Richiesta autenticazione forte (SCA)."
+        '76': "Pagamento rifiutato dall'emittente - annullamento non richiesto."
+        '77': "Pagamento declinato dall'emittente."
+        '78': "Pagamento rifiutato dall'emittente - carta utilizzata per la prima volta."
+        '82': "Pagamento rifiutato dall'emittente - risultati CAM, dCVV, iCVV o CVV negativi."
+        '85': "Autorizzazione riuscita."
+        'N7': "Transazione non autorizzata dall'emittente. Codice di sicurezza (CVV2/CVC2) errato."
+        'R0': "Pagamento rifiutato dall'emittente - Ordine di blocco dei pagamenti."
+        'R1': "Pagamento rifiutato dall'emittente - Ordine di revoca dell'autorizzazione."
+        'R3': "Pagamento rifiutato dall'emittente - Ordine di revoca di tutte le autorizzazioni."

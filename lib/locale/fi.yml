@@ -1,0 +1,300 @@
+fi:
+  tds_status_codes:
+    fraudulent_codes:
+      '09': totta
+      '10': totta
+      '11': totta
+    behaviour:
+      unknown: 'Ota yhteyttä tukiosastoomme.'
+      '01': Yritä uudelleen.
+      '02': Käytä toista laitetta.
+      '03': Käytä toista laitetta.
+      '04': Käytä toista korttia tai ota yhteyttä pankkiisi.
+      '05': Käytä toista korttia.
+      '06': Käytä toista korttia tai tarkista, että antamasi tiedot ovat oikein.
+      '07': Käytä toista korttia.
+      '08': Käytä toista korttia.
+      '09': Käytä toista korttia tai ota yhteyttä pankkiisi.
+      '10': Käytä toista korttia tai ota yhteyttä pankkiisi.
+      '11': Käytä toista korttia tai ota yhteyttä pankkiisi.
+      '12': Käytä toista korttia tai ota yhteyttä pankkiisi.
+      '13': Käytä toista korttia tai ota yhteyttä pankkiisi.
+      '14': Yritä myöhemmin uudelleen tai käytä toista korttia.
+      '15': Käytä toista korttia tai ota yhteyttä pankkiisi.
+      '16': Käytä toista korttia tai ota yhteyttä pankkiisi.
+      '17': Käytä toista korttia tai ota yhteyttä pankkiisi.
+      '18': Käytä toista korttia tai ota yhteyttä pankkiisi.
+      '19': Käytä toista korttia tai ota yhteyttä pankkiisi.
+      '20': Käytä toista korttia.
+      '21': Käytä toista korttia.
+      '22': Yritä myöhemmin uudelleen tai käytä toista korttia.
+      '23': Käytä toista korttia tai ota yhteyttä pankkiisi.
+      '24': Yritä myöhemmin uudelleen tai käytä toista korttia.
+      '25': Yritä myöhemmin uudelleen tai käytä toista korttia.
+      '26': Yritä myöhemmin uudelleen tai käytä toista korttia.
+      '80': Käytä toista korttia.
+      '81': Yritä myöhemmin uudelleen tai käytä toista korttia.
+      '82': Käytä toista korttia.
+      '83': Käytä toista korttia.
+      '84': Yritä myöhemmin uudelleen tai käytä toista korttia.
+      '85': Käytä toista korttia.
+      '86': Käytä toista korttia.
+      '87': Käytä toista korttia...
+      '88': Käytä toista korttia.
+    universal: &universal_tds_status_codes
+      unknown: "Tuntematon syy."
+    targeted:
+      merchant:
+        <<: *universal_tds_status_codes
+        '01': Kortin todennus epäonnistui.
+        '02': Tuntematon laite.
+        '03': Laitetta ei tueta.
+        '04': Ylittää todennustiheyden rajan
+        '05': Vanhentunut kortti.
+        '06': Virheellinen kortin numero.
+        '07': Virheellinen tapahtuma.
+        '08': Ei korttitietoja.
+        '09': Turvallisuushäiriö.
+        '10': Varastettu kortti.
+        '11': Epäilty petos.
+        '12': Kortinhaltijalle ei sallittu tapahtumaa.
+        '13': Kortinhaltija ei ole rekisteröitynyt palveluun.
+        '14': Tapahtuma on keskeytynyt ACS:ssä.
+        '15': Vähäinen luottamus.
+        '16': Keskimääräinen luottamus.
+        '17': Korkea luottamus.
+        '18': Erittäin korkea luottamus.
+        '19': Ylittää ACS:n maksimihaasteet.
+        '20': Maksukyvyttömiä tapahtumia ei tueta.
+        '21': 3RI-tapahtumaa ei tueta.
+        '22': ACS:n tekninen kysymys.
+        '23': ACS vaatii irrotettua todennusta, mutta 3DS-pyynnön esittäjä ei sitä vaadi.
+        '24': 3DS-pyynnön lähettäjän irrotettu enimmäisvanhenemisaika ylitetty.
+        '25': Irrotettu todennus ei antanut riittävästi aikaa kortinhaltijan todentamiseen. ACS ei yritä.
+        '26': Kortinhaltija on yrittänyt tunnistautumista, mutta ei ole suorittanut sitä.
+        '80': Virhe yhdistettäessä ACS:ään.
+        '81': ACS aikakatkaisu.
+        '82': ACS:n virheellinen vastaus.
+        '83': ACS:n järjestelmävirhevastaus.
+        '84': Sisäinen virhe CAVV:n luomisessa.
+        '85': VMID ei ole oikeutettu pyydettyyn ohjelmaan.
+        '86': ACS ei tue protokollan versiota.
+        '87': Tapahtuma ei kuulu käsittelyyritysten piiriin (sisältää ei-uudelleenladattavat prepaid-kortit ja maksukyvyttömyyden (NPA)).
+        '88': Pyydetty ohjelma ei saa tukea ACS:stä.
+      cardholder:
+        <<: *universal_tds_status_codes
+        '01': Negatiivinen tulos vahvasta autentikaatiosta pankin järjestelmässä.
+        '02': Pankin varmennusjärjestelmä ei tunnistanut laitetta, jolla todennusta yritettiin.
+        '03': Pankin varmennusjärjestelmä ei tue laitetta, jolla todennusta yritettiin.
+        '04': Pankin todennusyritysraja on ylitetty.
+        '05': Kortti on vanhentunut.
+        '06': Väärä kortin numero.
+        '07': Väärä tapahtumatyyppi.
+        '08': Pankin järjestelmässä ei ole korttia.
+        '09': Negatiivinen tulos vahvasta autentikaatiosta pankin järjestelmässä.
+        '10': Negatiivinen tulos vahvasta autentikaatiosta pankin järjestelmässä.
+        '11': Negatiivinen tulos vahvasta autentikaatiosta pankin järjestelmässä.
+        '12': Maksutapahtuma ei ole sallittu tällä kortilla.
+        '13': Pankin järjestelmässä ei ole korttia.
+        '14': Vahva todennus epäonnistui.
+        '15': Negatiivinen tulos vahvasta autentikaatiosta pankin järjestelmässä.
+        '16': Negatiivinen tulos vahvasta autentikaatiosta pankin järjestelmässä.
+        '17': Negatiivinen tulos vahvasta autentikaatiosta pankin järjestelmässä.
+        '18': Negatiivinen tulos vahvasta autentikaatiosta pankin järjestelmässä.
+        '19': Negatiivinen tulos vahvasta autentikaatiosta pankin järjestelmässä.
+        '20': Tämä kortti ei tue maksutapahtumaa.
+        '21': Vahva todennus epäonnistui.
+        '22': Pankin todentamisjärjestelmän puolella oli tekninen ongelma.
+        '23': Vahva todennus epäonnistui.
+        '24': Vahva todennus epäonnistui.
+        '25': Vahva todennus epäonnistui.
+        '26': Vahva todennus epäonnistui.
+        '80': Vahva todennus epäonnistui.
+        '81': Vahva todennus epäonnistui.
+        '82': Vahva todennus epäonnistui.
+        '83': Vahva todennus epäonnistui.
+        '84': Vahva todennus epäonnistui.
+        '85': Vahva todennus epäonnistui.
+        '86': Vahva todennus epäonnistui.
+        '87': Vahva todennus epäonnistui.
+        '88': Vahva todennus epäonnistui.
+
+  issuer_response_codes:
+    suggestion: 'Ehdotus'
+    fraud_notice: 'HUOMAUTUS: Älä toista tämän kortin veloitusta! Tätä voidaan pitää petoksen yrityksenä!'
+    fraudulent_codes:
+      '04': totta
+      '07': totta
+      '12': totta
+      '14': totta
+      '15': totta
+      '41': totta
+      '43': totta
+      '54': totta
+      '57': totta
+      '59': totta
+      '63': totta
+      'R0': totta
+      'R1': totta
+      'R3': totta
+    behaviour:
+      unknown: Ota yhteyttä tukiosastoomme.
+      '00': "Yritä myöhemmin uudelleen tai ota yhteys jälleenmyyjään."
+      '1A': "Yritä uudelleen tai ota yhteyttä pankkiisi tarkistaaksesi verkkomaksuasetukset."
+      '01': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '02': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '03': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '04': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '05': "Käytä toista korttia tai ota yhteyttä pankkiisi tarkistaaksesi verkkomaksuasetukset."
+      '06': "Käytä toista korttia tai ota yhteyttä pankkiisi tarkistaaksesi verkkomaksuasetukset."
+      '07': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '12': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '13': "Käytä toista korttia tai ota yhteyttä pankkiisi tarkistaaksesi verkkomaksujen rajat."
+      '14': "Käytä toista korttia."
+      '15': "Käytä toista korttia."
+      '19': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '21': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '30': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '39': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '41': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '43': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '51': "Käytä toista korttia, tarkista varojen saatavuus tai ota yhteyttä pankkiisi tarkistaaksesi verkkomaksurajat."
+      '52': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '53': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '54': "Käytä toista korttia."
+      '55': "Käytä toista korttia, tarkista, että CVV/CVC-koodi on oikea tai ota yhteyttä pankkiisi."
+      '57': "Käytä toista korttia tai ota yhteyttä pankkiisi tarkistaaksesi verkkomaksuasetukset."
+      '58': "Käytä toista korttia tai ota yhteyttä pankkiisi tarkistaaksesi verkkomaksuasetukset."
+      '59': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '61': "Käytä toista korttia tai ota yhteyttä pankkiisi tarkistaaksesi verkkomaksujen rajat."
+      '62': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '63': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '65': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '70': "Yritä uudelleen tai ota yhteyttä pankkiisi tarkistaaksesi verkkomaksuasetukset."
+      '76': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '77': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '78': "Käytä toista korttia tai ota yhteyttä pankkiisi kortin aktivoimiseksi."
+      '82': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      'N7': "Käytä toista korttia, tarkista, että CVV/CVC-koodi on oikea tai ota yhteyttä pankkiisi."
+      'R0': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      'R1': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      'R3': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      'E3': "Yritä myöhemmin uudelleen tai ota yhteyttä pankkiisi."
+      'E4': "Yritä myöhemmin uudelleen tai ota yhteyttä pankkiisi."
+      'E5': "Yritä myöhemmin uudelleen tai ota yhteyttä pankkiisi."
+      '75': "Käytä toista korttia, tarkista, että CVV/CVC-koodi on oikea tai ota yhteyttä pankkiisi."
+      '85': "Pankki vahvisti valtuutuksen."
+      '86': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '91': "Käytä toista korttia tai yritä myöhemmin uudelleen."
+      '92': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '93': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '94': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '96': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      '98': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      'N3': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      'P5': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+      'R2': "Käytä toista korttia tai ota yhteyttä pankkiisi."
+    universal: &issuer_response_code
+      unknown: Tuntematon syy
+      '75': "CVV/CVC/PIN-koodin virheellisten yritysten raja on ylitetty."
+      '85': "Valtuutus onnistui"
+      '86': "Pankki hylkäsi maksun - PIN-koodia ei voida valtuuttaa"
+      '91': "Maksu hylätty - pankin valtuutusjärjestelmä ei ole tilapäisesti käytettävissä."
+      '92': "Maksua ei voida käsitellä - tunnistamaton kortin myöntäjä."
+      '93': "Pankki hylkäsi maksun."
+      '94': "Väliaikainen virhe pankin puolella."
+      '96': "Väliaikainen virhe pankin puolella."
+      '98': "Väliaikainen virhe pankin puolella."
+      'N3': "Pankki hylkäsi maksun."
+      'P5': "Pankki hylkäsi maksun."
+      'R2': "Pankki hylkäsi maksun."
+      'E3': "Virheellinen 3D-Secure-varmistus: pankkivirhe."
+      'E4': "Virheellinen 3D-Secure-varmennus: Pankki hylkäsi tapahtuman valtuutuksen epäonnistumisen vuoksi."
+      'E5': "Väliaikainen virhe 3D-Secure-vahvistuksessa."
+    targeted:
+      merchant:
+        <<: *issuer_response_code
+        '00': "Operaattoritason tapahtuman hylkääminen. Maksu hylättiin seuraavista syistä: 1) pankilta ei saatu vastausta; 2) myyjän tili on suljettu; 3) korttityyppi ei ole tuettu tai kortin tiedot ovat virheelliset. 
+
+Tarkista, onko myyjän tili laskutusagentissa aktiivinen ja oikein määritetty Espagossa."
+        '1A': "Vahva todennus (SCA) vaaditaan."
+        '01': "Kortin myöntäjän oma koodi."
+        '02': "Kortin myöntäjän oma koodi."
+        '03': "Virheelliset/puutteelliset kauppiaan tiedot tai inaktiivinen tili."
+        '04': "Kortti estetty (muista syistä kuin varkaudesta/kadosta)."
+        '05': "Pankki hylkäsi maksun ilman erityistä syytä. Asiakkaan on otettava yhteyttä pankkiin selvityksen saamiseksi. Luultavasti MOTO/eCommerce/tilausmaksut eivät ole aktiivisia tai niitä ei tueta. "
+        '06': "Pankki ilmoitti virheestä maksun käsittelyssä."
+        '07': "Kortti estetty (epäilty väärinkäyttö)."
+        '12': "Virheellinen maksutapahtuma tai ei ole käytettävissä tällä kortilla."
+        '13': "Virheellinen tapahtumasumma (yli rajan) tai virheellinen valuuttamuunnos."
+        '14': "Väärä kortin tai tilin numero."
+        '15': "Kortin myöntäjää ei tunnistettu."
+        '19': "Pankki hylkäsi maksun ja kehotti yrittämään uudelleen."
+        '21': "Pankki ei ottanut maksupyyntöä vastaan."
+        '30': "Virheellinen valtuutusviestin tietomuoto."
+        '39': "Korttia ei ole liitetty luottotiliin."
+        '41': "Kortti merkitty kadonneeksi."
+        '43': "Kortti merkitty varastetuksi"
+        '51': "Tilillä ei ole riittävästi varoja tai maksutyypin raja ylittyy."
+        '52': "Korttia ei ole liitetty tiliin, jota voidaan veloittaa."
+        '53': "Korttia ei ole liitetty tiliin, jota voidaan veloittaa."
+        '54': "Kortti on vanhentunut tai viimeistä käyttöpäivää ei ole."
+        '55': "Virheellinen CVV-koodi."
+        '57': "Kortilla ei ole sallittua maksutapahtumatyyppiä."
+        '58': "Tapahtumatyyppi ei ole sallittu tässä päätelaitteessa."
+        '59': "Epäilty petos."
+        '61': "Tietyn maksutyypin rajan ylittäminen."
+        '62': "Korttirajoitus, poissulkeminen kustantajan maan perusteella."
+        '63': "Pankki hylkäsi maksun havaitun tietoturvaloukkauksen vuoksi."
+        '65': "Tämän kortin päivittäinen tapahtumamääräraja on ylitetty."
+        '70': "Tarvitaan vahva todennus."
+        '76': "Ilmoitetun maksun tiedot eivät vastaa pankin puolella olevia tietoja."
+        '77': "Kaksinkertainen palautus tai kaksinkertainen maksu."
+        '78': "Uusi, aktivoimaton kortti."
+        '82': "Virheellinen CVV-koodi."
+        'N7': "Virheellinen CVV-koodi."
+        'R0': "On vaadittu lisämaksujen pidättämistä."
+        'R1': "On vaadittu lisämaksujen pidättämistä."
+        'R3': "Kaikkien maksujen lopettamista on vaadittu."
+      cardholder:
+        <<: *issuer_response_code
+        '00': "Maksu epäonnistui."
+        '1A': "Vahva todennus (SCA) vaaditaan."
+        '01': "Pankki hylkäsi maksun."
+        '02': "Pankki hylkäsi maksun."
+        '03': "Tällä kortilla ei voi maksaa tällä kauppiaalla."
+        '04': "Pankki hylkäsi maksun."
+        '05': "Pankki hylkäsi maksun."
+        '06': "Pankki hylkäsi maksun."
+        '07': "Pankki hylkäsi maksun."
+        '12': "Maksu hylätty - maksutapahtuma on virheellinen."
+        '13': "Maksu hylätty - summa on virheellinen tai valuutan muuntaminen on tehty väärin."
+        '14': "Maksu hylätty - kortin tiedot ovat virheelliset."
+        '15': "Maksu hylätty - kortin myöntäjä tuntematon."
+        '19': "Pankki hylkäsi maksun."
+        '21': "Pankki hylkäsi maksun."
+        '30': "Maksu hylätty - valtuutusviestin muoto on väärä."
+        '39': "Pankki hylkäsi maksun."
+        '41': "Pankki hylkäsi maksun."
+        '43': "Pankki hylkäsi maksun."
+        '51': "Maksu hylätty - ei varoja tai yli limiitin."
+        '52': "Pankki hylkäsi maksun."
+        '53': "Pankki hylkäsi maksun."
+        '54': "Maksu hylätty - kortti ei ole enää voimassa."
+        '55': "Maksu hylätty - virheellinen tai puuttuva PIN-koodi."
+        '57': "Maksu hylätty – tapahtumatyyppiä ei sallita."
+        '58': "Maksu hylätty – tapahtumatyyppiä ei sallita."
+        '59': "Pankki hylkäsi maksun."
+        '61': "Maksu hylätty - maksun enimmäismäärä ylitetty."
+        '62': "Pankki on hylännyt maksun - korttia ei voi käyttää kyseisellä alueella tai kyseisessä maassa."
+        '63': "Pankki hylkäsi maksun turvallisuussyistä."
+        '65': "Maksu hylätty - käyttöraja on ylitetty."
+        '70': "Vahva todennus (SCA) vaaditaan"
+        '76': "Maksua ei voi peruuttaa."
+        '77': "Tapahtumaa ei voida suorittaa loppuun."
+        '78': "Maksu hylätty - korttia ei ole aktivoitu."
+        '82': "Pankki hylkäsi maksun - negatiivinen CAM-, dCVV-, iCVV- tai CVV-vahvistus."
+        'N7': "Pankki hylkäsi maksun - negatiivinen CVV-vahvistus."
+        'R0': "Pankki hylkäsi maksun - pyydettiin pidättäytymään hyväksymisestä."
+        'R1': "Pankki hylkäsi maksun - pyydettiin pidättäytymään hyväksymisestä."
+        'R3': "Pankki hylkäsi maksun - pyydettiin pidättäytymään hyväksymisestä."

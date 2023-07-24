@@ -4,12 +4,18 @@ This gem provides a quite comprehensive library of Issuer Response Code and 3D-S
 - Complete locales:
   - en
   - pl
+  - es
+  - fi
+  - fr
+  - hr
+  - it
+  - nl
+  - pt
 
 - Incomplete locales:
   - da
   - de
   - ee
-  - it
   - lt
   - lv
   - sv
