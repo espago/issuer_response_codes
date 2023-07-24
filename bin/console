@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require "bundler/setup"
-require "issuer_response_codes"
+require 'bundler/setup'
+require 'issuer_response_codes'
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
@@ -10,5 +10,7 @@ require "issuer_response_codes"
 # require "pry"
 # Pry.start
 
-require "irb"
-IRB.start(__FILE__)
+include ::IssuerResponseCodes
+
+require 'irb'
+::IRB.start(__FILE__)

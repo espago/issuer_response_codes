@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require_relative '../test_helper'
 
 module IssuerResponseCodes
   class ContextTest < Minitest::Test
-    def test_create_context_merchant
+    def test_create_context_merchant # rubocop:disable Metrics/MethodLength
       context = IssuerResponseCodes::Context.new
       assert_equal :merchant, context.default_target
       assert_equal :en, context.default_locale
@@ -33,7 +35,9 @@ module IssuerResponseCodes
       assert context.fraud_notice_by_default
       check_if_context_generates_correct_codes(context)
 
-      context = IssuerResponseCodes::Context.new(default_target: :merchant, fraud_notice_by_default: false, default_locale: :pl)
+      context = IssuerResponseCodes::Context.new(default_target: :merchant,
+                                                 fraud_notice_by_default: false,
+                                                 default_locale: :pl)
       assert_equal :merchant, context.default_target
       assert_equal :pl, context.default_locale
       assert !context.fraud_notice_by_default
@@ -59,7 +63,9 @@ module IssuerResponseCodes
       assert !context.fraud_notice_by_default
       check_if_context_generates_correct_codes(context)
 
-      context = IssuerResponseCodes::Context.new(default_target: :cardholder, fraud_notice_by_default: true, default_locale: :pl)
+      context = IssuerResponseCodes::Context.new(default_target: :cardholder,
+                                                 fraud_notice_by_default: true,
+                                                 default_locale: :pl)
       assert_equal :cardholder, context.default_target
       assert_equal :pl, context.default_locale
       assert context.fraud_notice_by_default
@@ -80,26 +86,26 @@ module IssuerResponseCodes
 
     private
 
-    def check_if_context_generates_correct_codes(context)
-      code = context.code(id: "00")
+    def check_if_context_generates_correct_codes(context) # rubocop:disable Metrics/MethodLength
+      code = context.code(id: '00')
       assert code.is_a? IssuerResponseCodes::Code
       assert_equal context.default_target, code.target
       assert_equal context.default_locale, code.locale
       assert_equal context.fraud_notice_by_default, code.fraud_notice
 
-      code = context.code(id: "00", target: :cardholder)
+      code = context.code(id: '00', target: :cardholder)
       assert code.is_a? IssuerResponseCodes::Code
       assert_equal :cardholder, code.target
       assert_equal context.default_locale, code.locale
       assert_equal context.fraud_notice_by_default, code.fraud_notice
 
-      code = context.code(id: "00", locale: :lv)
+      code = context.code(id: '00', locale: :lv)
       assert code.is_a? IssuerResponseCodes::Code
       assert_equal context.default_target, code.target
       assert_equal :lv, code.locale
       assert_equal context.fraud_notice_by_default, code.fraud_notice
 
-      code = context.code(id: "00", fraud_notice: false)
+      code = context.code(id: '00', fraud_notice: false)
       assert code.is_a? IssuerResponseCodes::Code
       assert_equal context.default_target, code.target
       assert_equal context.default_locale, code.locale
@@ -107,25 +113,25 @@ module IssuerResponseCodes
 
       # tds codes
 
-      code = context.tds_code(id: "00")
+      code = context.tds_code(id: '00')
       assert code.is_a? IssuerResponseCodes::TdsCode
       assert_equal context.default_target, code.target
       assert_equal context.default_locale, code.locale
       assert_equal context.fraud_notice_by_default, code.fraud_notice
 
-      code = context.tds_code(id: "00", target: :cardholder)
+      code = context.tds_code(id: '00', target: :cardholder)
       assert code.is_a? IssuerResponseCodes::TdsCode
       assert_equal :cardholder, code.target
       assert_equal context.default_locale, code.locale
       assert_equal context.fraud_notice_by_default, code.fraud_notice
 
-      code = context.tds_code(id: "00", locale: :lv)
+      code = context.tds_code(id: '00', locale: :lv)
       assert code.is_a? IssuerResponseCodes::TdsCode
       assert_equal context.default_target, code.target
       assert_equal :lv, code.locale
       assert_equal context.fraud_notice_by_default, code.fraud_notice
 
-      code = context.tds_code(id: "00", fraud_notice: false)
+      code = context.tds_code(id: '00', fraud_notice: false)
       assert code.is_a? IssuerResponseCodes::TdsCode
       assert_equal context.default_target, code.target
       assert_equal context.default_locale, code.locale
