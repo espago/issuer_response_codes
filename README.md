@@ -1,6 +1,7 @@
 # IssuerResponseCodes
 
-This gem provides a quite comprehensive library of Issuer Response Code and 3D-Secure Status Code descriptions (for both cardholders and merchants) with suggested actions in 9 languages:
+This gem provides a quite comprehensive library of Issuer Response Code and 3D-Secure Status Code descriptions (for both cardholders and merchants) with suggested actions in many languages:
+
 - Complete locales:
   - en
   - pl
@@ -139,7 +140,7 @@ code.behaviour #=> "Please contact your card issuer to get more details and try 
 
 ##### Locale
 
-The default locale is `:en`. There are 7 in total: `%i[en pl da ee lt lv sv]`. Only the first two are complete, the rest are partially in English.
+The default locale is `:en`. Only the first two are complete, the rest are partially in English.
 
 ```ruby
 code = ::IssuerResponseCodes::Code.new(id: '54')
@@ -151,6 +152,8 @@ code.reason #=> "Expired card."
 code = ::IssuerResponseCodes::Code.new(id: '54', locale: :pl)
 code.reason #=> "Karta utraciła ważność."
 ```
+
+A full list of available locales is stored in `IssuerResponseCodes::AVAILABLE_LOCALES`.
 
 #### Methods
 
@@ -266,7 +269,7 @@ code.behaviour #=> "Please use a different card or contact issuer. Transactions 
 
 ##### Locale
 
-The default locale is `:en`. There are 7 in total: `%i[en pl da ee lt lv sv]`. Only the first two are complete, the rest are partially in English.
+The default locale is `:en`. Only the first two are complete, the rest are partially in English.
 
 ```ruby
 code = ::IssuerResponseCodes::TdsCode.new(id: '11', target: :cardholder)
