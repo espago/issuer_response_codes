@@ -3,9 +3,9 @@ de:
     suggestion: 'Vorschlag'
     fraud_notice: 'Transaktionen mit diesem Code können als betrügerisch angesehen werden.'
     fraudulent_codes:
-      '09': true wahr
-      '10': true wahr
-      '11': true wahr
+      '09': true
+      '10': true
+      '11': true
     behaviour:
       unknown: 'Bitte kontaktieren Sie unser Support-Team.'
       '01': Bitte versuchen Sie es erneut.
