@@ -9,26 +9,26 @@ pl:
       '01': Proszę spróbować ponownie.
       '02': Proszę użyć innego urządzenia.
       '03': Proszę użyć innego urządzenia.
-      '04': Proszę użyć innej karty lub skontaktować sie z bankiem.
+      '04': Proszę użyć innej karty lub skontaktować się z bankiem.
       '05': Proszę użyć innej karty.
       '06': Proszę użyć innej karty lub sprawdzić poprawność wprowadzonych danych.
       '07': Proszę użyć innej karty.
       '08': Proszę użyć innej karty.
-      '09': Proszę użyć innej karty lub skontaktować sie z bankiem.
-      '10': Proszę użyć innej karty lub skontaktować sie z bankiem.
-      '11': Proszę użyć innej karty lub skontaktować sie z bankiem.
-      '12': Proszę użyć innej karty lub skontaktować sie z bankiem.
-      '13': Proszę użyć innej karty lub skontaktować sie z bankiem.
+      '09': Proszę użyć innej karty lub skontaktować się z bankiem.
+      '10': Proszę użyć innej karty lub skontaktować się z bankiem.
+      '11': Proszę użyć innej karty lub skontaktować się z bankiem.
+      '12': Proszę użyć innej karty lub skontaktować się z bankiem.
+      '13': Proszę użyć innej karty lub skontaktować się z bankiem.
       '14': Proszę spróbować ponownie później lub użyć innej karty.
-      '15': Proszę użyć innej karty lub skontaktować sie z bankiem.
-      '16': Proszę użyć innej karty lub skontaktować sie z bankiem.
-      '17': Proszę użyć innej karty lub skontaktować sie z bankiem.
-      '18': Proszę użyć innej karty lub skontaktować sie z bankiem.
-      '19': Proszę użyć innej karty lub skontaktować sie z bankiem.
+      '15': Proszę użyć innej karty lub skontaktować się z bankiem.
+      '16': Proszę użyć innej karty lub skontaktować się z bankiem.
+      '17': Proszę użyć innej karty lub skontaktować się z bankiem.
+      '18': Proszę użyć innej karty lub skontaktować się z bankiem.
+      '19': Proszę użyć innej karty lub skontaktować się z bankiem.
       '20': Proszę użyć innej karty.
       '21': Proszę użyć innej karty.
       '22': Proszę spróbować ponownie później lub użyć innej karty.
-      '23': Proszę użyć innej karty lub skontaktować sie z bankiem.
+      '23': Proszę użyć innej karty lub skontaktować się z bankiem.
       '24': Proszę spróbować ponownie później lub użyć innej karty.
       '25': Proszę spróbować ponownie później lub użyć innej karty.
       '26': Proszę spróbować ponownie później lub użyć innej karty.
@@ -124,13 +124,19 @@ pl:
     fraud_notice: 'UWAGA: Nie należy powtarzać obciążeń dla tej karty! Może to zostać uznane za próbę oszustwa!'
     fraudulent_codes:
       '04': true
+      'B04': true
       '07': true
       '12': true
       '14': true
+      'B14': true
       '15': true
+      'B15': true
       '41': true
+      'B41': true
       '43': true
+      'B43': true
       '54': true
+      'B54': true
       '57': true
       '59': true
       '63': true
@@ -141,59 +147,68 @@ pl:
       unknown: Prosimy o kontakt z naszym działem wsparcia.
       '00': "Proszę spróbować ponownie później lub skontaktować się ze sprzedawcą."
       '1A': "Proszę spróbować ponownie lub skontaktować się z bankiem w celu weryfikacji ustawień płatności internetowych."
-      '01': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      '02': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      '03': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      '04': "Proszę użyć innej karty lub skontaktować sie z bankiem."
+      'B1A': "Proszę spróbować ponownie lub skontaktować się z bankiem w celu weryfikacji ustawień płatności internetowych."
+      '01': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      '02': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      '03': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      '04': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      'B04': "Proszę użyć innej karty lub skontaktować się z bankiem."
       '05': "Proszę użyć innej karty lub skontaktować sie z bankiem w celu weryfikacji ustawień płatności internetowych."
       '06': "Proszę użyć innej karty lub skontaktować sie z bankiem w celu weryfikacji ustawień płatności internetowych."
-      '07': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      '12': "Proszę użyć innej karty lub skontaktować sie z bankiem."
+      '07': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      '12': "Proszę użyć innej karty lub skontaktować się z bankiem."
       '13': "Proszę użyć innej karty lub skontaktować sie z bankiem w celu weryfikacji limitów płatności internetowych."
       '14': "Proszę użyć innej karty."
+      'B14': "Proszę użyć innej karty."
       '15': "Proszę użyć innej karty."
-      '19': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      '21': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      '30': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      '39': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      '41': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      '43': "Proszę użyć innej karty lub skontaktować sie z bankiem."
+      'B15': "Proszę użyć innej karty."
+      '19': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      '21': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      '30': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      '39': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      '41': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      'B41': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      '43': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      'B43': "Proszę użyć innej karty lub skontaktować się z bankiem."
       '51': "Proszę użyć innej karty, zweryfikować dostępność środków lub skontaktować sie z bankiem w celu weryfikacji limitów płatności internetowych."
-      '52': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      '53': "Proszę użyć innej karty lub skontaktować sie z bankiem."
+      '52': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      '53': "Proszę użyć innej karty lub skontaktować się z bankiem."
       '54': "Proszę użyć innej karty."
+      'B54': "Proszę użyć innej karty."
       '55': "Proszę użyć innej karty, zweryfikować poprawność kodu CVV/CVC lub skontaktować sie z bankiem."
       '57': "Proszę użyć innej karty lub skontaktować sie z bankiem w celu weryfikacji ustawień płatności internetowych."
       '58': "Proszę użyć innej karty lub skontaktować sie z bankiem w celu weryfikacji ustawień płatności internetowych."
-      '59': "Proszę użyć innej karty lub skontaktować sie z bankiem."
+      '59': "Proszę użyć innej karty lub skontaktować się z bankiem."
       '61': "Proszę użyć innej karty lub skontaktować sie z bankiem w celu weryfikacji limitów płatności internetowych."
-      '62': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      '63': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      '65': "Proszę użyć innej karty lub skontaktować sie z bankiem."
+      '62': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      '63': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      '65': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      'B65': "Proszę użyć innej karty lub skontaktować się z bankiem."
       '70': "Proszę spróbować ponownie lub skontaktować się z bankiem w celu weryfikacji ustawień płatności internetowych."
-      '76': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      '77': "Proszę użyć innej karty lub skontaktować sie z bankiem."
+      '76': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      '77': "Proszę użyć innej karty lub skontaktować się z bankiem."
       '78': "Proszę użyć innej karty lub skontaktować sie z bankiem w celu aktywacji karty."
-      '82': "Proszę użyć innej karty lub skontaktować sie z bankiem."
+      '82': "Proszę użyć innej karty lub skontaktować się z bankiem."
       'N7': "Proszę użyć innej karty, zweryfikować poprawność kodu CVV/CVC lub skontaktować sie z bankiem."
-      'R0': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      'R1': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      'R3': "Proszę użyć innej karty lub skontaktować sie z bankiem."
+      'R0': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      'R1': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      'R3': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      'E1': "Proszę użyj innej karty lub skontaktuj się ze Sprzedawcą."
       'E3': "Proszę spróbować ponownie później lub skontaktować się z bankiem."
       'E4': "Proszę spróbować ponownie później lub skontaktować się z bankiem."
       'E5': "Proszę spróbować ponownie później lub skontaktować się z bankiem."
       '75': "Proszę użyć innej karty, zweryfikować poprawność kodu CVV/CVC lub skontaktować sie z bankiem."
       '85': "Bank potwierdził autoryzację."
-      '86': "Proszę użyć innej karty lub skontaktować sie z bankiem."
+      '86': "Proszę użyć innej karty lub skontaktować się z bankiem."
       '91': "Proszę użyć innej karty lub spróbować później."
-      '92': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      '93': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      '94': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      '96': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      '98': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      'N3': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      'P5': "Proszę użyć innej karty lub skontaktować sie z bankiem."
-      'R2': "Proszę użyć innej karty lub skontaktować sie z bankiem."
+      '92': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      '93': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      '94': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      '96': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      '98': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      'N3': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      'P5': "Proszę użyć innej karty lub skontaktować się z bankiem."
+      'R2': "Proszę użyć innej karty lub skontaktować się z bankiem."
     universal: &issuer_response_code
       unknown: Nieznana przyczyna
       '75': "Przekroczony limit błędnych prób podania kodu CVV/CVC/PIN."
@@ -208,6 +223,7 @@ pl:
       'N3': "Płatność odrzucona przez bank."
       'P5': "Płatność odrzucona przez bank."
       'R2': "Płatność odrzucona przez bank."
+      'E1': "Tymczasowa blokada ze względu na przekroczenie limitu odrzuconych powtórzeń i ryzyko dodatkowych opłat u operatora."
       'E3': "Błędna weryfikacja 3D-Secure: błąd banku."
       'E4': "Błędna weryfikacja 3D-Secure: Transakcja odrzucona przez bank z powodu niepowodzenia autoryzacji."
       'E5': "Tymczasowy błąd przy weryfikacji 3D-Secure."
@@ -221,10 +237,12 @@ pl:
 
 Należy sprawdzić czy konto sprzedawcy u agenta rozliczeniowego jest aktywne i poprawnie skonfigurowane w Espago."
         '1A': "Wymagane silne uwierzytelnienie (SCA)."
+        'B1A': "Wymagane silne uwierzytelnienie (SCA)."
         '01': "Kod własny wydawcy karty."
         '02': "Kod własny wydawcy karty."
         '03': "Nieprawidłowe/niepełne dane akceptanta lub nieaktywne konto."
         '04': "Karta zastrzeżona (z powodów innych niż kradzież/zgubienie)."
+        'B04': "Karta zastrzeżona (z powodów innych niż kradzież/zgubienie)."
         '05': "Płatność została odrzucona przez bank bez podania szczególnej przyczyny.
 Potrzebny kontakt klienta z bankiem w celu wyjaśnienia.
 Prawdopodobnie płatności typu MOTO/eCommerce/subskrypcyjne nieaktywne lub niewspierane. "
@@ -233,17 +251,22 @@ Prawdopodobnie płatności typu MOTO/eCommerce/subskrypcyjne nieaktywne lub niew
         '12': "Nieprawidłowa transakcja lub niedostępna dla tej karty."
         '13': "Nieprawidłowa kwota transakcji (przekroczenie limitu) lub błędne przeliczenie walut."
         '14': "Nieprawidłowy numer karty lub konta."
+        'B14': "Nieprawidłowy numer karty lub konta."
         '15': "Nie zidentyfikowano wydawcy karty."
+        'B15': "Nie zidentyfikowano wydawcy karty."
         '19': "Płatność została odrzucona przez bank z komunikatem sugerującym ponowną próbę."
         '21': "Bank nie podjął żądania obciążenia."
         '30': "Błędny format danych wiadomości autoryzacyjnej."
         '39': "Karta nie jest powiązana z rachunkiem kredytowym."
         '41': "Karta oznaczona jako zgubiona."
+        'B41': "Karta oznaczona jako zgubiona."
         '43': "Karta oznaczona jako skradziona"
+        'B43': "Karta oznaczona jako skradziona"
         '51': "Niewystarczające środki na koncie lub przekroczenie limitu dla danego typu płatności."
         '52': "Karta nie jest powiązana z rachunkiem, który może być obciążony."
         '53': "Karta nie jest powiązana z rachunkiem, który może być obciążony."
         '54': "Karta utraciła ważność, lub brak daty ważności."
+        'B54': "Karta utraciła ważność, lub brak daty ważności."
         '55': "Nieprawidłowy kod CVV."
         '57': "Typ transakcji niedozwolony dla karty."
         '58': "Typ transakcji niedozwolony dla na tym terminalu."
@@ -252,6 +275,7 @@ Prawdopodobnie płatności typu MOTO/eCommerce/subskrypcyjne nieaktywne lub niew
         '62': "Ograniczenie karty, wykluczenie ze względu na kraj wydawcy."
         '63': "Bank odrzucił płatność ze względu na wykryte naruszenie bezpieczeństwa."
         '65': "Przekroczony dzienny limit liczby transakcji dla tej karty."
+        'B65': "Przekroczony dzienny limit liczby transakcji dla tej karty."
         '70': "Wymagane silne uwierzytelnienie."
         '76': "Dane wskazanej płatności nie zgadzają się z danymi po stronie banku."
         '77': "Podwójny zwrot lub podwójna płatność."
@@ -265,27 +289,34 @@ Prawdopodobnie płatności typu MOTO/eCommerce/subskrypcyjne nieaktywne lub niew
         <<: *issuer_response_code
         '00': "Płatność nie udała się."
         '1A': "Wymagane silne uwierzytelnienie (SCA)."
+        'B1A': "Wymagane silne uwierzytelnienie (SCA)."
         '01': "Płatność odrzucona przez bank."
         '02': "Płatność odrzucona przez bank."
         '03': "Płatność tą kartą nie może być zrealizowana u tego sprzedawcy."
         '04': "Płatność odrzucona przez bank."
+        'B04': "Płatność odrzucona przez bank."
         '05': "Płatność odrzucona przez bank."
         '06': "Płatność odrzucona przez bank."
         '07': "Płatność odrzucona przez bank."
         '12': "Płatność odrzucona - transakcja jest niepoprawna."
         '13': "Płatność odrzucona - kwota jest niepoprawna lub nastąpiło błędne przewalutowanie."
         '14': "Płatność odrzucona - dane karty są niepoprawne."
+        'B14': "Płatność odrzucona - dane karty są niepoprawne."
         '15': "Płatność odrzucona - nieznany wydawca karty."
+        'B15': "Płatność odrzucona - nieznany wydawca karty."
         '19': "Płatność odrzucona przez bank."
         '21': "Płatność odrzucona przez bank."
         '30': "Płatność odrzucona - błędny format wiadomości autoryzacyjnej."
         '39': "Płatność odrzucona przez bank."
         '41': "Płatność odrzucona przez bank."
+        'B41': "Płatność odrzucona przez bank."
         '43': "Płatność odrzucona przez bank."
+        'B43': "Płatność odrzucona przez bank."
         '51': "Płatność odrzucona - brak środków lub przekroczony limit."
         '52': "Płatność odrzucona przez bank."
         '53': "Płatność odrzucona przez bank."
         '54': "Płatność odrzucona - karta utraciła ważność."
+        'B54': "Płatność odrzucona - karta utraciła ważność."
         '55': "Płatność odrzucona - niepoprawny lub brakujący PIN."
         '57': "Płatność odrzucona - niedozwolony rodzaj transakcji."
         '58': "Płatność odrzucona - niedozwolony rodzaj transakcji."
@@ -294,6 +325,7 @@ Prawdopodobnie płatności typu MOTO/eCommerce/subskrypcyjne nieaktywne lub niew
         '62': "Płatność odrzucona przez bank - karta nie może być użyta w tym regionie lub kraju."
         '63': "Płatność odrzucona przez bank ze względów bezpieczeństwa."
         '65': "Płatność odrzucona - przekroczono limit liczby użyć."
+        'B65': "Płatność odrzucona - przekroczono limit liczby użyć."
         '70': "Wymagane silne uwierzytelnienie (SCA)"
         '76': "Płatność nie może być wycofana."
         '77': "Transakcja nie może być zrealizowana."
