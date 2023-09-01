@@ -110,35 +110,45 @@ lt:
     fraud_notice: 'IMPORTANT NOTICE: It is forbidden to retry transactions that ended with this code. It may be recognized as a fraud attempt!'
     fraudulent_codes:
       '04': true
+      'B04': true
       '07': true
       '41': true
+      'B41': true
       '43': true
+      'B43': true
     behaviour:
       '00': "Prašome bandyti vėliau, susisiekti su Pardavėju arba Espago palaikymo komanda."
       '05': "Patikrinkite kortelės nustatymus šiems mokėjimų tipams arba naudokite kitą kortelę."
       '13': "Patikrinkite savo sąskaitos nustatymus ir limitus. Susisiekite su kortelės išdavėju ir bandykite vėliau."
       '14': "Patikrinkite įvestus duomenis ir bandykite dar kartą."
+      'B14': "Patikrinkite įvestus duomenis ir bandykite dar kartą."
       'N7': "Patikrinkite įvestus duomenis ir bandykite dar kartą."
       '51': "Pasitikrink sąskaitą ir bandyk dar kartą."
       '54': "Patikrinkite kortelę arba bandykite kitą."
+      'B54': "Patikrinkite kortelę arba bandykite kitą."
       '57': "Patikrinkite kortelės nustatymus šiems mokėjimų tipams arba naudokite kitą kortelę."
       '61': "Patikrinkite sąskaitos nustatymus ir limitus. Susisiekite su kortelės išdavėju ir bandykite vėliau."
       '82': "Patikrinkite įvestus duomenis ir bandykite dar kartą."
+      'E1': "Naudokite kitą kortelę arba susisiekite su prekybininku."
       # incomplete translations
       unknown: "Please contact our support team."
       '01': "Please contact your card issuer."
       '02': "Please contact your card issuer."
       '03': "Please contact your card issuer and try again later."
       '04': "Please contact your card issuer and try again later."
+      'B04': "Please contact your card issuer and try again later."
       '07': "Please contact your card issuer and try again later."
       '12': "Please contact your card issuer to get more details and try again later."
       '30': "Please contact your card issuer to get more details and try again later."
       '41': "Please contact your card issuer to get more details and try again later."
+      'B41': "Please contact your card issuer to get more details and try again later."
       '43': "Please contact your card issuer to get more details and try again later."
+      'B43': "Please contact your card issuer to get more details and try again later."
       '58': "Please check your card settings for those transaction types or use another card."
       '59': "Please contact your card issuer to get more details and try again later."
       '62': "Please contact your bank."
       '65': "Change your limits settings or try again later."
+      'B65': "Change your limits settings or try again later."
       '75': "Please check your CVV/CVC/PIN code on your card."
       '78': "Please activate your card and try again later."
       '91': "Please try again later."
@@ -156,12 +166,15 @@ lt:
       '05': "Bankas atmetė mokėjimą saugumo patikros metu (naudojama kortelė nepalaiko periodinių mokėjimų/mokėjimų be kortelės saugos (CVV) kodo), lėšos buvo užšaldytos, limitas viršytas arba mokėjimo kortelė nepalaiko nuotolinių/internetinių mokėjimų."
       '13': "Bankas atmetė mokėjimą."
       '14': "Kortelės numeris neteisingas."
+      'B14': "Kortelės numeris neteisingas."
       'N7': "Kortelės saugos kodas (CVV) neteisingas."
       '51': "Nepakanka lėšų sąskaitoje."
       '54': "Kortelė negalioja."
+      'B54': "Kortelė negalioja."
       '57': "Bankas atmetė mokėjimą, nes ši kreditinė kortelė negali būti naudojama šiam mokėjimų tipui (elektroninei prekybai, nuotoliniams ar periodiniams mokėjimams)."
       '61': "Bankas atmetė mokėjimą."
       '82': "Kortelės saugos kodas (CVV) neteisingas."
+      'E1': "Viršytas atsisakymo limitas."
       # incomplete translations
       unknown: "Unknown reason."
       '01': "Authorization Error."
@@ -173,6 +186,7 @@ lt:
       '59': "Your bank has declined this transaction"
       '62': "Your card can be not supported due to restrictions placed on the card or Seller country exclusion (imposition an embargo), or bank blocked a card eg. due to unacceptable debit balance."
       '65': "Activity count limit exceeded."
+      'B65': "Activity count limit exceeded."
       '75': "Invalid activity count limit exceeded."
       '78': "Inactive card."
       '91': "Temporary issuer error."
@@ -189,12 +203,18 @@ lt:
       merchant:
         <<: *issuer_response_code
         '04': "Pickup card."
+        'B04': "Pickup card."
         '07': "Pickup card."
         '41': "Lost card."
+        'B41': "Lost card."
         '43': "Stolen card."
+        'B43': "Stolen card."
       cardholder:
         <<: *issuer_response_code
         '04': "Your bank has declined this transaction."
+        'B04': "Your bank has declined this transaction."
         '07': "Your bank has declined this transaction."
         '41': "Your bank has declined this transaction."
+        'B41': "Your bank has declined this transaction."
         '43': "Your bank has declined this transaction."
+        'B43': "Your bank has declined this transaction."
