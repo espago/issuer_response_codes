@@ -223,7 +223,7 @@ fi:
       'N3': "Pankki hylkäsi maksun."
       'P5': "Pankki hylkäsi maksun."
       'R2': "Pankki hylkäsi maksun."
-      'E1': "Tilapäinen esto johtuen hylättyjen toistojen rajan ylityksestä ja operaattorin lisäveloitusten riskistä."
+      'E1': "Kieltäytymisraja ylitetty."
       'E3': "Virheellinen 3D-Secure-varmistus: pankkivirhe."
       'E4': "Virheellinen 3D-Secure-varmennus: Pankki hylkäsi tapahtuman valtuutuksen epäonnistumisen vuoksi."
       'E5': "Väliaikainen virhe 3D-Secure-vahvistuksessa."

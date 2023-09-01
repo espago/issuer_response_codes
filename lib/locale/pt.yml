@@ -223,7 +223,7 @@ pt:
       'N3': "Pagamento rejeitado pelo banco."
       'P5': "Pagamento rejeitado pelo banco."
       'R2': "Pagamento rejeitado pelo banco."
-      'E1': "Bloqueio temporário por ultrapassagem do limite de repetições rejeitadas e risco de cobranças adicionais por parte da operadora."
+      'E1': "Limite de recusa excedido."
       'E3': "Verificação incorrecta do 3D-Secure: erro do banco."
       'E4': "Verificação incorrecta do 3D-Secure: Transação rejeitada pelo banco devido a falha na autorização."
       'E5': "Erro temporário com a verificação 3D-Secure."

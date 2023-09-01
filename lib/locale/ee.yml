@@ -174,7 +174,7 @@ ee:
       '57': "Pank lükkas tehingu tagasi, kuna antud krediitkaarti ei saa seda liiki tehingu teostamiseks kasutada (eCommerce, MOTO või korduvtehing)."
       '61': "MOTO/eCommerce mitteaktiivne või summa limiit ületatud."
       '82': "Vale CVV-kood."
-      'E1': "Ajutine blokaad tagasilükatud korduste limiidi ületamise ja operaatoripoolsete lisatasude riski tõttu."
+      'E1': "Keeldumise limiit ületatud."
       # incomplete translations
       unknown: "Unknown reason."
       '01': "Authorization Error."

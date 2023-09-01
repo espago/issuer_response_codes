@@ -223,7 +223,7 @@ pl:
       'N3': "Płatność odrzucona przez bank."
       'P5': "Płatność odrzucona przez bank."
       'R2': "Płatność odrzucona przez bank."
-      'E1': "Tymczasowa blokada ze względu na przekroczenie limitu odrzuconych powtórzeń i ryzyko dodatkowych opłat u operatora."
+      'E1': "Przekroczony limit odmów."
       'E3': "Błędna weryfikacja 3D-Secure: błąd banku."
       'E4': "Błędna weryfikacja 3D-Secure: Transakcja odrzucona przez bank z powodu niepowodzenia autoryzacji."
       'E5': "Tymczasowy błąd przy weryfikacji 3D-Secure."

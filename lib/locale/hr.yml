@@ -223,7 +223,7 @@ hr:
       'N3': "Banka je odbila plaćanje."
       'P5': "Banka je odbila plaćanje."
       'R2': "Banka je odbila plaćanje."
-      'E1': "Privremena blokada zbog prekoračenja limita odbijenih ponavljanja i rizika od dodatnih troškova od strane operatera."
+      'E1': "Premašeno je ograničenje odbijanja."
       'E3': "3D-Secure pogreška pri provjeri: pogreška banke."
       'E4': "Pogrešna verifikacija 3D-Secure: banka je odbila transakciju zbog neuspjele autorizacije."
       'E5': "Privremena pogreška u 3D-Secure verifikaciji."

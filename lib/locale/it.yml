@@ -208,7 +208,7 @@ it:
       'N3': "Transazione non autorizzata dall’emittente."
       'P5': "Sblocco PIN rifiutato - richiesta di cambio o sblocco PIN respinta dall'emittente."
       'R2': "Transazione non autorizzata dall’emittente."
-      'E1': "Blocco temporaneo per superamento del limite di ripetizioni rifiutate e rischio di addebiti aggiuntivi da parte dell'operatore."
+      'E1': "Limite di rifiuto superato."
       'E3': "Transazione non eseguita a causa di un errore di 3D Secure."
       'E4': "Transazione non eseguita a causa di una conferma negativa 3D Secure dalla tua banca."
       'E5': "Errore temporaneo di 3D Secure."

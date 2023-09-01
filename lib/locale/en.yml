@@ -210,7 +210,7 @@ en:
       'N3': "Cash service not available."
       'P5': "Denied PIN unblock - PIN change or unblock request declined by issuer."
       'R2': "Payment rejected by the issuer - Transaction does not qualify for Visa PIN."
-      'E1': "Temporary blockade due to exceeding the limit of rejected repeats and the risk of additional charges from the operator."
+      'E1': "Refusal limit exceeded."
       'E3': "Transaction not executed due to a 3D-Secure error."
       'E4': "Transaction not executed due to a negative 3D-Secure confirmation from your bank."
       'E5': "Temporary 3D-Secure error."

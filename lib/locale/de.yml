@@ -211,7 +211,7 @@ de:
       'N3': "Zahlung wurde von Bank abgelehnt."
       'P5': "PIN-Entsperrung abgelehnt - PIN-Änderung oder Entsperrungsanfrage wurde vom Herausgeber abgelehnt.."
       'R2': "Zahlung wurde von Bank abgelehnt."
-      'E1': "Vorübergehende Sperrung aufgrund der Überschreitung der Anzahl abgelehnter Wiederholungen und der Gefahr zusätzlicher Gebühren seitens des Betreibers."
+      'E1': "Ablehnungsgrenze überschritten."
       'E3': "Transaktion wurde aufgrund eines 3D-Secure-Fehlers nicht ausgeführt."
       'E4': "Transaktion wurde aufgrund einer negativen 3D-Secure-Bestätigung Ihrer Bank nicht ausgeführt."
       'E5': "Vorübergehender 3D-Secure-Fehler."

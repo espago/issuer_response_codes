@@ -174,7 +174,7 @@ da:
       '57': "Banken har afvist transaktionen, da dette kreditkort ikke kan bruges til denne type transaktion (e-handel, MOTO eller tilbagevendende)."
       '61': "Banken har afvist transaktionen."
       '82': "Negative CVV / CVC resultater."
-      'E1': "Midlertidig blokade på grund af overskridelse af grænsen for afviste gentagelser og risiko for yderligere gebyrer fra operatøren."
+      'E1': "Grænsen for afslag er overskredet."
       # incomplete translations
       unknown: "Unknown reason."
       '01': "Authorization Error."

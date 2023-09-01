@@ -174,7 +174,7 @@ lv:
       '57': "Kartes turētājam šis darījuma veids nav atļauts. Banka ir atteikusi darījumu, jo šo kredītkarti nevar lietot šim darījuma veidam (e-komercija, MOTO vai automātiskais maksājums)."
       '61': "MOTO/e-komercija neaktīva vai pārsniegts summas limits."
       '82': "Negatīvi CVV rezultāti."
-      'E1': "Pagaidu blokāde sakarā ar noraidīto atkārtojumu limita pārsniegšanu un operatora papildu maksas risku."
+      'E1': "Pārsniegts atteikuma limits."
       # incomplete translations
       unknown: "Unknown reason."
       '01': "Authorization Error."

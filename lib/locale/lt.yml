@@ -174,7 +174,7 @@ lt:
       '57': "Bankas atmetė mokėjimą, nes ši kreditinė kortelė negali būti naudojama šiam mokėjimų tipui (elektroninei prekybai, nuotoliniams ar periodiniams mokėjimams)."
       '61': "Bankas atmetė mokėjimą."
       '82': "Kortelės saugos kodas (CVV) neteisingas."
-      'E1': "Laikina blokada dėl atmestų pakartojimų limito viršijimo ir operatoriaus papildomų mokesčių rizikos."
+      'E1': "Viršytas atsisakymo limitas."
       # incomplete translations
       unknown: "Unknown reason."
       '01': "Authorization Error."

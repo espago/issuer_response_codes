@@ -174,7 +174,7 @@ sv:
       '57': "Banken har avböjt transaktionen eftersom detta kreditkort inte kan användas för denna typ av transaktion (e-handel, MOTO eller återkommande)."
       '61': "Banken har avböjt transaktionen."
       '82': "Negativa CVV / CVC resultat."
-      'E1': "Tillfällig blockad på grund av överskridande av gränsen för avvisade upprepningar och risk för extra avgifter från operatören."
+      'E1': "Gränsen för avslag har överskridits."
       # incomplete translations
       unknown: "Unknown reason."
       '01': "Authorization Error."

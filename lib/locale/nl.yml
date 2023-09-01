@@ -223,7 +223,7 @@ nl:
       'N3': "Betaling geweigerd door de bank."
       'P5': "Betaling geweigerd door de bank."
       'R2': "Betaling geweigerd door de bank."
-      'E1': "Tijdelijke blokkade vanwege overschrijding van de limiet van afgewezen herhalingen en risico op extra kosten vanuit de exploitant."
+      'E1': "Weigeringslimiet overschreden."
       'E3': "Onjuiste 3D-Secure verificatie: bankfout."
       'E4': "Onjuiste 3D-Secure verificatie: Transactie afgewezen door de bank vanwege mislukte autorisatie."
       'E5': "Tijdelijke fout bij 3D-Secure verificatie."
