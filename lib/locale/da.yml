@@ -130,6 +130,7 @@ da:
       '61': "Tjek venligst indstillinger for din konto og konfigurationer af grænser. Kontakt venligst din kortudsteder og prøv igen senere."
       '82': "Kontroller indtastede data og prøv igen."
       'E1': "Brug venligst et andet kort, eller kontakt sælgeren."
+      'Q2': "Prøv venligst igen senere, eller brug et andet kort."
       # incomplete translations
       unknown: "Please contact our support team."
       '01': "Please contact your card issuer."
@@ -175,6 +176,7 @@ da:
       '61': "Banken har afvist transaktionen."
       '82': "Negative CVV / CVC resultater."
       'E1': "Grænsen for afslag er overskredet."
+      'Q2': "Acquirer systemfejl."
       # incomplete translations
       unknown: "Unknown reason."
       '01': "Authorization Error."

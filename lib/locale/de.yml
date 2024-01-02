@@ -186,6 +186,7 @@ de:
       'E3': "Bitte versuchen Sie es erneut oder kontaktieren Sie den Herausgeber für Klarstellungen."
       'E4': "Bitte versuchen Sie es erneut oder kontaktieren Sie den Herausgeber für Klarstellungen."
       'E5': "Bitte versuchen Sie es erneut oder kontaktieren Sie den Herausgeber für Klarstellungen."
+      'Q2': "Bitte versuchen Sie es erneut oder verwenden Sie eine andere Karte."
       '75': "Bitte versuchen Sie es erneut und überprüfen Sie die CVV/CVC oder kontaktieren Sie den Herausgeber für Klarstellungen."
       '85': "Der Herausgeber hat diese Transaktion bestätigt."
       '86': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
@@ -215,6 +216,7 @@ de:
       'E3': "Transaktion wurde aufgrund eines 3D-Secure-Fehlers nicht ausgeführt."
       'E4': "Transaktion wurde aufgrund einer negativen 3D-Secure-Bestätigung Ihrer Bank nicht ausgeführt."
       'E5': "Vorübergehender 3D-Secure-Fehler."
+      'Q2': "Acquirer-Systemfehler."
     targeted:
       merchant:
         <<: *issuer_response_code

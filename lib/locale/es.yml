@@ -197,6 +197,7 @@ es:
       'E3': "Vuelva a intentarlo más tarde o póngase en contacto con su banco."
       'E4': "Vuelva a intentarlo más tarde o póngase en contacto con su banco."
       'E5': "Vuelva a intentarlo más tarde o póngase en contacto con su banco."
+      'Q2': "Vuelva a intentarlo más tarde o utilice otra tarjeta."
       '75': "Utilice otra tarjeta, compruebe que el código CVV/CVC es correcto o póngase en contacto con su banco."
       '85': "El banco ha confirmado la autorización."
       '86': "Utilice otra tarjeta o póngase en contacto con su banco."
@@ -227,6 +228,7 @@ es:
       'E3': "Verificación 3D-Secure incorrecta: error del banco."
       'E4': "Verificación 3D-Secure incorrecta: Transacción rechazada por el banco por fallo de autorización."
       'E5': "Error temporal con la verificación 3D-Secure."
+      'Q2': "Error del sistema del adquirente."
     targeted:
       merchant:
         <<: *issuer_response_code

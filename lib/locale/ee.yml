@@ -130,6 +130,7 @@ ee:
       '61': "Palun kontrollige oma konto seadeid ja sätestatud limiite. Palun võtke ühendust oma kaardi väljaandjaga ja proovige hiljem uuesti."
       '82': "Kontrollige sisestatud andmeid ja proovige uuesti."
       'E1': "Kasutage teist kaarti või võtke ühendust kaupmehega."
+      'Q2': "Proovige hiljem uuesti või kasutage teist kaarti."
       # incomplete translations
       unknown: "Please contact our support team."
       '01': "Please contact your card issuer."
@@ -175,6 +176,7 @@ ee:
       '61': "MOTO/eCommerce mitteaktiivne või summa limiit ületatud."
       '82': "Vale CVV-kood."
       'E1': "Keeldumise limiit ületatud."
+      'Q2': "Acquirer system error."
       # incomplete translations
       unknown: "Unknown reason."
       '01': "Authorization Error."

@@ -130,6 +130,7 @@ lv:
       '61': "Lūdzu pārbaudiet konta iestatījumus un limitu konfigurācijas. Lūdzu sazinieties ar kartes izdevēju un mēģiniet vēlāk."
       '82': "Pārbaudiet ievadītos datus un mēģiniet vēlreiz."
       'E1': "Lūdzu, izmantojiet citu karti vai sazinieties ar tirgotāju."
+      'Q2': "Lūdzu, vēlāk mēģiniet vēlreiz vai izmantojiet citu karti."
       # incomplete translations
       unknown: "Please contact our support team."
       '01': "Please contact your card issuer."
@@ -175,6 +176,7 @@ lv:
       '61': "MOTO/e-komercija neaktīva vai pārsniegts summas limits."
       '82': "Negatīvi CVV rezultāti."
       'E1': "Pārsniegts atteikuma limits."
+      'Q2': "Maksājumu sniedzēja sistēmas kļūda."
       # incomplete translations
       unknown: "Unknown reason."
       '01': "Authorization Error."
