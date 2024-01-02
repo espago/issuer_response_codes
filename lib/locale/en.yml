@@ -185,6 +185,7 @@ en:
       'E3': "Please try again or contact the issuer for clarification."
       'E4': "Please try again or contact the issuer for clarification."
       'E5': "Please try again or contact the issuer for clarification."
+      'Q2': "Please try again or use a different card."
       '75': "Please try again and check the CVV/CVC or contact the issuer for clarification."
       '85': "The issuer has confirmed this transaction."
       '86': "Please use a different card or contact the issuer for clarification."
@@ -214,6 +215,7 @@ en:
       'E3': "Transaction not executed due to a 3D-Secure error."
       'E4': "Transaction not executed due to a negative 3D-Secure confirmation from your bank."
       'E5': "Temporary 3D-Secure error."
+      'Q2': "Acquirer system error."
     targeted:
       merchant:
         <<: *issuer_response_code

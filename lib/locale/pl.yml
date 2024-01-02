@@ -197,6 +197,7 @@ pl:
       'E3': "Proszę spróbować ponownie później lub skontaktować się z bankiem."
       'E4': "Proszę spróbować ponownie później lub skontaktować się z bankiem."
       'E5': "Proszę spróbować ponownie później lub skontaktować się z bankiem."
+      'Q2': "Proszę spróbować ponownie później lub użyć innej karty."
       '75': "Proszę użyć innej karty, zweryfikować poprawność kodu CVV/CVC lub skontaktować sie z bankiem."
       '85': "Bank potwierdził autoryzację."
       '86': "Proszę użyć innej karty lub skontaktować się z bankiem."
@@ -227,6 +228,7 @@ pl:
       'E3': "Błędna weryfikacja 3D-Secure: błąd banku."
       'E4': "Błędna weryfikacja 3D-Secure: Transakcja odrzucona przez bank z powodu niepowodzenia autoryzacji."
       'E5': "Tymczasowy błąd przy weryfikacji 3D-Secure."
+      'Q2': "Błąd systemu dostawcy płatności."
     targeted:
       merchant:
         <<: *issuer_response_code

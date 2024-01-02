@@ -183,6 +183,7 @@ it:
       'E3': "Si prega di riprovare o contattare l'emittente per chiarimenti."
       'E4': "Si prega di riprovare o contattare l'emittente per chiarimenti."
       'E5': "Si prega di riprovare o contattare l'emittente per chiarimenti."
+      'Q2': "Si prega di riprovare o utilizzare una carta diversa."
       '75': "Si prega di riprovare e controllare il CVV/CVC o contattare l'emittente per chiarimenti."
       '85': "L'emittente ha confermato questa transazione."
       '86': "Chiedi al cliente di fornire un’altra carta oppure Il cliente deve contattare la banca."
@@ -212,6 +213,7 @@ it:
       'E3': "Transazione non eseguita a causa di un errore di 3D Secure."
       'E4': "Transazione non eseguita a causa di una conferma negativa 3D Secure dalla tua banca."
       'E5': "Errore temporaneo di 3D Secure."
+      'Q2': "Errore di sistema dell'acquirente."
     targeted:
       merchant:
         <<: *issuer_response_code
