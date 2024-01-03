@@ -197,6 +197,7 @@ nl:
       'E3': "Probeer het later nog eens of neem contact op met de bank."
       'E4': "Probeer het later nog eens of neem contact op met de bank."
       'E5': "Probeer het later nog eens of neem contact op met de bank."
+      'Q2': "Probeer het later nog eens of gebruik een andere kaart."
       '75': "Gebruik een andere kaart, controleer of de CVV/CVC-code juist is of neem contact op met de bank."
       '85': "De bank heeft de autorisatie  bevestigd."
       '86': "Gebruik een andere kaart of neem contact op met de bank."
@@ -227,6 +228,7 @@ nl:
       'E3': "Onjuiste 3D-Secure verificatie: bankfout."
       'E4': "Onjuiste 3D-Secure verificatie: Transactie afgewezen door de bank vanwege mislukte autorisatie."
       'E5': "Tijdelijke fout bij 3D-Secure verificatie."
+      'Q2': "Acquirer-systeemfout."
     targeted:
       merchant:
         <<: *issuer_response_code
