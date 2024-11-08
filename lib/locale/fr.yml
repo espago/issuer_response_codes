@@ -198,6 +198,7 @@ fr:
       'E4': "Veuillez réessayer plus tard ou contacter votre banque."
       'E5': "Veuillez réessayer plus tard ou contacter votre banque."
       'Q2': "Veuillez réessayer plus tard ou utiliser une autre carte."
+      'N1': "Veuillez utiliser une autre carte ou contacter le commerçant."
       '75': "Veuillez utiliser une autre carte, vérifier que le code CVV/CVC est correct ou contacter votre banque."
       '85': "La banque a confirmé l'autorisation."
       '86': "Veuillez utiliser une autre carte ou contacter votre banque."
@@ -229,6 +230,7 @@ fr:
       'E4': "Vérification 3D-Secure incorrecte : Transaction rejetée par la banque en raison d'un défaut d'autorisation."
       'E5': "Erreur temporaire lors de la vérification de 3D-Secure."
       'Q2': "Erreur système de l'acquéreur."
+      'N1': "Le jeton du réseau de cartes n'est pas disponible et le numéro de carte complet n'est plus stocké."
     targeted:
       merchant:
         <<: *issuer_response_code

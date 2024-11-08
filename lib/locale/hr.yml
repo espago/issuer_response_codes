@@ -198,6 +198,7 @@ hr:
       'E4': "Pokušajte ponovno kasnije ili se obratite svojoj banci."
       'E5': "Pokušajte ponovno kasnije ili se obratite svojoj banci."
       'Q2': "Pokušajte ponovno kasnije ili upotrijebite drugu karticu."
+      'N1': "Upotrijebite drugu karticu ili kontaktirajte trgovca."
       '75': "Upotrijebite drugu karticu, provjerite je li CVV/CVC kod točan ili se obratite svojoj banci."
       '85': "Banka je potvrdila autorizaciju."
       '86': "Upotrijebite drugu karticu ili se obratite svojoj banci."
@@ -229,6 +230,7 @@ hr:
       'E4': "Pogrešna verifikacija 3D-Secure: banka je odbila transakciju zbog neuspjele autorizacije."
       'E5': "Privremena pogreška u 3D-Secure verifikaciji."
       'Q2': "Pogreška sustava stjecatelja."
+      'N1': "Mrežni token kartice nije dostupan i cijeli broj kartice više nije pohranjen."
     targeted:
       merchant:
         <<: *issuer_response_code

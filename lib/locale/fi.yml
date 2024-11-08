@@ -198,6 +198,7 @@ fi:
       'E4': "Yritä myöhemmin uudelleen tai ota yhteyttä pankkiisi."
       'E5': "Yritä myöhemmin uudelleen tai ota yhteyttä pankkiisi."
       'Q2': "Yritä myöhemmin uudelleen tai käytä toista korttia."
+      'N1': "Käytä toista korttia tai ota yhteyttä kauppiaaseen."
       '75': "Käytä toista korttia, tarkista, että CVV/CVC-koodi on oikea tai ota yhteyttä pankkiisi."
       '85': "Pankki vahvisti valtuutuksen."
       '86': "Käytä toista korttia tai ota yhteyttä pankkiisi."
@@ -229,6 +230,7 @@ fi:
       'E4': "Virheellinen 3D-Secure-varmennus: Pankki hylkäsi tapahtuman valtuutuksen epäonnistumisen vuoksi."
       'E5': "Väliaikainen virhe 3D-Secure-vahvistuksessa."
       'Q2': "Acquirer system error."
+      'N1': "Kortin verkkotunnus ei ole saatavilla, eikä koko kortin numeroa enää tallenneta."
     targeted:
       merchant:
         <<: *issuer_response_code
