@@ -131,6 +131,7 @@ sv:
       '82': "Kontrollera inmatade data och försök igen."
       'E1': "Använd ett annat kort eller kontakta säljaren."
       'Q2': "Försök igen senare eller använd ett annat kort."
+      'N1': "Använd ett annat kort eller kontakta säljaren."
       # incomplete translations
       unknown: "Please contact our support team."
       '01': "Please contact your card issuer."
@@ -177,6 +178,7 @@ sv:
       '82': "Negativa CVV / CVC resultat."
       'E1': "Gränsen för avslag har överskridits."
       'Q2': "Acquirer-systemfel."
+      'N1': "Kortnätverkstoken är inte tillgänglig och hela kortnumret lagras inte längre."
       # incomplete translations
       unknown: "Unknown reason."
       '01': "Authorization Error."

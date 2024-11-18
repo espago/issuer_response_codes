@@ -131,6 +131,7 @@ ee:
       '82': "Kontrollige sisestatud andmeid ja proovige uuesti."
       'E1': "Kasutage teist kaarti või võtke ühendust kaupmehega."
       'Q2': "Proovige hiljem uuesti või kasutage teist kaarti."
+      'N1': "Kasutage teist kaarti või võtke ühendust kaupmehega."
       # incomplete translations
       unknown: "Please contact our support team."
       '01': "Please contact your card issuer."
@@ -177,6 +178,7 @@ ee:
       '82': "Vale CVV-kood."
       'E1': "Keeldumise limiit ületatud."
       'Q2': "Acquirer system error."
+      'N1': "Kaardi võrgumärk pole saadaval ja kaardi täielikku numbrit enam ei salvestata."
       # incomplete translations
       unknown: "Unknown reason."
       '01': "Authorization Error."

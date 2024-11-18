@@ -198,6 +198,7 @@ pt:
       'E4': "Tente novamente mais tarde ou contate o seu banco."
       'E5': "Tente novamente mais tarde ou contate o seu banco."
       'Q2': "Tente novamente mais tarde ou utilize um cartão diferente."
+      'N1': "Utilize outro cartão ou entre em contato com o comerciante."
       '75': "Utilize outro cartão, verifique se o código CVV/CVC está correto ou contate o seu banco."
       '85': "O banco confirmou a autorização."
       '86': "Utilize outro cartão ou contacte o seu banco."
@@ -229,6 +230,7 @@ pt:
       'E4': "Verificação incorrecta do 3D-Secure: Transação rejeitada pelo banco devido a falha na autorização."
       'E5': "Erro temporário com a verificação 3D-Secure."
       'Q2': "Erro no sistema do provedor de pagamento."
+      'N1': "O token da rede do cartão não está disponível e o número completo do cartão não é mais armazenado."
     targeted:
       merchant:
         <<: *issuer_response_code

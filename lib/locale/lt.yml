@@ -131,6 +131,7 @@ lt:
       '82': "Patikrinkite įvestus duomenis ir bandykite dar kartą."
       'E1': "Naudokite kitą kortelę arba susisiekite su prekybininku."
       'Q2': "Vėliau bandykite dar kartą arba naudokite kitą kortelę."
+      'N1': "Naudokite kitą kortelę arba susisiekite su prekybininku."
       # incomplete translations
       unknown: "Please contact our support team."
       '01': "Please contact your card issuer."
@@ -177,6 +178,7 @@ lt:
       '82': "Kortelės saugos kodas (CVV) neteisingas."
       'E1': "Viršytas atsisakymo limitas."
       'Q2': "Gavijo sistemos klaida."
+      'N1': "Kortelės tinklo prieigos raktas nepasiekiamas, o visas kortelės numeris nebesaugomas."
       # incomplete translations
       unknown: "Unknown reason."
       '01': "Authorization Error."
