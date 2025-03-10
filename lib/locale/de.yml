@@ -188,6 +188,7 @@ de:
       'E5': "Bitte versuchen Sie es erneut oder kontaktieren Sie den Herausgeber für Klarstellungen."
       'Q2': "Bitte versuchen Sie es erneut oder verwenden Sie eine andere Karte."
       'N1': "Verwenden Sie eine andere Karte oder wenden Sie sich an den Händler."
+      'N2': "Bitte verwenden Sie eine andere Karte."
       '75': "Bitte versuchen Sie es erneut und überprüfen Sie die CVV/CVC oder kontaktieren Sie den Herausgeber für Klarstellungen."
       '85': "Der Herausgeber hat diese Transaktion bestätigt."
       '86': "Verwenden Sie eine andere Karte Der Karteninhaber sollte sich mit seiner Bank in Verbindung setzen."
@@ -219,6 +220,7 @@ de:
       'E5': "Vorübergehender 3D-Secure-Fehler."
       'Q2': "Acquirer-Systemfehler."
       'N1': "Das Kartennetzwerk-Token ist nicht verfügbar und die vollständige Kartennummer ist nicht mehr gespeichert."
+      'N2': "Kartennetzwerk ist nicht verfügbar"
     targeted:
       merchant:
         <<: *issuer_response_code

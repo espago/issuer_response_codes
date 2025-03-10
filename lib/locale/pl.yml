@@ -199,6 +199,7 @@ pl:
       'E5': "Proszę spróbować ponownie później lub skontaktować się z bankiem."
       'Q2': "Proszę spróbować ponownie później lub użyć innej karty."
       'N1': "Proszę użyj innej karty lub skontaktuj się ze Sprzedawcą."
+      'N2': "Proszę użyć innej karty."
       '75': "Proszę użyć innej karty, zweryfikować poprawność kodu CVV/CVC lub skontaktować sie z bankiem."
       '85': "Bank potwierdził autoryzację."
       '86': "Proszę użyć innej karty lub skontaktować się z bankiem."
@@ -231,6 +232,7 @@ pl:
       'E5': "Tymczasowy błąd przy weryfikacji 3D-Secure."
       'Q2': "Błąd systemu dostawcy płatności."
       'N1': "Token sieciowy karty jest niedostępny, a pełny numer karty nie jest już przechowywany."
+      'N2': 'Sieć kart jest niedostępna.'
     targeted:
       merchant:
         <<: *issuer_response_code

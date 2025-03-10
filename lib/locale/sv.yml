@@ -132,6 +132,7 @@ sv:
       'E1': "Använd ett annat kort eller kontakta säljaren."
       'Q2': "Försök igen senare eller använd ett annat kort."
       'N1': "Använd ett annat kort eller kontakta säljaren."
+      'N2': "Vänligen använd ett annat kort."
       # incomplete translations
       unknown: "Please contact our support team."
       '01': "Please contact your card issuer."
@@ -179,6 +180,7 @@ sv:
       'E1': "Gränsen för avslag har överskridits."
       'Q2': "Acquirer-systemfel."
       'N1': "Kortnätverkstoken är inte tillgänglig och hela kortnumret lagras inte längre."
+      'N2': "Kortnätverket är inte tillgängligt."
       # incomplete translations
       unknown: "Unknown reason."
       '01': "Authorization Error."
