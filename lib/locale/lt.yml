@@ -132,6 +132,7 @@ lt:
       'E1': "Naudokite kitą kortelę arba susisiekite su prekybininku."
       'Q2': "Vėliau bandykite dar kartą arba naudokite kitą kortelę."
       'N1': "Naudokite kitą kortelę arba susisiekite su prekybininku."
+      'N2': "Prašome naudoti kitą kortelę."
       # incomplete translations
       unknown: "Please contact our support team."
       '01': "Please contact your card issuer."
@@ -179,6 +180,7 @@ lt:
       'E1': "Viršytas atsisakymo limitas."
       'Q2': "Gavijo sistemos klaida."
       'N1': "Kortelės tinklo prieigos raktas nepasiekiamas, o visas kortelės numeris nebesaugomas."
+      'N2': "Kortelės tinklas neprieinamas."
       # incomplete translations
       unknown: "Unknown reason."
       '01': "Authorization Error."
