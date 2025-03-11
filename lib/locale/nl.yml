@@ -199,6 +199,7 @@ nl:
       'E5': "Probeer het later nog eens of neem contact op met de bank."
       'Q2': "Probeer het later nog eens of gebruik een andere kaart."
       'N1': "Gebruik een andere kaart of neem contact op met de Handelaar."
+      'N2': "Gebruik een andere kaart."
       '75': "Gebruik een andere kaart, controleer of de CVV/CVC-code juist is of neem contact op met de bank."
       '85': "De bank heeft de autorisatie  bevestigd."
       '86': "Gebruik een andere kaart of neem contact op met de bank."
@@ -231,6 +232,7 @@ nl:
       'E5': "Tijdelijke fout bij 3D-Secure verificatie."
       'Q2': "Acquirer-systeemfout."
       'N1': "Het kaartnetwerktoken is niet beschikbaar en het volledige kaartnummer wordt niet langer opgeslagen."
+      'N2': "Het kaartnetwerk is niet beschikbaar."
     targeted:
       merchant:
         <<: *issuer_response_code

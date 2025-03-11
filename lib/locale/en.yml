@@ -187,6 +187,7 @@ en:
       'E5': "Please try again or contact the issuer for clarification."
       'Q2': "Please try again or use a different card."
       'N1': "Please use a different card or contact the Merchant."
+      'N2': "Please use a different card."
       '75': "Please try again and check the CVV/CVC or contact the issuer for clarification."
       '85': "The issuer has confirmed this transaction."
       '86': "Please use a different card or contact the issuer for clarification."
@@ -218,6 +219,7 @@ en:
       'E5': "Temporary 3D-Secure error."
       'Q2': "Acquirer system error."
       'N1': "Card network token is unavailable and the full card number is no longer stored."
+      'N2': "Card network is unavailable."
     targeted:
       merchant:
         <<: *issuer_response_code
