@@ -4,7 +4,7 @@ require_relative '../test_helper'
 
 module IssuerResponseCodes
   class ContextTest < Minitest::Test
-    def test_create_context_merchant # rubocop:disable Metrics/MethodLength
+    def test_create_context_merchant
       context = IssuerResponseCodes::Context.new
       assert_equal :merchant, context.default_target
       assert_equal :en, context.default_locale
@@ -35,9 +35,9 @@ module IssuerResponseCodes
       assert context.fraud_notice_by_default
       check_if_context_generates_correct_codes(context)
 
-      context = IssuerResponseCodes::Context.new(default_target: :merchant,
+      context = IssuerResponseCodes::Context.new(default_target:          :merchant,
                                                  fraud_notice_by_default: false,
-                                                 default_locale: :pl)
+                                                 default_locale:          :pl,)
       assert_equal :merchant, context.default_target
       assert_equal :pl, context.default_locale
       assert !context.fraud_notice_by_default
@@ -63,9 +63,9 @@ module IssuerResponseCodes
       assert !context.fraud_notice_by_default
       check_if_context_generates_correct_codes(context)
 
-      context = IssuerResponseCodes::Context.new(default_target: :cardholder,
+      context = IssuerResponseCodes::Context.new(default_target:          :cardholder,
                                                  fraud_notice_by_default: true,
-                                                 default_locale: :pl)
+                                                 default_locale:          :pl,)
       assert_equal :cardholder, context.default_target
       assert_equal :pl, context.default_locale
       assert context.fraud_notice_by_default
@@ -86,7 +86,7 @@ module IssuerResponseCodes
 
     private
 
-    def check_if_context_generates_correct_codes(context) # rubocop:disable Metrics/MethodLength
+    def check_if_context_generates_correct_codes(context)
       code = context.code(id: '00')
       assert code.is_a? IssuerResponseCodes::Code
       assert_equal context.default_target, code.target

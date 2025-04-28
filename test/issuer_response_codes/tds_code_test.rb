@@ -1,4 +1,4 @@
-# rubocop:disable Metrics/MethodLength, Layout/LineLength
+# rubocop:disable Layout/LineLength
 # frozen_string_literal: true
 
 require_relative '../test_helper'
@@ -230,4 +230,4 @@ module IssuerResponseCodes
   end
 end
 
-# rubocop:enable Metrics/MethodLength, Layout/LineLength
+# rubocop:enable Layout/LineLength
