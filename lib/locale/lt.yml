@@ -176,7 +176,7 @@ lt:
       'B54': "Kortelė negalioja."
       '57': "Bankas atmetė mokėjimą, nes ši kreditinė kortelė negali būti naudojama šiam mokėjimų tipui (elektroninei prekybai, nuotoliniams ar periodiniams mokėjimams)."
       '61': "Bankas atmetė mokėjimą."
-      '82': "Kortelės saugos kodas (CVV) neteisingas."
+      '82': "(Visa) Kortelės saugos kodas (CVV) neteisingas. (Mastercard) Atmetimas pagal kortelių organizacijos politiką."
       'E1': "Viršytas atsisakymo limitas."
       'Q2': "Gavijo sistemos klaida."
       'N1': "Kortelės tinklo prieigos raktas nepasiekiamas, o visas kortelės numeris nebesaugomas."

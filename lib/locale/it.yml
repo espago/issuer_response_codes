@@ -224,7 +224,7 @@ it:
         '00': "Rifiuto dell'operazione da parte del prestatore di servizi di pagamento. Il pagamento è stato rifiutato perché
 1) Il sistema di autorizzazione bancaria non risponde
 2) Il conto del venditore è bloccato
-3) I dati della carta non sono corretti o la carta utilizzata non è approvata per questo pagamento 
+3) I dati della carta non sono corretti o la carta utilizzata non è approvata per questo pagamento
 Verifica che il conto del venditore dall'acquirente è attivo e correttamente configurato in Espago.."
         '1A': "Rifiuto."
         'B1A': "Rifiuto."
@@ -268,7 +268,7 @@ Verifica che il conto del venditore dall'acquirente è attivo e correttamente co
         '76': "Annullamento non richiesto."
         '77': "Annullamento duplicato o transazione duplicata."
         '78': "Bloccata, prima utilizzata."
-        '82': "Risultati CAM, dCVV, iCVV o CVV negativi."
+        '82': "(Visa) Risultati CAM, dCVV, iCVV o CVV negativi. (Mastercard) Rifiuto conforme alla politica dell'organizzazione delle carte."
         '85': "Non rifiutata."
         'N7': "Rifiuto per fallimento CVV2."
         'R0': "Ordine di blocco dei pagamenti."
@@ -319,7 +319,7 @@ Verifica che il conto del venditore dall'acquirente è attivo e correttamente co
         '76': "Pagamento rifiutato dall'emittente - annullamento non richiesto."
         '77': "Pagamento declinato dall'emittente."
         '78': "Pagamento rifiutato dall'emittente - carta utilizzata per la prima volta."
-        '82': "Pagamento rifiutato dall'emittente - risultati CAM, dCVV, iCVV o CVV negativi."
+        '82': "Pagamento rifiutato dall'emittente - (Visa) risultati CAM, dCVV, iCVV o CVV negativi; (Mastercard) rifiuto conforme alla politica dell'organizzazione delle carte."
         '85': "Autorizzazione riuscita."
         'N7': "Transazione non autorizzata dall'emittente. Codice di sicurezza (CVV2/CVC2) errato."
         'R0': "Pagamento rifiutato dall'emittente - Ordine di blocco dei pagamenti."

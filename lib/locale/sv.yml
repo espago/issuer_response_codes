@@ -176,7 +176,7 @@ sv:
       'B54': "Utgånget kort."
       '57': "Banken har avböjt transaktionen eftersom detta kreditkort inte kan användas för denna typ av transaktion (e-handel, MOTO eller återkommande)."
       '61': "Banken har avböjt transaktionen."
-      '82': "Negativa CVV / CVC resultat."
+      '82': "(Visa) Negativa CVV resultat. (Mastercard) Avslag enligt kortorganisationens policy."
       'E1': "Gränsen för avslag har överskridits."
       'Q2': "Acquirer-systemfel."
       'N1': "Kortnätverkstoken är inte tillgänglig och hela kortnumret lagras inte längre."

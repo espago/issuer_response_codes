@@ -176,7 +176,7 @@ lv:
       'B54': "Kartei beidzies termiņš."
       '57': "Kartes turētājam šis darījuma veids nav atļauts. Banka ir atteikusi darījumu, jo šo kredītkarti nevar lietot šim darījuma veidam (e-komercija, MOTO vai automātiskais maksājums)."
       '61': "MOTO/e-komercija neaktīva vai pārsniegts summas limits."
-      '82': "Negatīvi CVV rezultāti."
+      '82': "(Visa) Negatīvi CVV rezultāti. (Mastercard) Noraidījums saskaņā ar karšu organizācijas politiku."
       'E1': "Pārsniegts atteikuma limits."
       'Q2': "Maksājumu sniedzēja sistēmas kļūda."
       'N1': "Kartes tīkla marķieris nav pieejams, un pilns kartes numurs vairs netiek saglabāts."

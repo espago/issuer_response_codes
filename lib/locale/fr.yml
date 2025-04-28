@@ -236,7 +236,7 @@ fr:
     targeted:
       merchant:
         <<: *issuer_response_code
-        '00': "Rejet de la transaction au niveau de l'opérateur. Le paiement a été rejeté pour les raisons suivantes 1) absence de réponse de la banque ; 2) blocage du compte du Vendeur ; 3) utilisation d'un type de carte non pris en charge ou de données de carte incorrectes. 
+        '00': "Rejet de la transaction au niveau de l'opérateur. Le paiement a été rejeté pour les raisons suivantes 1) absence de réponse de la banque ; 2) blocage du compte du Vendeur ; 3) utilisation d'un type de carte non pris en charge ou de données de carte incorrectes.
 
 Vérifiez que le compte vendeur de l'agent de règlement est actif et correctement configuré dans Espago."
         '1A': "Authentification forte (SCA) requise."
@@ -281,7 +281,7 @@ Vérifiez que le compte vendeur de l'agent de règlement est actif et correcteme
         '76': "Les détails du paiement indiqué ne correspondent pas aux détails du côté de la banque."
         '77': "Double remboursement ou double paiement."
         '78': "Carte neuve, non activée."
-        '82': "Code CVV incorrect."
+        '82': "(Visa) Vérification négative de CAM, dCVV, iCVV ou CVV. (Mastercard) Refus conforme à la politique de l'organisation de cartes."
         'N7': "Code CVV incorrect."
         'R0': "Il a été demandé de suspendre les paiements ultérieurs."
         'R1': "Il a été demandé de suspendre les paiements ultérieurs."
@@ -331,7 +331,7 @@ Vérifiez que le compte vendeur de l'agent de règlement est actif et correcteme
         '76': "Le paiement ne peut pas être annulé."
         '77': "La transaction ne peut pas être réalisée."
         '78': "Paiement rejeté - carte non activée."
-        '82': "Paiement rejeté par la banque - vérification négative de CAM, dCVV, iCVV ou CVV."
+        '82': "Paiement rejeté par la banque - (Visa) vérification négative de CAM, dCVV, iCVV ou CVV; (Mastercard) refus conforme à la politique de l'organisation de cartes."
         'N7': "Paiement rejeté par la banque - vérification CVV négative."
         'R0': "Paiement rejeté par la banque - il y a eu une demande de suspension de l'autorisation."
         'R1': "Paiement rejeté par la banque - il y a eu une demande de suspension de l'autorisation."

@@ -236,7 +236,7 @@ pt:
     targeted:
       merchant:
         <<: *issuer_response_code
-        '00': "Transação rejeitada a nível do operador. O pagamento foi rejeitado devido a: 1) ausência de resposta do banco; 2) bloqueio da conta do vendedor; 3) utilização de um tipo de cartão não suportado ou de dados incorrectos. 
+        '00': "Transação rejeitada a nível do operador. O pagamento foi rejeitado devido a: 1) ausência de resposta do banco; 2) bloqueio da conta do vendedor; 3) utilização de um tipo de cartão não suportado ou de dados incorrectos.
 
 Verifique se a conta do vendedor junto ao agente de cobrança está ativa e configurada corretamente no Espago."
         '1A': "É necessária uma autenticação forte (SCA)."
@@ -281,7 +281,7 @@ Verifique se a conta do vendedor junto ao agente de cobrança está ativa e conf
         '76': "Os dados do pagamento indicado não coincidem com os dados do banco."
         '77': "Duplo reembolso ou duplo pagamento."
         '78': "Cartão novo e não ativado."
-        '82': "Código CVV incorreto."
+        '82': "(Visa) Verificação negativa de CAM, dCVV, iCVV ou CVV. (Mastercard) Rejeição de acordo com a política da organização de cartões."
         'N7': "Código CVV incorreto."
         'R0': "Foi exigida a retenção de novos pagamentos."
         'R1': "Foi exigida a retenção de novos pagamentos."
@@ -331,7 +331,7 @@ Verifique se a conta do vendedor junto ao agente de cobrança está ativa e conf
         '76': "O pagamento não pode ser revertido."
         '77': "A transação não pode ser concluída."
         '78': "Pagamento rejeitado - cartão não ativado."
-        '82': "Pagamento rejeitado pelo banco - verificação negativa de CAM, dCVV, iCVV ou CVV."
+        '82': "Pagamento rejeitado pelo banco - (Visa) verificação negativa de CAM, dCVV, iCVV ou CVV; (Mastercard) rejeição de acordo com a política da organização de cartões."
         'N7': "Pagamento rejeitado pelo banco - verificação negativa do CVV."
         'R0': "Pagamento rejeitado pelo banco - houve um pedido de suspensão da autorização."
         'R1': "Pagamento rejeitado pelo banco - houve um pedido de suspensão da autorização."

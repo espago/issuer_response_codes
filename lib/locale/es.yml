@@ -236,7 +236,7 @@ es:
     targeted:
       merchant:
         <<: *issuer_response_code
-        '00': "Rechazo de transacción a nivel del operador. El pago fue rechazado debido a: 1) falta de respuesta del banco; 2) bloqueo de la cuenta del vendedor; 3) uso de un tipo de tarjeta no admitido o datos de tarjeta incorrectos. 
+        '00': "Rechazo de transacción a nivel del operador. El pago fue rechazado debido a: 1) falta de respuesta del banco; 2) bloqueo de la cuenta del vendedor; 3) uso de un tipo de tarjeta no admitido o datos de tarjeta incorrectos.
 
 Compruebe que la cuenta del vendedor con el agente de facturación está activa y configurada correctamente en Espago."
         '1A': "Se requiere autenticación fuerte (SCA)."
@@ -281,7 +281,7 @@ Compruebe que la cuenta del vendedor con el agente de facturación está activa 
         '76': "Los datos del pago indicado no coinciden con los del banco."
         '77': "Reembolso doble o pago doble."
         '78': "Tarjeta nueva, desactivada."
-        '82': "Código CVV incorrecto."
+        '82': "(Visa) Verificación negativa de CAM, dCVV, iCVV o CVV. (Mastercard) Rechazo conforme a la política de la organización de tarjetas."
         'N7': "Código CVV incorrecto."
         'R0': "Ha habido una solicitud para retener más pagos."
         'R1': "Ha habido una solicitud para retener más pagos."
@@ -331,7 +331,7 @@ Compruebe que la cuenta del vendedor con el agente de facturación está activa 
         '76': "El pago no puede retirarse."
         '77': "La transacción no puede completarse."
         '78': "Pago rechazado - tarjeta no activada."
-        '82': "Pago rechazado por el banco - verificación negativa de CAM, dCVV, iCVV o CVV."
+        '82': "Pago rechazado por el banco - (Visa) verificación negativa de CAM, dCVV, iCVV o CVV; (Mastercard) rechazo conforme a la política de la organización de tarjetas."
         'N7': "Pago rechazado por el banco - verificación CVV negativa."
         'R0': "Pago rechazado por el banco: se solicitó la retención de la autorización."
         'R1': "Pago rechazado por el banco: se solicitó la retención de la autorización."
