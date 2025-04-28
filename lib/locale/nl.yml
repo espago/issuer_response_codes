@@ -236,7 +236,7 @@ nl:
     targeted:
       merchant:
         <<: *issuer_response_code
-        '00': "Afwijzing van transacties op operatorniveau. De betaling is geweigerd vanwege: 1) geen reactie van de bank; 2) blokkering van de rekening van de verkoper; 3) gebruik van een niet-ondersteunde kaartsoort of onjuiste kaartgegevens. 
+        '00': "Afwijzing van transacties op operatorniveau. De betaling is geweigerd vanwege: 1) geen reactie van de bank; 2) blokkering van de rekening van de verkoper; 3) gebruik van een niet-ondersteunde kaartsoort of onjuiste kaartgegevens.
 
 Controleer of de betaalrekening bij de aqcuirer actief is en correct is geconfigureerd in Espago."
         '1A': "Sterke authenticatie (SCA) vereist."
@@ -281,7 +281,7 @@ Controleer of de betaalrekening bij de aqcuirer actief is en correct is geconfig
         '76': "De gegevens van de weergegeven betaling komen niet overeen met de gegevens die bij de bank bekend zijn."
         '77': "Dubbele terugbetaling of dubbele betaling."
         '78': "Nieuwe kaart, nog niet geactiveerd."
-        '82': "Onjuiste CVV-code."
+        '82': "(Visa) Negatieve verificatie van CAM, dCVV, iCVV of CVV. (Mastercard) Afwijzing volgens het beleid van de kaartorganisatie."
         'N7': "Onjuiste CVV-code."
         'R0': "Er is verzocht om verdere betalingen te blokkeren."
         'R1': "Er is verzocht om verdere betalingen te blokkeren."
@@ -331,7 +331,7 @@ Controleer of de betaalrekening bij de aqcuirer actief is en correct is geconfig
         '76': "De betaling kan niet worden teruggedraaid."
         '77': "De transactie kan niet worden voltooid."
         '78': "Betaling geweigerd - kaart is niet geactiveerd."
-        '82': "Betaling geweigerd door de bank - negatieve verificatie van CAM, dCVV, iCVV of CVV."
+        '82': "Betaling geweigerd door de bank - (Visa) negatieve verificatie van CAM, dCVV, iCVV of CVV; (Mastercard) afwijzing volgens het beleid van de kaartorganisatie."
         'N7': "Betaling geweigerd door de bank - negatieve CVV-verificatie."
         'R0': "Betaling geweigerd door de bank - er is verzocht om de autorisatie te blokkeren."
         'R1': "Betaling geweigerd door de bank - er is verzocht om de autorisatie te blokkeren."

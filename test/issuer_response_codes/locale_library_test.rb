@@ -68,17 +68,17 @@ module IssuerResponseCodes
 
       model_issuer_response_codes = {
         '04': {
-          behaviour: 'Please contact your card issuer and try again later.',
-          merchant_reason: 'Pick up card.',
+          behaviour:         'Please contact your card issuer and try again later.',
+          merchant_reason:   'Pick up card.',
           cardholder_reason: 'Card authentication failed.',
-          fraudulent: true
+          fraudulent:        true,
         },
         '03': {
-          behaviour: 'Please contact your card issuer and try again later.',
-          merchant_reason: 'Card authentication failed.',
+          behaviour:         'Please contact your card issuer and try again later.',
+          merchant_reason:   'Card authentication failed.',
           cardholder_reason: 'Card authentication failed.',
-          fraudulent: false
-        }
+          fraudulent:        false,
+        },
       }
 
       assert_equal model_issuer_response_codes, @library.issuer_response_codes
@@ -102,17 +102,17 @@ module IssuerResponseCodes
 
       model_tds_codes = {
         '04': {
-          behaviour: 'Please contact your card issuer and try again later.',
-          merchant_reason: 'Pick up card.',
+          behaviour:         'Please contact your card issuer and try again later.',
+          merchant_reason:   'Pick up card.',
           cardholder_reason: 'Card authentication failed.',
-          fraudulent: true
+          fraudulent:        true,
         },
         '03': {
-          behaviour: 'Please contact your card issuer and try again later.',
-          merchant_reason: 'Card authentication failed.',
+          behaviour:         'Please contact your card issuer and try again later.',
+          merchant_reason:   'Card authentication failed.',
           cardholder_reason: 'Card authentication failed.',
-          fraudulent: false
-        }
+          fraudulent:        false,
+        },
       }
 
       assert_equal model_tds_codes, @library.tds_codes

@@ -236,7 +236,7 @@ fi:
     targeted:
       merchant:
         <<: *issuer_response_code
-        '00': "Operaattoritason tapahtuman hylkääminen. Maksu hylättiin seuraavista syistä: 1) pankilta ei saatu vastausta; 2) myyjän tili on suljettu; 3) korttityyppi ei ole tuettu tai kortin tiedot ovat virheelliset. 
+        '00': "Operaattoritason tapahtuman hylkääminen. Maksu hylättiin seuraavista syistä: 1) pankilta ei saatu vastausta; 2) myyjän tili on suljettu; 3) korttityyppi ei ole tuettu tai kortin tiedot ovat virheelliset.
 
 Tarkista, onko myyjän tili laskutusagentissa aktiivinen ja oikein määritetty Espagossa."
         '1A': "Vahva todennus (SCA) vaaditaan."
@@ -281,7 +281,7 @@ Tarkista, onko myyjän tili laskutusagentissa aktiivinen ja oikein määritetty 
         '76': "Ilmoitetun maksun tiedot eivät vastaa pankin puolella olevia tietoja."
         '77': "Kaksinkertainen palautus tai kaksinkertainen maksu."
         '78': "Uusi, aktivoimaton kortti."
-        '82': "Virheellinen CVV-koodi."
+        '82': "(Visa) Negatiivinen CAM-, dCVV-, iCVV- tai CVV-vahvistus. (Mastercard) Hylkäys korttijärjestelmän politiikan mukaisesti."
         'N7': "Virheellinen CVV-koodi."
         'R0': "On vaadittu lisämaksujen pidättämistä."
         'R1': "On vaadittu lisämaksujen pidättämistä."
@@ -331,7 +331,7 @@ Tarkista, onko myyjän tili laskutusagentissa aktiivinen ja oikein määritetty 
         '76': "Maksua ei voi peruuttaa."
         '77': "Tapahtumaa ei voida suorittaa loppuun."
         '78': "Maksu hylätty - korttia ei ole aktivoitu."
-        '82': "Pankki hylkäsi maksun - negatiivinen CAM-, dCVV-, iCVV- tai CVV-vahvistus."
+        '82': "Pankki hylkäsi maksun - (Visa) negatiivinen CAM-, dCVV-, iCVV- tai CVV-vahvistus; (Mastercard) hylkäys korttijärjestelmän politiikan mukaisesti."
         'N7': "Pankki hylkäsi maksun - negatiivinen CVV-vahvistus."
         'R0': "Pankki hylkäsi maksun - pyydettiin pidättäytymään hyväksymisestä."
         'R1': "Pankki hylkäsi maksun - pyydettiin pidättäytymään hyväksymisestä."

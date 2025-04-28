@@ -176,7 +176,7 @@ da:
       'B54': "Udgået kort."
       '57': "Banken har afvist transaktionen, da dette kreditkort ikke kan bruges til denne type transaktion (e-handel, MOTO eller tilbagevendende)."
       '61': "Banken har afvist transaktionen."
-      '82': "Negative CVV / CVC resultater."
+      '82': "(Visa) Negative CVV resultater. (Mastercard) Afvisning i overensstemmelse med kortorganisationens politik."
       'E1': "Grænsen for afslag er overskredet."
       'Q2': "Acquirer systemfejl."
       'N1': "Kortnetværkstoken er ikke tilgængelig, og det fulde kortnummer er ikke længere gemt."

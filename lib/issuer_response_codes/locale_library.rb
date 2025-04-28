@@ -37,11 +37,11 @@ module IssuerResponseCodes
         [
           code,
           {
-            merchant_reason: merchant_reason,
+            merchant_reason:   merchant_reason,
             cardholder_reason: cardholder_reasons[code],
-            behaviour: behaviours[code],
-            fraudulent: fraudulent_codes[code] == true
-          }
+            behaviour:         behaviours[code],
+            fraudulent:        fraudulent_codes[code] == true,
+          },
         ]
       end
     end
@@ -58,11 +58,11 @@ module IssuerResponseCodes
         [
           code,
           {
-            merchant_reason: merchant_reason,
+            merchant_reason:   merchant_reason,
             cardholder_reason: cardholder_reasons[code],
-            behaviour: behaviours[code],
-            fraudulent: fraudulent_codes[code] == true
-          }
+            behaviour:         behaviours[code],
+            fraudulent:        fraudulent_codes[code] == true,
+          },
         ]
       end
     end
@@ -113,7 +113,7 @@ module IssuerResponseCodes
         ::YAML.load_file(
           file_path,
           symbolize_names: true,
-          aliases: true
+          aliases:         true,
         )
       end
     else
@@ -122,7 +122,7 @@ module IssuerResponseCodes
       def load_yaml(file_path)
         ::YAML.load_file(
           file_path,
-          symbolize_names: true
+          symbolize_names: true,
         )
       end
     end

@@ -5,7 +5,7 @@ require_relative '../test_helper'
 
 module IssuerResponseCodes
   class CodeTest < Minitest::Test
-    def test_humanize_return_proper_value # rubocop:disable Metrics/MethodLength
+    def test_humanize_return_proper_value
       code = IssuerResponseCodes::Code.new(id: '00')
       assert_equal :merchant, code.target
       assert_equal :en, code.locale
@@ -55,7 +55,7 @@ module IssuerResponseCodes
       assert_equal 'Unknown reason. Please contact our support team.', code.humanize
     end
 
-    def test_description_return_proper_value # rubocop:disable Metrics/MethodLength
+    def test_description_return_proper_value
       code = IssuerResponseCodes::Code.new(id: '00')
       assert_equal :merchant, code.target
       assert_equal :en, code.locale
@@ -103,7 +103,7 @@ module IssuerResponseCodes
       assert_equal 'Unknown reason. Please contact our support team.', code.description
     end
 
-    def test_behaviour_return_proper_value # rubocop:disable Metrics/MethodLength
+    def test_behaviour_return_proper_value
       code = IssuerResponseCodes::Code.new(id: '00')
       assert_equal :merchant, code.target
       assert_equal :en, code.locale
@@ -155,7 +155,7 @@ module IssuerResponseCodes
       assert_equal 'Please contact our support team.', code.behaviour
     end
 
-    def test_reason_return_proper_value # rubocop:disable Metrics/MethodLength
+    def test_reason_return_proper_value
       code = IssuerResponseCodes::Code.new(id: '00')
       assert_equal :merchant, code.target
       assert_equal :en, code.locale

@@ -35,17 +35,17 @@ module IssuerResponseCodes
 
     # @return [String]
     def reason
-      LOCALE_LIBRARY[path: id,
-                     scope: "issuer_response_codes.targeted.#{target}",
-                     locale: locale,
+      LOCALE_LIBRARY[path:    id,
+                     scope:   "issuer_response_codes.targeted.#{target}",
+                     locale:  locale,
                      default: :unknown]
     end
 
     # @return [String]
     def behaviour
-      behaviour_str = LOCALE_LIBRARY[path: id,
-                                     scope: 'issuer_response_codes.behaviour',
-                                     locale: locale,
+      behaviour_str = LOCALE_LIBRARY[path:    id,
+                                     scope:   'issuer_response_codes.behaviour',
+                                     locale:  locale,
                                      default: :unknown]
       return behaviour_str unless fraud_notice && fraudulent_code?
 

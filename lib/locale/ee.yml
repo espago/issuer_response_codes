@@ -176,7 +176,7 @@ ee:
       'B54': "Kehtivuse kaotanud kaart."
       '57': "Pank lükkas tehingu tagasi, kuna antud krediitkaarti ei saa seda liiki tehingu teostamiseks kasutada (eCommerce, MOTO või korduvtehing)."
       '61': "MOTO/eCommerce mitteaktiivne või summa limiit ületatud."
-      '82': "Vale CVV-kood."
+      '82': "(Visa) Vale CVV-kood. (Mastercard) Keeldumine vastavalt kaardiorganisatsiooni poliitikale."
       'E1': "Keeldumise limiit ületatud."
       'Q2': "Acquirer system error."
       'N1': "Kaardi võrgumärk pole saadaval ja kaardi täielikku numbrit enam ei salvestata."

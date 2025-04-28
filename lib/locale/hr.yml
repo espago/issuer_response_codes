@@ -236,7 +236,7 @@ hr:
     targeted:
       merchant:
         <<: *issuer_response_code
-        '00': "Odbijanje transakcije na razini operatera. Plaćanje je odbijeno zbog: 1) izostanka odgovora banke; 2) suspenzije računa Trgovca; 3) uporabe nepodržane vrste kartice ili netočnih podataka o kartici. 
+        '00': "Odbijanje transakcije na razini operatera. Plaćanje je odbijeno zbog: 1) izostanka odgovora banke; 2) suspenzije računa Trgovca; 3) uporabe nepodržane vrste kartice ili netočnih podataka o kartici.
 
 Provjerite je li račun prodavatelja kod agenta za namiru aktivan i pravilno konfiguriran u Espago-u."
         '1A': "Potrebna je snažna autentikacija (SCA)."
@@ -281,7 +281,7 @@ Provjerite je li račun prodavatelja kod agenta za namiru aktivan i pravilno kon
         '76': "Podaci o navedenoj uplati ne podudaraju se s podacima sa strane banke."
         '77': "Dvostruki povrat novca ili dvostruko plaćanje."
         '78': "Nova, neaktivna kartica."
-        '82': "Nevažeći kod CVV."
+        '82': "(Visa) Negativna verifikacija CAM, dCVV, iCVV ili CVV. (Mastercard) Odbijeno u skladu s politikom kartičarske organizacije."
         'N7': "Nevažeći kod CVV."
         'R0': "Došlo je do zahtjeva za zadržavanje daljnjih plaćanja."
         'R1': "Došlo je do zahtjeva za zadržavanje daljnjih plaćanja."
@@ -331,7 +331,7 @@ Provjerite je li račun prodavatelja kod agenta za namiru aktivan i pravilno kon
         '76': "Plaćanje se ne može poništiti."
         '77': "Transakcija se ne može dovršiti."
         '78': "Plaćanje je odbijeno - kartica nije aktivirana."
-        '82': "Banka je odbila plaćanje - negativna verifikacija CAM, dCVV, iCVV ili CVV."
+        '82': "Banka je odbila plaćanje - (Visa) negativna verifikacija CAM, dCVV, iCVV ili CVV; (Mastercard) odbijeno u skladu s politikom kartičarske organizacije."
         'N7': "Banka je odbila plaćanje - negativna verifikacija CVV-a."
         'R0': "Banka je odbila plaćanje - podnesen je zahtjev za obustavu autorizacije."
         'R1': "Banka je odbila plaćanje - podnesen je zahtjev za obustavu autorizacije."

@@ -13,9 +13,9 @@ module IssuerResponseCodes
     # @return [String]
     def reason
       LOCALE_LIBRARY[
-        path: id,
-        scope: "tds_status_codes.targeted.#{target}",
-        locale: locale,
+        path:    id,
+        scope:   "tds_status_codes.targeted.#{target}",
+        locale:  locale,
         default: :unknown
       ]
     end
@@ -23,9 +23,9 @@ module IssuerResponseCodes
     # @return [String]
     def behaviour
       behaviour_str = LOCALE_LIBRARY[
-        path: id,
-        scope: 'tds_status_codes.behaviour',
-        locale: locale,
+        path:    id,
+        scope:   'tds_status_codes.behaviour',
+        locale:  locale,
         default: :unknown
       ]
 
