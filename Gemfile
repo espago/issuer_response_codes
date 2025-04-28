@@ -11,4 +11,3 @@ gem 'minitest', '~> 5.0' # test framework
 gem 'rake', '~> 12.0' # automation
 gem 'rubocop', '~> 1.54' # linter
 gem 'rubocop-espago', '~> 1.0' # linter config
-gem 'solargraph', '~> 0.49' # language server
