@@ -1,0 +1,325 @@
+hu:
+  tds_status_codes:
+    suggestion: 'Javaslat'
+    fraud_notice: 'Az ilyen kóddal rendelkező tranzakciók csalásnak minősülhetnek.'
+    fraudulent_codes:
+      '09': true
+      '10': true
+      '11': true
+    behaviour:
+      unknown: 'Kérjük, vegye fel a kapcsolatot ügyfélszolgálatunkkal.'
+      '01': Kérjük, próbálja újra.
+      '02': Kérjük, próbálja újra másik eszközzel.
+      '03': Kérjük, próbálja újra másik eszközzel.
+      '04': Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kártyakibocsátóval.
+      '05': Kérjük, használjon másik kártyát.
+      '06': Kérjük, használjon másik kártyát vagy ellenőrizze a kártyaszámot.
+      '07': Kérjük, használjon másik kártyát.
+      '08': Kérjük, használjon másik kártyát.
+      '09': Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval.
+      '10': Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval.
+      '11': Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval.
+      '12': Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval.
+      '13': Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval.
+      '14': Kérjük, próbálja újra vagy használjon másik kártyát.
+      '15': Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval.
+      '16': Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval.
+      '17': Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval.
+      '18': Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval.
+      '19': Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval.
+      '20': Kérjük, használjon másik kártyát.
+      '21': Kérjük, használjon másik kártyát.
+      '22': Kérjük, próbálja újra vagy használjon másik kártyát.
+      '23': Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval.
+      '24': Kérjük, próbálja újra vagy használjon másik kártyát.
+      '25': Kérjük, próbálja újra vagy használjon másik kártyát.
+      '26': Kérjük, próbálja újra vagy használjon másik kártyát.
+      '80': Kérjük, használjon másik kártyát.
+      '81': Kérjük, próbálja újra vagy használjon másik kártyát.
+      '82': Kérjük, használjon másik kártyát.
+      '83': Kérjük, használjon másik kártyát.
+      '84': Kérjük, próbálja újra vagy használjon másik kártyát.
+      '85': Kérjük, használjon másik kártyát.
+      '86': Kérjük, használjon másik kártyát.
+      '87': Kérjük, használjon másik kártyát.
+      '88': Kérjük, használjon másik kártyát.
+    universal: &universal_tds_status_codes
+      unknown: "Ismeretlen ok."
+      '01': Kártya hitelesítése sikertelen.
+      '02': Ismeretlen eszköz.
+      '03': Nem támogatott eszköz.
+      '04': Túllépi a hitelesítési gyakoriság határértékét.
+      '05': Lejárt kártya.
+      '06': Érvénytelen kártyaszám.
+      '07': Érvénytelen tranzakció.
+      '08': Nincs kártyarekord.
+      '15': Alacsony megbízhatóság.
+      '16': Közepes megbízhatóság.
+      '17': Magas megbízhatóság.
+      '18': Nagyon magas megbízhatóság.
+      '19': Túllépi az ACS maximális kihívásait.
+      '20': Nem fizetési tranzakció nem támogatott.
+    targeted:
+      merchant:
+        <<: *universal_tds_status_codes
+        '09': Biztonsági hiba.
+        '10': Lopott kártya.
+        '11': Feltételezett csalás.
+        '12': A tranzakció nem engedélyezett a kártyabirtokosnak.
+        '13': A kártyabirtokos nincs regisztrálva a szolgáltatásra.
+        '14': A tranzakció időtúllépést szenvedett az ACS-nél.
+        '21': 3RI tranzakció nem támogatott.
+        '22': ACS technikai probléma.
+        '23': Az ACS által megkövetelt leválasztott hitelesítést a 3DS kérelmező nem kérte.
+        '24': A 3DS kérelmező leválasztott maximális lejárati ideje túllépve.
+        '25': A leválasztott hitelesítésre nem állt rendelkezésre elegendő idő a kártyabirtokos hitelesítéséhez. Az ACS nem tesz kísérletet.
+        '26': A hitelesítést megkísérelték, de a kártyabirtokos nem hajtotta végre.
+        '80': Hiba az ACS-hez való kapcsolódáskor.
+        '81': ACS időtúllépés.
+        '82': Érvénytelen válasz az ACS-től.
+        '83': Rendszerhiba válasz az ACS-től.
+        '84': Belső hiba a CAVV generálása közben.
+        '85': A VMID nem jogosult a kért programra.
+        '86': Az ACS nem támogatja a protokoll verziót.
+        '87': A tranzakció ki van zárva a kísérleti feldolgozásból (beleértve a nem újratölthető előre fizetett kártyákat és a nem fizetési (NPA) tranzakciókat).
+        '88': A kért programot az ACS nem támogatja.
+      cardholder:
+        <<: *universal_tds_status_codes
+        '09': Kártya hitelesítése sikertelen.
+        '10': Kártya hitelesítése sikertelen.
+        '11': Kártya hitelesítése sikertelen.
+        '12': A tranzakció nem engedélyezett a kártyabirtokosnak.
+        '13': A kártyabirtokos nincs regisztrálva a szolgáltatásra.
+        '14': Kártya hitelesítése sikertelen.
+        '21': Kártya hitelesítése sikertelen.
+        '22': Kibocsátói technikai probléma.
+        '23': Kártya hitelesítése sikertelen
+        '24': Kártya hitelesítése sikertelen
+        '25': Kártya hitelesítése sikertelen.
+        '26': Kártya hitelesítése sikertelen.
+        '80': Kártya hitelesítése sikertelen.
+        '81': Kártya hitelesítése sikertelen.
+        '82': Kártya hitelesítése sikertelen.
+        '83': Kártya hitelesítése sikertelen.
+        '84': Kártya hitelesítése sikertelen.
+        '85': Kártya hitelesítése sikertelen.
+        '86': Kártya hitelesítése sikertelen.
+        '87': Kártya hitelesítése sikertelen.
+        '88': Kártya hitelesítése sikertelen.
+
+  issuer_response_codes:
+    suggestion: 'Javaslat'
+    fraud_notice: 'FONTOS FIGYELMEZTETÉS: Tilos az ilyen kóddal végződő tranzakciókat újrapróbálni. Ez csalási kísérletnek minősülhet!'
+    fraudulent_codes:
+      '04': true
+      'B04': true
+      '07': true
+      '12': true
+      '14': true
+      'B14': true
+      '15': true
+      'B15': true
+      '41': true
+      'B41': true
+      '43': true
+      'B43': true
+      '54': true
+      'B54': true
+      '57': true
+      '59': true
+      '63': true
+      'R0': true
+      'R1': true
+      'R3': true
+    behaviour:
+      unknown: Kérjük, vegye fel a kapcsolatot ügyfélszolgálatunkkal.
+      '00': "Kérjük, próbálja újra vagy lépjen kapcsolatba az eladóval."
+      '1A': "Kérjük, próbálja újra vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'B1A': "Kérjük, próbálja újra vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '01': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '02': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '03': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '04': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'B04': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '05': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval az e-kereskedelmi fizetési beállítások ellenőrzéséhez."
+      '06': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '07': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '12': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '13': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval az e-kereskedelmi fizetési beállítások ellenőrzéséhez."
+      '14': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'B14': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '15': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'B15': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '19': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '21': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '30': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '39': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '41': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'B41': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '43': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'B43': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '51': "Kérjük, ellenőrizze fizetési limitjét, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '52': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '53': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '54': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'B54': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '55': "Kérjük, használjon másik kártyát vagy ellenőrizze CVV/CVC kódját vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '57': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval az e-kereskedelmi fizetési beállítások ellenőrzéséhez."
+      '58': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval az e-kereskedelmi fizetési beállítások ellenőrzéséhez."
+      '59': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '61': "Kérjük, ellenőrizze fizetési limitjét, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '62': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '63': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '65': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'B65': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '70': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval az e-kereskedelmi fizetési beállítások ellenőrzéséhez."
+      '76': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '77': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '78': "Kérjük, próbálja újra vagy lépjen kapcsolatba a kibocsátóval a kártya aktiválásához."
+      '82': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'N7': "Kérjük, próbálja újra és ellenőrizze a CVV/CVC kódot vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'R0': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'R1': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'R3': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'E1': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kereskedővel."
+      'E3': "Kérjük, próbálja újra vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'E4': "Kérjük, próbálja újra vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'E5': "Kérjük, próbálja újra vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'Q2': "Kérjük, próbálja újra vagy használjon másik kártyát."
+      'N1': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kereskedővel."
+      'N2': "Kérjük, használjon másik kártyát."
+      '75': "Kérjük, próbálja újra és ellenőrizze a CVV/CVC kódot vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '85': "A kibocsátó megerősítette ezt a tranzakciót."
+      '86': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '91': "Kérjük, használjon másik kártyát vagy próbálja újra később"
+      '92': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '93': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '94': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '96': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      '98': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'N3': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'P5': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+      'R2': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
+    universal: &issuer_response_code
+      unknown: "Ismeretlen ok."
+      '75': "PIN-kód beviteli próbálkozások számának túllépése."
+      '86': "PIN-kód nem ellenőrizhető."
+      '91': "Kibocsátó nem elérhető."
+      '92': "A pénzügyi intézmény vagy közvetítő hálózati létesítmény nem található az útválasztáshoz (érvénytelen fogadó intézmény azonosító)."
+      '93': "A tranzakció nem hajtható végre - törvénysértés."
+      '94': "Átmeneti kibocsátói hiba."
+      '96': "Átmeneti kibocsátói hiba."
+      '98': "Átmeneti kibocsátói hiba."
+      'N3': "Készpénz szolgáltatás nem elérhető."
+      'P5': "PIN feloldás elutasítva - PIN módosítási vagy feloldási kérelem elutasítva a kibocsátó által."
+      'R2': "Fizetés elutasítva a kibocsátó által - A tranzakció nem felel meg a Visa PIN követelményeknek."
+      'E1': "Elutasítási limit túllépve."
+      'E3': "A tranzakció nem hajtható végre 3D-Secure hiba miatt."
+      'E4': "A tranzakció nem hajtható végre a bank negatív 3D-Secure visszaigazolása miatt."
+      'E5': "Átmeneti 3D-Secure hiba."
+      'Q2': "Elfogadói rendszerhiba."
+      'N1': "A kártyahálózati token nem elérhető és a teljes kártyaszám már nincs tárolva."
+      'N2': "A kártyahálózat nem elérhető."
+    targeted:
+      merchant:
+        <<: *issuer_response_code
+        '00': "A tranzakció elutasítva a kibocsátó/bank válaszának hiánya, inaktív kereskedői fiók, nem támogatott kártya használata vagy helytelen kártyaadatok miatt."
+        '1A': "Enyhe elutasítás."
+        'B1A': "Enyhe elutasítás."
+        '01': "Forduljon a kártyakibocsátóhoz."
+        '02': "Forduljon a kártyakibocsátóhoz, különleges feltétel."
+        '03': "Érvénytelen kereskedő."
+        '04': "Kártya bevonandó (nem csalás)."
+        'B04': "Kártya bevonandó (nem csalás)."
+        '05': "Ne fogadja el."
+        '06': "Hiba."
+        '07': "Kártya bevonandó, különleges feltétel (csalárd számla)."
+        '12': "Érvénytelen tranzakció."
+        '13': "Érvénytelen összeg vagy valutaátváltási mező túlcsordulás."
+        '14': "Érvénytelen számlaszám (nem létezik ilyen szám)."
+        'B14': "Érvénytelen számlaszám (nem létezik ilyen szám)."
+        '15': "Nincs ilyen kibocsátó."
+        'B15': "Nincs ilyen kibocsátó."
+        '19': "Ismételje meg a tranzakciót."
+        '21': "Nem történt intézkedés."
+        '30': "Formátum hiba."
+        '39': "Nincs hitelszámla."
+        '41': "Elveszett kártya, bevonandó (csalárd számla)."
+        'B41': "Elveszett kártya, bevonandó (csalárd számla)."
+        '43': "Lopott kártya, bevonandó (csalárd számla)."
+        'B43': "Lopott kártya, bevonandó (csalárd számla)."
+        '51': "Nincs elegendő fedezet."
+        '52': "Nincs folyószámla."
+        '53': "Nincs megtakarítási számla."
+        '54': "Lejárt kártya vagy hiányzó lejárati dátum."
+        'B54': "Lejárt kártya vagy hiányzó lejárati dátum."
+        '55': "Helytelen PIN vagy hiányzó PIN."
+        '57': "Tranzakció nem engedélyezett a kártyabirtokosnak."
+        '58': "Tranzakció nem engedélyezett a terminálnál."
+        '59': "Feltételezett csalás."
+        '61': "Túllépi a jóváhagyási összeghatárt."
+        '62': "Korlátozott kártya (kártya érvénytelen ebben a régióban vagy országban)."
+        '63': "Biztonsági szabálysértés."
+        '65': "Túllépi a készpénzfelvételi gyakoriság határértékét."
+        'B65': "Túllépi a készpénzfelvételi gyakoriság határértékét."
+        '70': "PIN adat szükséges."
+        '76': "Kéretlen visszavonás."
+        '77': "Duplikált visszavonás vagy duplikált tranzakció."
+        '78': "Blokkolva, először használt."
+        '82': "(Visa) Negatív CAM, dCVV, iCVV vagy CVV eredmények. (Mastercard) Szabályzati elutasítás."
+        '85': "Nem elutasítva."
+        'N7': "Elutasítás CVV2 hiba miatt."
+        'R0': "Fizetés leállítási megbízás."
+        'R1': "Engedélyezés visszavonási megbízás."
+        'R3': "Minden engedély visszavonását rendelő végzés."
+      cardholder:
+        <<: *issuer_response_code
+        '00': "Fizetés sikertelen."
+        '1A': "Enyhe elutasítás - hitelesítés szükséges."
+        'B1A': "Enyhe elutasítás - hitelesítés szükséges."
+        '01': "Fizetés elutasítva."
+        '02': "Fizetés elutasítva."
+        '03': "Ezt a kártyát ez a kereskedő nem fogadhatja el."
+        '04': "Fizetés elutasítva a kibocsátó által."
+        'B04': "Fizetés elutasítva a kibocsátó által."
+        '05': "Fizetés elutasítva a kibocsátó által."
+        '06': "Hiba."
+        '07': "Fizetés elutasítva a kibocsátó által."
+        '12': "Fizetés elutasítva a kibocsátó által - érvénytelen tranzakció."
+        '13': "Fizetés elutasítva a kibocsátó által - érvénytelen összeg vagy valutaátváltási mező túlcsordulás."
+        '14': "Fizetés elutasítva a kibocsátó által - érvénytelen számlaszám."
+        'B14': "Fizetés elutasítva a kibocsátó által - érvénytelen számlaszám."
+        '15': "Fizetés elutasítva - nincs ilyen kibocsátó."
+        'B15': "Fizetés elutasítva - nincs ilyen kibocsátó."
+        '19': "Fizetés elutasítva a kibocsátó által."
+        '21': "Fizetés elutasítva a kibocsátó által."
+        '30': "Fizetés elutasítva a kibocsátó által - formátum hiba."
+        '39': "Fizetés elutasítva a kibocsátó által - nincs hitelszámla."
+        '41': "Fizetés elutasítva a kibocsátó által."
+        'B41': "Fizetés elutasítva a kibocsátó által."
+        '43': "Fizetés elutasítva a kibocsátó által."
+        'B43': "Fizetés elutasítva a kibocsátó által."
+        '51': "Fizetés elutasítva a kibocsátó által - nincs elegendő fedezet."
+        '52': "Fizetés elutasítva a kibocsátó által."
+        '53': "Fizetés elutasítva a kibocsátó által."
+        '54': "Fizetés elutasítva a kibocsátó által - lejárt kártya."
+        'B54': "Fizetés elutasítva a kibocsátó által - lejárt kártya."
+        '55': "Fizetés elutasítva a kibocsátó által - Helytelen PIN vagy hiányzó PIN."
+        '57': "Fizetés elutasítva a kibocsátó által - tranzakció nem engedélyezett a kártyabirtokosnak."
+        '58': "Fizetés elutasítva a kibocsátó által - tranzakció nem engedélyezett a terminálnál."
+        '59': "Fizetés elutasítva a kibocsátó által."
+        '61': "Fizetés elutasítva a kibocsátó által - túllépi a jóváhagyási összeghatárt."
+        '62': "Fizetés elutasítva a kibocsátó által - kártya érvénytelen ebben a régióban vagy országban."
+        '63': "Fizetés elutasítva a kibocsátó által"
+        '65': "Fizetés elutasítva a kibocsátó által - túllépi a készpénzfelvételi gyakoriság határértékét."
+        'B65': "Fizetés elutasítva a kibocsátó által - túllépi a készpénzfelvételi gyakoriság határértékét."
+        '70': "Erős ügyfél-hitelesítés szükséges (SCA)."
+        '76': "Fizetés elutasítva a kibocsátó által - kéretlen visszavonás."
+        '77': "Fizetés elutasítva a kibocsátó által."
+        '78': "Fizetés elutasítva a kibocsátó által - kártya először használva."
+        '82': "Fizetés elutasítva a kibocsátó által - (Visa) negatív CAM, dCVV, iCVV vagy CVV eredmények; (Mastercard) szabályzati elutasítás."
+        '85': "Engedélyezés sikeres."
+        'N7': "Fizetés elutasítva a kibocsátó által - elutasítás CVV2 hiba miatt."
+        'R0': "Fizetés elutasítva a kibocsátó által - Fizetési megbízás leállítása."
+        'R1': "Fizetés elutasítva a kibocsátó által - Engedély visszavonása."
+        'R3': "Fizetés elutasítva a kibocsátó által - Minden engedély visszavonását rendelő végzés."

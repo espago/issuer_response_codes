@@ -1,0 +1,325 @@
+cs:
+  tds_status_codes:
+    suggestion: 'Návrh'
+    fraud_notice: 'Transakce s tímto kódem mohou být považovány za podvodné.'
+    fraudulent_codes:
+      '09': true
+      '10': true
+      '11': true
+    behaviour:
+      unknown: 'Kontaktujte prosím náš tým podpory.'
+      '01': Zkuste to prosím znovu.
+      '02': Zkuste to prosím znovu pomocí jiného zařízení.
+      '03': Zkuste to prosím znovu pomocí jiného zařízení.
+      '04': Použijte prosím jinou kartu nebo kontaktujte vydavatele karty.
+      '05': Použijte prosím jinou kartu.
+      '06': Použijte prosím jinou kartu nebo zkontrolujte číslo karty.
+      '07': Použijte prosím jinou kartu.
+      '08': Použijte prosím jinou kartu.
+      '09': Použijte prosím jinou kartu nebo kontaktujte vydavatele.
+      '10': Použijte prosím jinou kartu nebo kontaktujte vydavatele.
+      '11': Použijte prosím jinou kartu nebo kontaktujte vydavatele.
+      '12': Použijte prosím jinou kartu nebo kontaktujte vydavatele.
+      '13': Použijte prosím jinou kartu nebo kontaktujte vydavatele.
+      '14': Zkuste to prosím znovu nebo použijte jinou kartu.
+      '15': Použijte prosím jinou kartu nebo kontaktujte vydavatele.
+      '16': Použijte prosím jinou kartu nebo kontaktujte vydavatele.
+      '17': Použijte prosím jinou kartu nebo kontaktujte vydavatele.
+      '18': Použijte prosím jinou kartu nebo kontaktujte vydavatele.
+      '19': Použijte prosím jinou kartu nebo kontaktujte vydavatele.
+      '20': Použijte prosím jinou kartu.
+      '21': Použijte prosím jinou kartu.
+      '22': Zkuste to prosím znovu nebo použijte jinou kartu.
+      '23': Použijte prosím jinou kartu nebo kontaktujte vydavatele.
+      '24': Zkuste to prosím znovu nebo použijte jinou kartu.
+      '25': Zkuste to prosím znovu nebo použijte jinou kartu.
+      '26': Zkuste to prosím znovu nebo použijte jinou kartu.
+      '80': Použijte prosím jinou kartu.
+      '81': Zkuste to prosím znovu nebo použijte jinou kartu.
+      '82': Použijte prosím jinou kartu.
+      '83': Použijte prosím jinou kartu.
+      '84': Zkuste to prosím znovu nebo použijte jinou kartu.
+      '85': Použijte prosím jinou kartu.
+      '86': Použijte prosím jinou kartu.
+      '87': Použijte prosím jinou kartu.
+      '88': Použijte prosím jinou kartu.
+    universal: &universal_tds_status_codes
+      unknown: "Neznámý důvod."
+      '01': Ověření karty selhalo.
+      '02': Neznámé zařízení.
+      '03': Nepodporované zařízení.
+      '04': Překročen limit četnosti ověření.
+      '05': Platnost karty vypršela.
+      '06': Neplatné číslo karty.
+      '07': Neplatná transakce.
+      '08': Žádný záznam karty.
+      '15': Nízká důvěra.
+      '16': Střední důvěra.
+      '17': Vysoká důvěra.
+      '18': Velmi vysoká důvěra.
+      '19': Překročen maximální počet výzev ACS.
+      '20': Neplatební transakce není podporována.
+    targeted:
+      merchant:
+        <<: *universal_tds_status_codes
+        '09': Bezpečnostní selhání.
+        '10': Ukradená karta.
+        '11': Podezření na podvod.
+        '12': Transakce není držiteli karty povolena.
+        '13': Držitel karty není zaregistrován ve službě.
+        '14': Vypršel časový limit transakce v ACS.
+        '21': 3RI transakce není podporována.
+        '22': Technický problém ACS.
+        '23': ACS vyžaduje oddělenou autentizaci, ale 3DS žadatel ji nevyžádal.
+        '24': Překročen maximální čas vypršení oddělené autentizace 3DS žadatele.
+        '25': Pro oddělenou autentizaci nebyl poskytnut dostatečný čas k ověření držitele karty. ACS se nepokusí o autentizaci.
+        '26': Autentizace byla pokusena, ale nebyla provedena držitelem karty.
+        '80': Chyba připojení k ACS.
+        '81': Vypršel časový limit ACS.
+        '82': Neplatná odpověď od ACS.
+        '83': Systémová chyba odpovědi od ACS.
+        '84': Interní chyba při generování CAVV.
+        '85': VMID není způsobilé pro požadovaný program.
+        '86': Verze protokolu není podporována ACS.
+        '87': Transakce je vyloučena z procesu pokusů (včetně nedobíjecích předplacených karet a neplatebních transakcí).
+        '88': Požadovaný program není podporován ACS.
+      cardholder:
+        <<: *universal_tds_status_codes
+        '09': Ověření karty selhalo.
+        '10': Ověření karty selhalo.
+        '11': Ověření karty selhalo.
+        '12': Transakce není držiteli karty povolena.
+        '13': Držitel karty není zaregistrován ve službě.
+        '14': Ověření karty selhalo.
+        '21': Ověření karty selhalo.
+        '22': Technický problém vydavatele.
+        '23': Ověření karty selhalo
+        '24': Ověření karty selhalo
+        '25': Ověření karty selhalo.
+        '26': Ověření karty selhalo.
+        '80': Ověření karty selhalo.
+        '81': Ověření karty selhalo.
+        '82': Ověření karty selhalo.
+        '83': Ověření karty selhalo.
+        '84': Ověření karty selhalo.
+        '85': Ověření karty selhalo.
+        '86': Ověření karty selhalo.
+        '87': Ověření karty selhalo.
+        '88': Ověření karty selhalo.
+
+  issuer_response_codes:
+    suggestion: 'Návrh'
+    fraud_notice: 'DŮLEŽITÉ UPOZORNĚNÍ: Je zakázáno opakovat transakce, které skončily tímto kódem. Může to být považováno za pokus o podvod!'
+    fraudulent_codes:
+      '04': true
+      'B04': true
+      '07': true
+      '12': true
+      '14': true
+      'B14': true
+      '15': true
+      'B15': true
+      '41': true
+      'B41': true
+      '43': true
+      'B43': true
+      '54': true
+      'B54': true
+      '57': true
+      '59': true
+      '63': true
+      'R0': true
+      'R1': true
+      'R3': true
+    behaviour:
+      unknown: Kontaktujte prosím náš tým podpory.
+      '00': "Zkuste to prosím znovu nebo kontaktujte prodejce."
+      '1A': "Zkuste to prosím znovu nebo kontaktujte vydavatele pro vysvětlení."
+      'B1A': "Zkuste to prosím znovu nebo kontaktujte vydavatele pro vysvětlení."
+      '01': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '02': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '03': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '04': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      'B04': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '05': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro kontrolu nastavení e-commerce plateb."
+      '06': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '07': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '12': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '13': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro kontrolu nastavení e-commerce plateb."
+      '14': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      'B14': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '15': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      'B15': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '19': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '21': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '30': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '39': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '41': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      'B41': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '43': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      'B43': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '51': "Ověřte prosím svůj platební limit, použijte jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '52': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '53': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '54': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      'B54': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '55': "Použijte prosím jinou kartu nebo ověřte CVV/CVC nebo kontaktujte vydavatele pro vysvětlení."
+      '57': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro kontrolu nastavení e-commerce plateb."
+      '58': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro kontrolu nastavení e-commerce plateb."
+      '59': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '61': "Ověřte prosím svůj platební limit, použijte jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '62': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '63': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '65': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      'B65': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '70': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro kontrolu nastavení e-commerce plateb."
+      '76': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '77': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '78': "Zkuste to prosím znovu nebo kontaktujte vydavatele pro aktivaci karty."
+      '82': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      'N7': "Zkuste to prosím znovu a zkontrolujte CVV/CVC nebo kontaktujte vydavatele pro vysvětlení."
+      'R0': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      'R1': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      'R3': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      'E1': "Použijte prosím jinou kartu nebo kontaktujte obchodníka."
+      'E3': "Zkuste to prosím znovu nebo kontaktujte vydavatele pro vysvětlení."
+      'E4': "Zkuste to prosím znovu nebo kontaktujte vydavatele pro vysvětlení."
+      'E5': "Zkuste to prosím znovu nebo kontaktujte vydavatele pro vysvětlení."
+      'Q2': "Zkuste to prosím znovu nebo použijte jinou kartu."
+      'N1': "Použijte prosím jinou kartu nebo kontaktujte obchodníka."
+      'N2': "Použijte prosím jinou kartu."
+      '75': "Zkuste to prosím znovu a zkontrolujte CVV/CVC nebo kontaktujte vydavatele pro vysvětlení."
+      '85': "Vydavatel potvrdil tuto transakci."
+      '86': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '91': "Použijte prosím jinou kartu nebo zkuste to později"
+      '92': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '93': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '94': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '96': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      '98': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      'N3': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      'P5': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+      'R2': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
+    universal: &issuer_response_code
+      unknown: "Neznámý důvod."
+      '75': "Překročen povolený počet pokusů o zadání PINu."
+      '86': "Nelze ověřit PIN."
+      '91': "Vydavatel není dostupný."
+      '92': "Finanční instituci nebo mezisíťové zařízení nelze najít pro směrování (ID přijímající instituce je neplatné)."
+      '93': "Transakci nelze dokončit - porušení zákona."
+      '94': "Dočasná chyba vydavatele."
+      '96': "Dočasná chyba vydavatele."
+      '98': "Dočasná chyba vydavatele."
+      'N3': "Služba výběru hotovosti není dostupná."
+      'P5': "Odmítnuto odblokování PINu - žádost o změnu nebo odblokování PINu zamítnuta vydavatelem."
+      'R2': "Platba zamítnuta vydavatelem - Transakce nesplňuje podmínky pro Visa PIN."
+      'E1': "Překročen limit odmítnutí."
+      'E3': "Transakce nebyla provedena kvůli chybě 3D-Secure."
+      'E4': "Transakce nebyla provedena kvůli negativnímu potvrzení 3D-Secure od vaší banky."
+      'E5': "Dočasná chyba 3D-Secure."
+      'Q2': "Chyba systému acquirera."
+      'N1': "Token kartové sítě není dostupný a úplné číslo karty již není uloženo."
+      'N2': "Kartová síť není dostupná."
+    targeted:
+      merchant:
+        <<: *issuer_response_code
+        '00': "Transakce zamítnuta z důvodu žádné odpovědi od vydavatele/banky, neaktivního účtu obchodníka, použití nepodporované karty nebo nesprávných údajů o kartě."
+        '1A': "Měkké odmítnutí."
+        'B1A': "Měkké odmítnutí."
+        '01': "Obraťte se na vydavatele karty."
+        '02': "Obraťte se na vydavatele karty, speciální podmínka."
+        '03': "Neplatný obchodník."
+        '04': "Zadržte kartu (bez podvodu)."
+        'B04': "Zadržte kartu (bez podvodu)."
+        '05': "Nepovolovat."
+        '06': "Chyba."
+        '07': "Zadržte kartu, speciální podmínka (podvodný účet)."
+        '12': "Neplatná transakce."
+        '13': "Neplatná částka nebo přetečení pole pro převod měny."
+        '14': "Neplatné číslo účtu (takové číslo neexistuje)."
+        'B14': "Neplatné číslo účtu (takové číslo neexistuje)."
+        '15': "Takový vydavatel neexistuje."
+        'B15': "Takový vydavatel neexistuje."
+        '19': "Zadejte transakci znovu."
+        '21': "Nebyla provedena žádná akce."
+        '30': "Chyba formátu."
+        '39': "Žádný kreditní účet."
+        '41': "Ztracená karta, zadržet (podvodný účet)."
+        'B41': "Ztracená karta, zadržet (podvodný účet)."
+        '43': "Ukradená karta, zadržet (podvodný účet)."
+        'B43': "Ukradená karta, zadržet (podvodný účet)."
+        '51': "Nedostatek finančních prostředků."
+        '52': "Žádný běžný účet."
+        '53': "Žádný spořící účet."
+        '54': "Platnost karty vypršela nebo chybí datum platnosti."
+        'B54': "Platnost karty vypršela nebo chybí datum platnosti."
+        '55': "Nesprávný PIN nebo chybějící PIN."
+        '57': "Transakce není držiteli karty povolena."
+        '58': "Transakce není na terminálu povolena."
+        '59': "Podezření na podvod."
+        '61': "Překročen limit schválené částky."
+        '62': "Omezená karta (karta neplatná v tomto regionu nebo zemi)."
+        '63': "Porušení bezpečnosti."
+        '65': "Překročen limit četnosti výběrů."
+        'B65': "Překročen limit četnosti výběrů."
+        '70': "Vyžadovány údaje PIN."
+        '76': "Nevyžádané storno."
+        '77': "Duplicitní storno nebo duplicitní transakce."
+        '78': "Blokováno, první použití."
+        '82': "(Visa) Negativní výsledky CAM, dCVV, iCVV nebo CVV. (Mastercard) Zamítnutí z důvodu pravidel."
+        '85': "Nezamítnuto."
+        'N7': "Zamítnuto kvůli chybě CVV2."
+        'R0': "Příkaz k zastavení platby."
+        'R1': "Příkaz ke zrušení autorizace."
+        'R3': "Příkaz ke zrušení všech autorizací."
+      cardholder:
+        <<: *issuer_response_code
+        '00': "Platba selhala."
+        '1A': "Měkké odmítnutí - vyžadováno ověření."
+        'B1A': "Měkké odmítnutí - vyžadováno ověření."
+        '01': "Platba zamítnuta."
+        '02': "Platba zamítnuta."
+        '03': "Tuto kartu tento obchodník nemůže přijmout."
+        '04': "Platba zamítnuta vydavatelem."
+        'B04': "Platba zamítnuta vydavatelem."
+        '05': "Platba zamítnuta vydavatelem."
+        '06': "Chyba."
+        '07': "Platba zamítnuta vydavatelem."
+        '12': "Platba zamítnuta vydavatelem - neplatná transakce."
+        '13': "Platba zamítnuta vydavatelem - neplatná částka nebo přetečení pole pro převod měny."
+        '14': "Platba zamítnuta vydavatelem - neplatné číslo účtu."
+        'B14': "Platba zamítnuta vydavatelem - neplatné číslo účtu."
+        '15': "Platba zamítnuta - takový vydavatel neexistuje."
+        'B15': "Platba zamítnuta - takový vydavatel neexistuje."
+        '19': "Platba zamítnuta vydavatelem."
+        '21': "Platba zamítnuta vydavatelem."
+        '30': "Platba zamítnuta vydavatelem - chyba formátu."
+        '39': "Platba zamítnuta vydavatelem - žádný kreditní účet."
+        '41': "Platba zamítnuta vydavatelem."
+        'B41': "Platba zamítnuta vydavatelem."
+        '43': "Platba zamítnuta vydavatelem."
+        'B43': "Platba zamítnuta vydavatelem."
+        '51': "Platba zamítnuta vydavatelem - nedostatek finančních prostředků."
+        '52': "Platba zamítnuta vydavatelem."
+        '53': "Platba zamítnuta vydavatelem."
+        '54': "Platba zamítnuta vydavatelem - platnost karty vypršela."
+        'B54': "Platba zamítnuta vydavatelem - platnost karty vypršela."
+        '55': "Platba zamítnuta vydavatelem - nesprávný PIN nebo chybějící PIN."
+        '57': "Platba zamítnuta vydavatelem - transakce není držiteli karty povolena."
+        '58': "Platba zamítnuta vydavatelem - transakce není na terminálu povolena."
+        '59': "Platba zamítnuta vydavatelem."
+        '61': "Platba zamítnuta vydavatelem - překročen limit schválené částky."
+        '62': "Platba zamítnuta vydavatelem - karta neplatná v tomto regionu nebo zemi."
+        '63': "Platba zamítnuta vydavatelem"
+        '65': "Platba zamítnuta vydavatelem - překročen limit četnosti výběrů."
+        'B65': "Platba zamítnuta vydavatelem - překročen limit četnosti výběrů."
+        '70': "Vyžadováno silné ověření (SCA)."
+        '76': "Platba zamítnuta vydavatelem - nevyžádané storno."
+        '77': "Platba zamítnuta vydavatelem."
+        '78': "Platba zamítnuta vydavatelem - karta použita poprvé."
+        '82': "Platba zamítnuta vydavatelem - (Visa) negativní výsledky CAM, dCVV, iCVV nebo CVV; (Mastercard) zamítnutí z důvodu pravidel."
+        '85': "Autorizace úspěšná."
+        'N7': "Platba zamítnuta vydavatelem - zamítnutí kvůli chybě CVV2."
+        'R0': "Platba zamítnuta vydavatelem - příkaz k zastavení platby."
+        'R1': "Platba zamítnuta vydavatelem - příkaz ke zrušení autorizace."
+        'R3': "Platba zamítnuta vydavatelem - příkaz ke zrušení všech autorizací."

@@ -15,7 +15,7 @@ module IssuerResponseCodes
   # @return [Set<Symbol>]
   AVAILABLE_TARGETS = ::Set.new(%i[merchant cardholder]).freeze
   # @return [Set<Symbol>]
-  AVAILABLE_LOCALES = ::Set.new(%i[en pl da de ee it lt lv sv es fi fr hr nl pt uk ja]).freeze
+  AVAILABLE_LOCALES = ::Set.new(%i[en pl da de ee it lt lv sv es fi fr hr nl pt uk ja cs sk hu]).freeze
 
   # @return [LocaleLibrary]
   LOCALE_LIBRARY = LocaleLibrary.new
