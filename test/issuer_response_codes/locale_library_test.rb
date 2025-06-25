@@ -55,7 +55,6 @@ module IssuerResponseCodes
     def test_issuer_response_codes_method
       @library.locale_hash[:en][:issuer_response_codes] =
         { behaviour: {}, targeted: { merchant: {}, cardholder: {} }, fraudulent_codes: {} }
-      @library.locale_hash[:en][:issuer_response_codes][:fraudulent_codes][:'04'] = true
       @library.locale_hash[:en][:issuer_response_codes][:behaviour][:'04'] =
         'Please contact your card issuer and try again later.'
       @library.locale_hash[:en][:issuer_response_codes][:targeted][:merchant][:'04'] = 'Pick up card.'
@@ -89,11 +88,10 @@ module IssuerResponseCodes
     def test_tds_codes_method
       @library.locale_hash[:en][:tds_status_codes] =
         { behaviour: {}, targeted: { merchant: {}, cardholder: {} }, fraudulent_codes: {} }
-      @library.locale_hash[:en][:tds_status_codes][:fraudulent_codes][:'04'] = true
-      @library.locale_hash[:en][:tds_status_codes][:behaviour][:'04'] =
+      @library.locale_hash[:en][:tds_status_codes][:behaviour][:'09'] =
         'Please contact your card issuer and try again later.'
-      @library.locale_hash[:en][:tds_status_codes][:targeted][:merchant][:'04'] = 'Pick up card.'
-      @library.locale_hash[:en][:tds_status_codes][:targeted][:cardholder][:'04'] = 'Card authentication failed.'
+      @library.locale_hash[:en][:tds_status_codes][:targeted][:merchant][:'09'] = 'Pick up card.'
+      @library.locale_hash[:en][:tds_status_codes][:targeted][:cardholder][:'09'] = 'Card authentication failed.'
 
       @library.locale_hash[:en][:tds_status_codes][:behaviour][:'03'] =
         'Please contact your card issuer and try again later.'
@@ -101,7 +99,7 @@ module IssuerResponseCodes
       @library.locale_hash[:en][:tds_status_codes][:targeted][:cardholder][:'03'] = 'Card authentication failed.'
 
       model_tds_codes = {
-        '04': {
+        '09': {
           behaviour:         'Please contact your card issuer and try again later.',
           merchant_reason:   'Pick up card.',
           cardholder_reason: 'Card authentication failed.',

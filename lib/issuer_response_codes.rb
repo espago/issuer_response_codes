@@ -1,6 +1,7 @@
+# typed: true
 # frozen_string_literal: true
 
-require 'set'
+require 'sorbet-runtime'
 
 require_relative 'issuer_response_codes/version'
 require_relative 'issuer_response_codes/locale_library'
@@ -12,11 +13,11 @@ module IssuerResponseCodes
   class IllegalTarget < StandardError; end
   class IllegalLocale < StandardError; end
 
-  # @return [Set<Symbol>]
-  AVAILABLE_TARGETS = ::Set.new(%i[merchant cardholder]).freeze
-  # @return [Set<Symbol>]
-  AVAILABLE_LOCALES = ::Set.new(%i[en pl da de ee it lt lv sv es fi fr hr nl pt uk ja cs sk hu]).freeze
+  AVAILABLE_TARGETS =
+    ::Set.new(%i[merchant cardholder]).freeze #: Set[Symbol]
 
-  # @return [LocaleLibrary]
+  AVAILABLE_LOCALES =
+    ::Set.new(%i[en pl da de ee it lt lv sv es fi fr hr nl pt uk ja cs sk hu]).freeze #: Set[Symbol]
+
   LOCALE_LIBRARY = LocaleLibrary.new
 end

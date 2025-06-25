@@ -1,9 +1,5 @@
 pt:
   tds_status_codes:
-    fraudulent_codes:
-      '09': true
-      '10': true
-      '11': true
     behaviour:
       unknown: 'Contacte o nosso departamento de assistência.'
       '01': Por favor tente novamente.
@@ -122,27 +118,6 @@ pt:
   issuer_response_codes:
     suggestion: 'Sugestão'
     fraud_notice: 'NOTA: Não repetir cobranças para este cartão! Isto pode ser considerado uma tentativa de fraude!'
-    fraudulent_codes:
-      '04': true
-      'B04': true
-      '07': true
-      '12': true
-      '14': true
-      'B14': true
-      '15': true
-      'B15': true
-      '41': true
-      'B41': true
-      '43': true
-      'B43': true
-      '54': true
-      'B54': true
-      '57': true
-      '59': true
-      '63': true
-      'R0': true
-      'R1': true
-      'R3': true
     behaviour:
       unknown: Contacte o nosso departamento de assistência.
       '00': "Tente novamente mais tarde ou contate o seu revendedor."
@@ -236,9 +211,7 @@ pt:
     targeted:
       merchant:
         <<: *issuer_response_code
-        '00': "Transação rejeitada a nível do operador. O pagamento foi rejeitado devido a: 1) ausência de resposta do banco; 2) bloqueio da conta do vendedor; 3) utilização de um tipo de cartão não suportado ou de dados incorrectos.
-
-Verifique se a conta do vendedor junto ao agente de cobrança está ativa e configurada corretamente no Espago."
+        '00': "Transação rejeitada a nível do operador. O pagamento foi rejeitado devido a: 1) ausência de resposta do banco; 2) bloqueio da conta do vendedor; 3) utilização de um tipo de cartão não suportado ou de dados incorrectos.\nVerifique se a conta do vendedor junto ao agente de cobrança está ativa e configurada corretamente no Espago."
         '1A': "É necessária uma autenticação forte (SCA)."
         'B1A': "É necessária uma autenticação forte (SCA)."
         '01': "Código próprio do emissor do cartão."

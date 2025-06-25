@@ -1,9 +1,5 @@
 fi:
   tds_status_codes:
-    fraudulent_codes:
-      '09': totta
-      '10': totta
-      '11': totta
     behaviour:
       unknown: 'Ota yhteyttä tukiosastoomme.'
       '01': Yritä uudelleen.
@@ -122,27 +118,6 @@ fi:
   issuer_response_codes:
     suggestion: 'Ehdotus'
     fraud_notice: 'HUOMAUTUS: Älä toista tämän kortin veloitusta! Tätä voidaan pitää petoksen yrityksenä!'
-    fraudulent_codes:
-      '04': totta
-      'B04': totta
-      '07': totta
-      '12': totta
-      '14': totta
-      'B14': totta
-      '15': totta
-      'B15': totta
-      '41': totta
-      'B41': totta
-      '43': totta
-      'B43': totta
-      '54': totta
-      'B54': totta
-      '57': totta
-      '59': totta
-      '63': totta
-      'R0': totta
-      'R1': totta
-      'R3': totta
     behaviour:
       unknown: Ota yhteyttä tukiosastoomme.
       '00': "Yritä myöhemmin uudelleen tai ota yhteys jälleenmyyjään."
@@ -236,9 +211,7 @@ fi:
     targeted:
       merchant:
         <<: *issuer_response_code
-        '00': "Operaattoritason tapahtuman hylkääminen. Maksu hylättiin seuraavista syistä: 1) pankilta ei saatu vastausta; 2) myyjän tili on suljettu; 3) korttityyppi ei ole tuettu tai kortin tiedot ovat virheelliset.
-
-Tarkista, onko myyjän tili laskutusagentissa aktiivinen ja oikein määritetty Espagossa."
+        '00': "Operaattoritason tapahtuman hylkääminen. Maksu hylättiin seuraavista syistä: 1) pankilta ei saatu vastausta; 2) myyjän tili on suljettu; 3) korttityyppi ei ole tuettu tai kortin tiedot ovat virheelliset.\nTarkista, onko myyjän tili laskutusagentissa aktiivinen ja oikein määritetty Espagossa."
         '1A': "Vahva todennus (SCA) vaaditaan."
         'B1A': "Vahva todennus (SCA) vaaditaan."
         '01': "Kortin myöntäjän oma koodi."

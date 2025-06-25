@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
     'A simple Ruby gem which provides Issuer Response Code descriptions and suggestions for cardholders and merchants'
   spec.homepage      = 'https://github.com/espago/issuer_response_codes'
   spec.license       = 'MIT'
-  spec.required_ruby_version = Gem::Requirement.new('>= 3.0')
+  spec.required_ruby_version = Gem::Requirement.new('>= 3.2')
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/espago/issuer_response_codes'
@@ -27,4 +27,6 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
   spec.metadata['rubygems_mfa_required'] = 'true'
+
+  spec.add_dependency 'sorbet-runtime', '~> 0.5'
 end

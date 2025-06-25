@@ -2,10 +2,6 @@ sk:
   tds_status_codes:
     suggestion: 'Návrh'
     fraud_notice: 'Transakcie s týmto kódom môžu byť považované za podvodné.'
-    fraudulent_codes:
-      '09': true
-      '10': true
-      '11': true
     behaviour:
       unknown: 'Prosím kontaktujte náš podporný tím.'
       '01': Prosím skúste znova.
@@ -110,27 +106,6 @@ sk:
   issuer_response_codes:
     suggestion: 'Návrh'
     fraud_notice: 'DÔLEŽITÉ UPOZORNENIE: Je zakázané opakovať transakcie, ktoré skončili týmto kódom. Môže to byť považované za pokus o podvod!'
-    fraudulent_codes:
-      '04': true
-      'B04': true
-      '07': true
-      '12': true
-      '14': true
-      'B14': true
-      '15': true
-      'B15': true
-      '41': true
-      'B41': true
-      '43': true
-      'B43': true
-      '54': true
-      'B54': true
-      '57': true
-      '59': true
-      '63': true
-      'R0': true
-      'R1': true
-      'R3': true
     behaviour:
       unknown: Prosím kontaktujte náš podporný tím.
       '00': "Prosím skúste znova alebo kontaktujte predajcu."

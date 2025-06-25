@@ -103,6 +103,23 @@ module IssuerResponseCodes
       assert_equal 'Unknown reason. Please contact our support team.', code.description
     end
 
+    def test_behaviour_code_return_proper_value
+      code = IssuerResponseCodes::Code.new(id: '46')
+      assert_equal :abort, code.behaviour_code
+
+      code = IssuerResponseCodes::Code.new(id: '22')
+      assert_equal :retry_later, code.behaviour_code
+
+      code = IssuerResponseCodes::Code.new(id: '1A')
+      assert_equal :sca_required, code.behaviour_code
+
+      code = IssuerResponseCodes::Code.new(id: '04')
+      assert_equal :invalid_card, code.behaviour_code
+
+      code = IssuerResponseCodes::Code.new(id: '61')
+      assert_equal :invalid_amount, code.behaviour_code
+    end
+
     def test_behaviour_return_proper_value
       code = IssuerResponseCodes::Code.new(id: '00')
       assert_equal :merchant, code.target

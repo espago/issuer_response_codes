@@ -1,17 +1,21 @@
+# typed: true
 # frozen_string_literal: true
 
 module IssuerResponseCodes
   # Context stores default settings for retrieving codes.
   class Context
-    attr_reader :default_target, :default_locale, :fraud_notice_by_default
+    #: Symbol
+    attr_reader :default_target
+    #: Symbol
+    attr_reader :default_locale
+    #: bool
+    attr_reader :fraud_notice_by_default
 
-    NOT_PROVIDED = ::Object.new
+    NOT_PROVIDED = ::Object.new #: as untyped
 
-    # @param default_target [Symbol]
-    # @param default_locale [Symbol]
-    # @param fraud_notice_by_default [Boolean, Object]
     # @raise [IllegalLocale]
     # @raise [IllegalTarget]
+    #: (?default_target: Symbol, ?default_locale: Symbol, ?fraud_notice_by_default: bool) -> void
     def initialize(default_target: :merchant, default_locale: :en, fraud_notice_by_default: NOT_PROVIDED)
       @default_target = default_target
       @default_locale = default_locale
@@ -27,20 +31,12 @@ module IssuerResponseCodes
       @fraud_notice_by_default = default_target == :merchant
     end
 
-    # @param id [String, Symbol]
-    # @param target [Symbol]
-    # @param locale [Symbol]
-    # @param fraud_notice [Boolean, Object]
-    # @return [Code]
+    #: (id: String | Symbol, ?target: Symbol, ?locale: Symbol, ?fraud_notice: bool) -> Code
     def code(id:, target: default_target, locale: default_locale, fraud_notice: fraud_notice_by_default)
       Code.new(id: id, target: target, locale: locale, fraud_notice: fraud_notice)
     end
 
-    # @param id [String, Symbol]
-    # @param target [Symbol]
-    # @param locale [Symbol]
-    # @param fraud_notice [Boolean, Object]
-    # @return [TdsCode]
+    #: (id: String | Symbol, ?target: Symbol, ?locale: Symbol, ?fraud_notice: bool) -> TdsCode
     def tds_code(id:, target: default_target, locale: default_locale, fraud_notice: fraud_notice_by_default)
       TdsCode.new(id: id, target: target, locale: locale, fraud_notice: fraud_notice)
     end

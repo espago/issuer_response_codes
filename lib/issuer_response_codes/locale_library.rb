@@ -1,3 +1,4 @@
+# typed: true
 # frozen_string_literal: true
 
 require 'yaml'
@@ -7,6 +8,7 @@ module IssuerResponseCodes
   class LocaleLibrary
     attr_reader :locale_hash
 
+    #: -> void
     def initialize
       @locale_hash = {}
 
@@ -15,20 +17,14 @@ module IssuerResponseCodes
       end
     end
 
-    # @param path [String]
-    # @param locale [Symbol]
-    # @param scope [String]
-    # @param default [Symbol, String, nil]
-    # @return [String, Hash, nil]
+    #: (path: String | Symbol, ?locale: Symbol, ?scope: String, ?default: Symbol | String?) -> untyped
     def dig(path:, locale: :en, scope: '', default: nil)
       __dig__(path: path, locale: locale, scope: scope, default: default)
     end
     alias [] dig
 
-    # @param locale [Symbol]
-    # @return [Hash{SYmbol => Hash{Symbol => Object}}]
+    #: (?locale: Symbol) -> Hash[Symbol, Hash[Symbol, untyped]]
     def issuer_response_codes(locale: :en)
-      fraudulent_codes = locale_hash.dig(locale, :issuer_response_codes, :fraudulent_codes)
       behaviours = locale_hash.dig(locale, :issuer_response_codes, :behaviour)
       cardholder_reasons = locale_hash.dig(locale, :issuer_response_codes, :targeted, :cardholder)
       merchant_reasons = locale_hash.dig(locale, :issuer_response_codes, :targeted, :merchant)
@@ -40,16 +36,14 @@ module IssuerResponseCodes
             merchant_reason:   merchant_reason,
             cardholder_reason: cardholder_reasons[code],
             behaviour:         behaviours[code],
-            fraudulent:        fraudulent_codes[code] == true,
+            fraudulent:        Code::FRAUDULENT_IDS.include?(code.to_s),
           },
         ]
       end
     end
 
-    # @param locale [Symbol]
-    # @return [Hash{Symbol => Hash{Symbol => Object}}]
+    #: (?locale: Symbol) -> Hash[Symbol, Hash[Symbol, untyped]]
     def tds_codes(locale: :en)
-      fraudulent_codes = locale_hash.dig(locale, :tds_status_codes, :fraudulent_codes)
       behaviours = locale_hash.dig(locale, :tds_status_codes, :behaviour)
       cardholder_reasons = locale_hash.dig(locale, :tds_status_codes, :targeted, :cardholder)
       merchant_reasons = locale_hash.dig(locale, :tds_status_codes, :targeted, :merchant)
@@ -61,7 +55,7 @@ module IssuerResponseCodes
             merchant_reason:   merchant_reason,
             cardholder_reason: cardholder_reasons[code],
             behaviour:         behaviours[code],
-            fraudulent:        fraudulent_codes[code] == true,
+            fraudulent:        TdsCode::FRAUDULENT_IDS.include?(code.to_s),
           },
         ]
       end
@@ -69,11 +63,7 @@ module IssuerResponseCodes
 
     private
 
-    # @param path [String]
-    # @param locale [Symbol]
-    # @param scope [String]
-    # @param default [Symbol, String, nil]
-    # @return [String, Hash, nil]
+    #: (path: String | Symbol, ?locale: Symbol, ?scope: String, ?default: Symbol | String?) -> untyped
     def __dig__(path:, locale: :en, scope: '', default: nil)
       result = dig_provided_path(path, scope, locale)
       return result if result || !default
@@ -83,10 +73,6 @@ module IssuerResponseCodes
       dig_provided_path(default.to_s, scope, locale)
     end
 
-    # @param path [String]
-    # @param locale [Symbol]
-    # @param scope [String]
-    # @return [String, Hash, nil]
     def dig_provided_path(path, scope, locale)
       return if path.nil? || path.empty?
 
@@ -97,8 +83,7 @@ module IssuerResponseCodes
       locale_hash.dig(*full_path_array)
     end
 
-    # @param name [Symbol, String]
-    # @return [void]
+    #: (Symbol | String) -> void
     def load_locale(name)
       raw_hash = load_yaml(::File.join(::File.dirname(::File.expand_path(__FILE__)), "../locale/#{name}.yml"))
       name = name.to_sym
@@ -106,9 +91,8 @@ module IssuerResponseCodes
       @locale_hash[name] = raw_hash[name]
     end
 
-    if ::Psych::VERSION > '4'
-      # @param file_path [String]
-      # @return [Hash{Symbol => Object}]
+    if ::Psych::VERSION > T.unsafe('4') # rubocop:disable Sorbet/ForbidTUnsafe,Style/YodaCondition
+      #: (String) -> Hash[Symbol, untyped]
       def load_yaml(file_path)
         ::YAML.load_file(
           file_path,
@@ -117,8 +101,7 @@ module IssuerResponseCodes
         )
       end
     else
-      # @param file_path [String]
-      # @return [Hash{Symbol => Object}]
+      #: (String) -> Hash[Symbol, untyped]
       def load_yaml(file_path)
         ::YAML.load_file(
           file_path,

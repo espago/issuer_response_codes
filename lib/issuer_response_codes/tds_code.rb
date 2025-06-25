@@ -1,32 +1,35 @@
+# typed: true
 # frozen_string_literal: true
 
 module IssuerResponseCodes
   # 3D Secure reject reason code.
   class TdsCode < Code
-    # @return [String]
+    FRAUDULENT_IDS = %w[09 10 11].to_set #: Set[String]
+
+    #: -> String
     def humanize
       "#{reason} #{behaviour}"
     end
 
     alias description humanize
 
-    # @return [String]
+    #: -> String
     def reason
       LOCALE_LIBRARY[
         path:    id,
         scope:   "tds_status_codes.targeted.#{target}",
         locale:  locale,
-        default: :unknown
+        default: :unknown,
       ]
     end
 
-    # @return [String]
+    #: -> String
     def behaviour
       behaviour_str = LOCALE_LIBRARY[
         path:    id,
         scope:   'tds_status_codes.behaviour',
         locale:  locale,
-        default: :unknown
+        default: :unknown,
       ]
 
       return behaviour_str unless fraud_notice && fraudulent_code?
@@ -34,9 +37,9 @@ module IssuerResponseCodes
       "#{behaviour_str} #{LOCALE_LIBRARY[path: 'tds_status_codes.fraud_notice']}"
     end
 
-    # @return [Boolean]
+    #: -> bool
     def fraudulent_code?
-      @fraudulent_code ||= LOCALE_LIBRARY[path: id, scope: 'tds_status_codes.fraudulent_codes', locale: locale]
+      FRAUDULENT_IDS.include?(id)
     end
 
   end
