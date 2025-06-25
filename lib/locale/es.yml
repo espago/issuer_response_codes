@@ -1,9 +1,5 @@
 es:
   tds_status_codes:
-    fraudulent_codes:
-      '09': verdadero
-      '10': verdadero
-      '11': verdadero
     behaviour:
       unknown: 'Póngase en contacto con nuestro servicio de asistencia.'
       '01': Inténtelo otra vez.
@@ -122,27 +118,6 @@ es:
   issuer_response_codes:
     suggestion: 'Sugerencia'
     fraud_notice: 'NOTA: ¡No repita las cargas para esta tarjeta! ¡Esto puede considerarse un intento de fraude!'
-    fraudulent_codes:
-      '04': verdadero
-      'B04': verdadero
-      '07': verdadero
-      '12': verdadero
-      '14': verdadero
-      'B14': verdadero
-      '15': verdadero
-      'B15': verdadero
-      '41': verdadero
-      'B41': verdadero
-      '43': verdadero
-      'B43': verdadero
-      '54': verdadero
-      'B54': verdadero
-      '57': verdadero
-      '59': verdadero
-      '63': verdadero
-      'R0': verdadero
-      'R1': verdadero
-      'R3': verdadero
     behaviour:
       unknown: Póngase en contacto con nuestro servicio de asistencia.
       '00': "Vuelva a intentarlo más tarde o póngase en contacto con el vendedor."
@@ -236,9 +211,7 @@ es:
     targeted:
       merchant:
         <<: *issuer_response_code
-        '00': "Rechazo de transacción a nivel del operador. El pago fue rechazado debido a: 1) falta de respuesta del banco; 2) bloqueo de la cuenta del vendedor; 3) uso de un tipo de tarjeta no admitido o datos de tarjeta incorrectos.
-
-Compruebe que la cuenta del vendedor con el agente de facturación está activa y configurada correctamente en Espago."
+        '00': "Rechazo de transacción a nivel del operador. El pago fue rechazado debido a: 1) falta de respuesta del banco; 2) bloqueo de la cuenta del vendedor; 3) uso de un tipo de tarjeta no admitido o datos de tarjeta incorrectos.\nCompruebe que la cuenta del vendedor con el agente de facturación está activa y configurada correctamente en Espago."
         '1A': "Se requiere autenticación fuerte (SCA)."
         'B1A': "Se requiere autenticación fuerte (SCA)."
         '01': "Código propio del emisor de la tarjeta."

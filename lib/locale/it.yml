@@ -1,9 +1,5 @@
 it:
   tds_status_codes:
-    fraudulent_codes:
-      '09': true
-      '10': true
-      '11': true
     behaviour:
       unknown: 'Si prega di contattare il nostro team di supporto.'
       '01': Si prega di riprovare.
@@ -108,27 +104,6 @@ it:
   issuer_response_codes:
     suggestion: 'Suggerimento'
     fraud_notice: 'AVVISO IMPORTANTE: È vietato ripetere le transazioni che terminano con questo codice. Potrebbe essere riconosciuto come un tentativo di frode!'
-    fraudulent_codes:
-      '04': true
-      'B04': true
-      '07': true
-      '12': true
-      '14': true
-      'B14': true
-      '15': true
-      'B15': true
-      '41': true
-      'B41': true
-      '43': true
-      'B43': true
-      '54': true
-      'B54': true
-      '57': true
-      '59': true
-      '63': true
-      'R0': true
-      'R1': true
-      'R3': true
     behaviour:
       unknown: Si prega di contattare il nostro team di supporto.
       '00': "Riprova a eseguire la transazione oppure.."
@@ -221,11 +196,7 @@ it:
     targeted:
       merchant:
         <<: *issuer_response_code
-        '00': "Rifiuto dell'operazione da parte del prestatore di servizi di pagamento. Il pagamento è stato rifiutato perché
-1) Il sistema di autorizzazione bancaria non risponde
-2) Il conto del venditore è bloccato
-3) I dati della carta non sono corretti o la carta utilizzata non è approvata per questo pagamento
-Verifica che il conto del venditore dall'acquirente è attivo e correttamente configurato in Espago.."
+        '00': "Rifiuto dell'operazione da parte del prestatore di servizi di pagamento. Il pagamento è stato rifiutato perché\n1) Il sistema di autorizzazione bancaria non risponde\n2) Il conto del venditore è bloccato\n3) I dati della carta non sono corretti o la carta utilizzata non è approvata per questo pagamento\nVerifica che il conto del venditore dall'acquirente è attivo e correttamente configurato in Espago.."
         '1A': "Rifiuto."
         'B1A': "Rifiuto."
         '01': "Codice personale dell'emittente della carta."

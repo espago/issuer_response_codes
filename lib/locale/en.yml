@@ -2,10 +2,6 @@ en:
   tds_status_codes:
     suggestion: 'Suggestion'
     fraud_notice: 'Transactions with this code may be considered fraudulent.'
-    fraudulent_codes:
-      '09': true
-      '10': true
-      '11': true
     behaviour:
       unknown: 'Please contact our support team.'
       '01': Please try again.
@@ -110,27 +106,6 @@ en:
   issuer_response_codes:
     suggestion: 'Suggestion'
     fraud_notice: 'IMPORTANT NOTICE: It is forbidden to retry transactions that ended with this code. It may be recognized as a fraud attempt!'
-    fraudulent_codes:
-      '04': true
-      'B04': true
-      '07': true
-      '12': true
-      '14': true
-      'B14': true
-      '15': true
-      'B15': true
-      '41': true
-      'B41': true
-      '43': true
-      'B43': true
-      '54': true
-      'B54': true
-      '57': true
-      '59': true
-      '63': true
-      'R0': true
-      'R1': true
-      'R3': true
     behaviour:
       unknown: Please contact our support team.
       '00': "Please try again or contact the seller."

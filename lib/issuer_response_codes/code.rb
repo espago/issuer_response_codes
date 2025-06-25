@@ -1,18 +1,27 @@
+# typed: true
 # frozen_string_literal: true
+
+require_relative 'code/behaviour'
 
 module IssuerResponseCodes
   # ISO-8583 Response code.
   class Code
-    attr_reader :id, :target, :locale, :fraud_notice
+    #: String
+    attr_reader :id
+    #: Symbol
+    attr_reader :target
+    #: Symbol
+    attr_reader :locale
+    #: bool
+    attr_reader :fraud_notice
 
-    NOT_PROVIDED = ::Object.new
+    FRAUDULENT_IDS = %w[04 B04 07 12 14 B14 15 B15 41 B41 43 B43 54 B54 57 59 63 R0 R1 R3].to_set #: Set[String]
 
-    # @param id [String]
-    # @param target [Symbol]
-    # @param locale [Symbol]
-    # @param fraud_notice [Boolean, Object]
+    NOT_PROVIDED = ::Object.new #: as untyped
+
+    #: (id: String | Symbol, ?target: Symbol, ?locale: Symbol, ?fraud_notice: bool) -> void
     def initialize(id:, target: :merchant, locale: :en, fraud_notice: NOT_PROVIDED)
-      @id = id
+      @id = id.to_s
       @target = target
       @locale = locale
 
@@ -24,37 +33,47 @@ module IssuerResponseCodes
         return
       end
 
-      @fraud_notice = target == :merchant
+      @fraud_notice = target == :merchant #: bool
     end
 
-    # @return [String]
+    #: -> String
     def humanize
       "#{reason} #{behaviour}"
     end
     alias description humanize
 
-    # @return [String]
+    #: -> String
     def reason
-      LOCALE_LIBRARY[path:    id,
-                     scope:   "issuer_response_codes.targeted.#{target}",
-                     locale:  locale,
-                     default: :unknown]
+      LOCALE_LIBRARY[
+        path:    id,
+        scope:   "issuer_response_codes.targeted.#{target}",
+        locale:  locale,
+        default: :unknown,
+      ]
     end
 
-    # @return [String]
+    #: -> String
     def behaviour
-      behaviour_str = LOCALE_LIBRARY[path:    id,
-                                     scope:   'issuer_response_codes.behaviour',
-                                     locale:  locale,
-                                     default: :unknown]
+      behaviour_str = LOCALE_LIBRARY[
+        path:    id,
+        scope:   'issuer_response_codes.behaviour',
+        locale:  locale,
+        default: :unknown,
+      ]
+
       return behaviour_str unless fraud_notice && fraudulent_code?
 
       "#{behaviour_str} #{LOCALE_LIBRARY[path: 'issuer_response_codes.fraud_notice']}"
     end
 
-    # @return [Boolean]
+    #: -> Symbol
+    def behaviour_code
+      Behaviour[id]
+    end
+
+    #: -> bool
     def fraudulent_code?
-      @fraudulent_code ||= LOCALE_LIBRARY[path: id, scope: 'issuer_response_codes.fraudulent_codes', locale: locale]
+      FRAUDULENT_IDS.include?(id)
     end
 
   end

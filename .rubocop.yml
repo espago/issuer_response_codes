@@ -1,5 +1,33 @@
 inherit_gem:
-  rubocop-espago: rubocop.yml
+  rubocop-espago: sorbet.yml
 
 AllCops:
-  TargetRubyVersion: 3.0
+  TargetRubyVersion: 3.2
+
+Sorbet/EnforceSignatures:
+  Enabled: false
+
+Layout/LeadingCommentSpace:
+  Enabled: false
+
+Sorbet/HasSigil:
+  AutoCorrect: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+Lint/EmptyWhen:
+  Enabled: false
+
+Style/ArrayFirstLast:
+  Enabled: false
+
+Style/FetchEnvVar:
+  Enabled: false
+
+Sorbet/ForbidSig:
+  Enabled: false
+
+Style/ImplicitRuntimeError:
+  Enabled: false
+

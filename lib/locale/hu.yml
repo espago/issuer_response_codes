@@ -2,10 +2,6 @@ hu:
   tds_status_codes:
     suggestion: 'Javaslat'
     fraud_notice: 'Az ilyen kóddal rendelkező tranzakciók csalásnak minősülhetnek.'
-    fraudulent_codes:
-      '09': true
-      '10': true
-      '11': true
     behaviour:
       unknown: 'Kérjük, vegye fel a kapcsolatot ügyfélszolgálatunkkal.'
       '01': Kérjük, próbálja újra.
@@ -110,27 +106,6 @@ hu:
   issuer_response_codes:
     suggestion: 'Javaslat'
     fraud_notice: 'FONTOS FIGYELMEZTETÉS: Tilos az ilyen kóddal végződő tranzakciókat újrapróbálni. Ez csalási kísérletnek minősülhet!'
-    fraudulent_codes:
-      '04': true
-      'B04': true
-      '07': true
-      '12': true
-      '14': true
-      'B14': true
-      '15': true
-      'B15': true
-      '41': true
-      'B41': true
-      '43': true
-      'B43': true
-      '54': true
-      'B54': true
-      '57': true
-      '59': true
-      '63': true
-      'R0': true
-      'R1': true
-      'R3': true
     behaviour:
       unknown: Kérjük, vegye fel a kapcsolatot ügyfélszolgálatunkkal.
       '00': "Kérjük, próbálja újra vagy lépjen kapcsolatba az eladóval."

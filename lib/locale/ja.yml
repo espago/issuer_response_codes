@@ -2,10 +2,6 @@ ja:
   tds_status_codes:
     suggestion: '提案'
     fraud_notice: 'このコードを使用した取引は不正行為とみなされる可能性があります。'
-    fraudulent_codes:
-      '09': true
-      '10': true
-      '11': true
     behaviour:
       unknown: 'サポートチームにお問い合わせください。'
       '01': もう一度お試しください。
@@ -110,27 +106,6 @@ ja:
   issuer_response_codes:
     suggestion: '提案'
     fraud_notice: '重要なお知らせ: このコードで終了した取引を再試行することは禁止されています。不正行為とみなされる可能性があります！'
-    fraudulent_codes:
-      '04': true
-      'B04': true
-      '07': true
-      '12': true
-      '14': true
-      'B14': true
-      '15': true
-      'B15': true
-      '41': true
-      'B41': true
-      '43': true
-      'B43': true
-      '54': true
-      'B54': true
-      '57': true
-      '59': true
-      '63': true
-      'R0': true
-      'R1': true
-      'R3': true
     behaviour:
       unknown: サポートチームにお問い合わせください。
       '00': "もう一度お試しいただくか、販売者にお問い合わせください。"

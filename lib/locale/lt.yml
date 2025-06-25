@@ -1,9 +1,5 @@
 lt:
   tds_status_codes:
-    fraudulent_codes:
-      '09': true
-      '10': true
-      '11': true
     behaviour:
       unknown: 'Please contact our support team.'
       '01': Please try again.
@@ -108,14 +104,6 @@ lt:
   issuer_response_codes:
     suggestion: 'Suggestion'
     fraud_notice: 'IMPORTANT NOTICE: It is forbidden to retry transactions that ended with this code. It may be recognized as a fraud attempt!'
-    fraudulent_codes:
-      '04': true
-      'B04': true
-      '07': true
-      '41': true
-      'B41': true
-      '43': true
-      'B43': true
     behaviour:
       '00': "Prašome bandyti vėliau, susisiekti su Pardavėju arba Espago palaikymo komanda."
       '05': "Patikrinkite kortelės nustatymus šiems mokėjimų tipams arba naudokite kitą kortelę."

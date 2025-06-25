@@ -1,9 +1,5 @@
 nl:
   tds_status_codes:
-    fraudulent_codes:
-      '09': waar
-      '10': waar
-      '11': waar
     behaviour:
       unknown: 'Neem contact op met onze supportafdeling.'
       '01': Probeer opnieuw.
@@ -122,27 +118,6 @@ nl:
   issuer_response_codes:
     suggestion: 'Suggestie'
     fraud_notice: 'LET OP: Herhaal geen betalingen met deze kaart! Dit kan worden beschouwd als een poging tot fraude!'
-    fraudulent_codes:
-      '04': waar
-      'B04': waar
-      '07': waar
-      '12': waar
-      '14': waar
-      'B14': waar
-      '15': waar
-      'B15': waar
-      '41': waar
-      'B41': waar
-      '43': waar
-      'B43': waar
-      '54': waar
-      'B54': waar
-      '57': waar
-      '59': waar
-      '63': waar
-      'R0': waar
-      'R1': waar
-      'R3': waar
     behaviour:
       unknown: Neem contact op met onze supportafdeling.
       '00': "Probeer het later nog eens of neem contact op met de verkoper."
@@ -236,9 +211,7 @@ nl:
     targeted:
       merchant:
         <<: *issuer_response_code
-        '00': "Afwijzing van transacties op operatorniveau. De betaling is geweigerd vanwege: 1) geen reactie van de bank; 2) blokkering van de rekening van de verkoper; 3) gebruik van een niet-ondersteunde kaartsoort of onjuiste kaartgegevens.
-
-Controleer of de betaalrekening bij de aqcuirer actief is en correct is geconfigureerd in Espago."
+        '00': "Afwijzing van transacties op operatorniveau. De betaling is geweigerd vanwege: 1) geen reactie van de bank; 2) blokkering van de rekening van de verkoper; 3) gebruik van een niet-ondersteunde kaartsoort of onjuiste kaartgegevens.\nControleer of de betaalrekening bij de aqcuirer actief is en correct is geconfigureerd in Espago."
         '1A': "Sterke authenticatie (SCA) vereist."
         'B1A': "Sterke authenticatie (SCA) vereist."
         '01': "Eigen code van de kaartverstrekker."

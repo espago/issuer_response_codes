@@ -1,9 +1,5 @@
 fr:
   tds_status_codes:
-    fraudulent_codes:
-      '09': vrai
-      '10': vrai
-      '11': vrai
     behaviour:
       unknown: 'Veuillez contacter notre service d''assistance.'
       '01': Veuillez réessayer.
@@ -122,27 +118,6 @@ fr:
   issuer_response_codes:
     suggestion: 'Suggestion'
     fraud_notice: 'ATTENTION : Ne pas répéter les prélèvements pour cette carte ! Cela peut être considéré comme une tentative de fraude !'
-    fraudulent_codes:
-      '04': vrai
-      'B04': vrai
-      '07': vrai
-      '12': vrai
-      '14': vrai
-      'B14': vrai
-      '15': vrai
-      'B15': vrai
-      '41': vrai
-      'B41': vrai
-      '43': vrai
-      'B43': vrai
-      '54': vrai
-      'B54': vrai
-      '57': vrai
-      '59': vrai
-      '63': vrai
-      'R0': vrai
-      'R1': vrai
-      'R3': vrai
     behaviour:
       unknown: Veuillez contacter notre service d'assistance.
       '00': "Veuillez réessayer plus tard ou contacter votre revendeur."
@@ -236,9 +211,7 @@ fr:
     targeted:
       merchant:
         <<: *issuer_response_code
-        '00': "Rejet de la transaction au niveau de l'opérateur. Le paiement a été rejeté pour les raisons suivantes 1) absence de réponse de la banque ; 2) blocage du compte du Vendeur ; 3) utilisation d'un type de carte non pris en charge ou de données de carte incorrectes.
-
-Vérifiez que le compte vendeur de l'agent de règlement est actif et correctement configuré dans Espago."
+        '00': "Rejet de la transaction au niveau de l'opérateur. Le paiement a été rejeté pour les raisons suivantes 1) absence de réponse de la banque ; 2) blocage du compte du Vendeur ; 3) utilisation d'un type de carte non pris en charge ou de données de carte incorrectes.\nVérifiez que le compte vendeur de l'agent de règlement est actif et correctement configuré dans Espago."
         '1A': "Authentification forte (SCA) requise."
         'B1A': "Authentification forte (SCA) requise."
         '01': "Code propre à l'émetteur de la carte."

@@ -1,0 +1,7 @@
+--dir
+.
+--enable-experimental-rbs-assertions
+--enable-experimental-rbs-signatures
+--enable-experimental-requires-ancestor
+--ignore=tmp/
+--ignore=vendor/

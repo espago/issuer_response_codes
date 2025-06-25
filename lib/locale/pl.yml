@@ -1,9 +1,5 @@
 pl:
   tds_status_codes:
-    fraudulent_codes:
-      '09': true
-      '10': true
-      '11': true
     behaviour:
       unknown: 'Prosimy o kontakt z naszym działem wsparcia.'
       '01': Proszę spróbować ponownie.
@@ -122,27 +118,6 @@ pl:
   issuer_response_codes:
     suggestion: 'Sugestia'
     fraud_notice: 'UWAGA: Nie należy powtarzać obciążeń dla tej karty! Może to zostać uznane za próbę oszustwa!'
-    fraudulent_codes:
-      '04': true
-      'B04': true
-      '07': true
-      '12': true
-      '14': true
-      'B14': true
-      '15': true
-      'B15': true
-      '41': true
-      'B41': true
-      '43': true
-      'B43': true
-      '54': true
-      'B54': true
-      '57': true
-      '59': true
-      '63': true
-      'R0': true
-      'R1': true
-      'R3': true
     behaviour:
       unknown: Prosimy o kontakt z naszym działem wsparcia.
       '00': "Proszę spróbować ponownie później lub skontaktować się ze sprzedawcą."
@@ -236,12 +211,7 @@ pl:
     targeted:
       merchant:
         <<: *issuer_response_code
-        '00': "Odrzucenie transakcji na poziomie operatora. Płatność została odrzucona ze względu na:
-1) brak odpowiedzi z banku;
-2) blokadę konta Sprzedawcy;
-3) użycie nieobsługiwanego typu karty lub nieprawidłowe dane karty.
-
-Należy sprawdzić czy konto sprzedawcy u agenta rozliczeniowego jest aktywne i poprawnie skonfigurowane w Espago."
+        '00': "Odrzucenie transakcji na poziomie operatora. Płatność została odrzucona ze względu na:\n1) brak odpowiedzi z banku;\n2) blokadę konta Sprzedawcy;\n3) użycie nieobsługiwanego typu karty lub nieprawidłowe dane karty.\nNależy sprawdzić czy konto sprzedawcy u agenta rozliczeniowego jest aktywne i poprawnie skonfigurowane w Espago."
         '1A': "Wymagane silne uwierzytelnienie (SCA)."
         'B1A': "Wymagane silne uwierzytelnienie (SCA)."
         '01': "Kod własny wydawcy karty."
@@ -249,9 +219,7 @@ Należy sprawdzić czy konto sprzedawcy u agenta rozliczeniowego jest aktywne i 
         '03': "Nieprawidłowe/niepełne dane akceptanta lub nieaktywne konto."
         '04': "Karta zastrzeżona (z powodów innych niż kradzież/zgubienie)."
         'B04': "Karta zastrzeżona (z powodów innych niż kradzież/zgubienie)."
-        '05': "Płatność została odrzucona przez bank bez podania szczególnej przyczyny.
-Potrzebny kontakt klienta z bankiem w celu wyjaśnienia.
-Prawdopodobnie płatności typu MOTO/eCommerce/subskrypcyjne nieaktywne lub niewspierane. "
+        '05': "Płatność została odrzucona przez bank bez podania szczególnej przyczyny.\nPotrzebny kontakt klienta z bankiem w celu wyjaśnienia.\nPrawdopodobnie płatności typu MOTO/eCommerce/subskrypcyjne nieaktywne lub niewspierane. "
         '06': "Bank zgłosił błąd podczas przetwarzania płatności."
         '07': "Karta zastrzeżona (podejrzenie nadużycia)."
         '12': "Nieprawidłowa transakcja lub niedostępna dla tej karty."
