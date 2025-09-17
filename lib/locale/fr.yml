@@ -175,6 +175,7 @@ fr:
       'Q2': "Veuillez réessayer plus tard ou utiliser une autre carte."
       'N1': "Veuillez utiliser une autre carte ou contacter le commerçant."
       'N2': "Veuillez utiliser une autre carte."
+      'E6': "Veuillez utiliser une autre carte."
       '75': "Veuillez utiliser une autre carte, vérifier que le code CVV/CVC est correct ou contacter votre banque."
       '85': "La banque a confirmé l'autorisation."
       '86': "Veuillez utiliser une autre carte ou contacter votre banque."
@@ -208,6 +209,7 @@ fr:
       'Q2': "Erreur système de l'acquéreur."
       'N1': "Le jeton du réseau de cartes n'est pas disponible et le numéro de carte complet n'est plus stocké."
       'N2': "Le réseau de cartes est indisponible."
+      'E6': "Le pays de la carte n'est pas pris en charge."
     targeted:
       merchant:
         <<: *issuer_response_code
