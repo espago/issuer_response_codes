@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    issuer_response_codes (0.3.9)
+    issuer_response_codes (0.3.10)
       sorbet-runtime (~> 0.5)
 
 GEM
