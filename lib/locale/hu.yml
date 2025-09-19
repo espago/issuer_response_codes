@@ -163,6 +163,7 @@ hu:
       'Q2': "Kérjük, próbálja újra vagy használjon másik kártyát."
       'N1': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kereskedővel."
       'N2': "Kérjük, használjon másik kártyát."
+      'E6': "Kérjük, használjon másik kártyát."
       '75': "Kérjük, próbálja újra és ellenőrizze a CVV/CVC kódot vagy lépjen kapcsolatba a kibocsátóval pontosításért."
       '85': "A kibocsátó megerősítette ezt a tranzakciót."
       '86': "Kérjük, használjon másik kártyát vagy lépjen kapcsolatba a kibocsátóval pontosításért."
@@ -195,6 +196,7 @@ hu:
       'Q2': "Elfogadói rendszerhiba."
       'N1': "A kártyahálózati token nem elérhető és a teljes kártyaszám már nincs tárolva."
       'N2': "A kártyahálózat nem elérhető."
+      'E6': "A kártya országát nem támogatjuk."
     targeted:
       merchant:
         <<: *issuer_response_code

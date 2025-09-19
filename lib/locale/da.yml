@@ -122,6 +122,7 @@ da:
       'N1': "Brug venligst et andet kort, eller kontakt sælgeren."
       # incomplete translations
       'N2': "Brug venligst et andet kort."
+      'E6': "Brug venligst et andet kort."
       unknown: "Please contact our support team."
       '01': "Please contact your card issuer."
       '02': "Please contact your card issuer."
@@ -170,6 +171,7 @@ da:
       'N1': "Kortnetværkstoken er ikke tilgængelig, og det fulde kortnummer er ikke længere gemt."
       # incomplete translations
       'N2': "Kortnetværket er ikke tilgængeligt."
+      'E6': "Kortlandet understøttes ikke."
       unknown: "Unknown reason."
       '01': "Authorization Error."
       '02': "Authorization Error."

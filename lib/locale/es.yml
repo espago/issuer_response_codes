@@ -175,6 +175,7 @@ es:
       'Q2': "Vuelva a intentarlo más tarde o utilice otra tarjeta."
       'N1': "Utilice otra tarjeta o comuníquese con el comerciante."
       'N2': "Utilice otra tarjeta"
+      'E6': "Utilice otra tarjeta"
       '75': "Utilice otra tarjeta, compruebe que el código CVV/CVC es correcto o póngase en contacto con su banco."
       '85': "El banco ha confirmado la autorización."
       '86': "Utilice otra tarjeta o póngase en contacto con su banco."
@@ -208,6 +209,7 @@ es:
       'Q2': "Error del sistema del adquirente."
       'N1': "El token de red de la tarjeta no está disponible y el número completo de la tarjeta ya no se almacena."
       'N2': "La red de la tarjeta no está disponible."
+      'E6': 'El país de la tarjeta no es compatible.'
     targeted:
       merchant:
         <<: *issuer_response_code

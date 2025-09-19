@@ -163,6 +163,7 @@ cs:
       'Q2': "Zkuste to prosím znovu nebo použijte jinou kartu."
       'N1': "Použijte prosím jinou kartu nebo kontaktujte obchodníka."
       'N2': "Použijte prosím jinou kartu."
+      'E6': "Použijte prosím jinou kartu."
       '75': "Zkuste to prosím znovu a zkontrolujte CVV/CVC nebo kontaktujte vydavatele pro vysvětlení."
       '85': "Vydavatel potvrdil tuto transakci."
       '86': "Použijte prosím jinou kartu nebo kontaktujte vydavatele pro vysvětlení."
@@ -195,6 +196,7 @@ cs:
       'Q2': "Chyba systému acquirera."
       'N1': "Token kartové sítě není dostupný a úplné číslo karty již není uloženo."
       'N2': "Kartová síť není dostupná."
+      'E6': 'Země karty není podporována.'
     targeted:
       merchant:
         <<: *issuer_response_code

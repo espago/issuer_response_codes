@@ -163,6 +163,7 @@ sk:
       'Q2': "Prosím skúste znova alebo použite inú kartu."
       'N1': "Prosím použite inú kartu alebo kontaktujte Obchodníka."
       'N2': "Prosím použite inú kartu."
+      'E6': "Prosím použite inú kartu."
       '75': "Prosím skúste znova a skontrolujte CVV/CVC alebo kontaktujte vydavateľa pre objasnenie."
       '85': "Vydavateľ potvrdil túto transakciu."
       '86': "Prosím použite inú kartu alebo kontaktujte vydavateľa pre objasnenie."
@@ -195,6 +196,7 @@ sk:
       'Q2': "Chyba systému prijímateľa."
       'N1': "Token kartovej siete je nedostupný a úplné číslo karty už nie je uložené."
       'N2': "Kartová sieť je nedostupná."
+      'E6': "Karta krajiny nie je podporovaná."
     targeted:
       merchant:
         <<: *issuer_response_code

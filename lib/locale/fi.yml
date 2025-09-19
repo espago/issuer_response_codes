@@ -175,6 +175,7 @@ fi:
       'Q2': "Yritä myöhemmin uudelleen tai käytä toista korttia."
       'N1': "Käytä toista korttia tai ota yhteyttä kauppiaaseen."
       'N2': "Käytä toista korttia."
+      'E6': "Käytä toista korttia."
       '75': "Käytä toista korttia, tarkista, että CVV/CVC-koodi on oikea tai ota yhteyttä pankkiisi."
       '85': "Pankki vahvisti valtuutuksen."
       '86': "Käytä toista korttia tai ota yhteyttä pankkiisi."
@@ -208,6 +209,7 @@ fi:
       'Q2': "Acquirer system error."
       'N1': "Kortin verkkotunnus ei ole saatavilla, eikä koko kortin numeroa enää tallenneta."
       'N2': "Kortin verkko ei ole käytettävissä."
+      'E6': "Kortin maa ei ole tuettu."
     targeted:
       merchant:
         <<: *issuer_response_code

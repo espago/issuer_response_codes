@@ -175,6 +175,7 @@ hr:
       'Q2': "Pokušajte ponovno kasnije ili upotrijebite drugu karticu."
       'N1': "Upotrijebite drugu karticu ili kontaktirajte trgovca."
       'N2': "Upotrijebite drugu karticu."
+      'E6': "Upotrijebite drugu karticu."
       '75': "Upotrijebite drugu karticu, provjerite je li CVV/CVC kod točan ili se obratite svojoj banci."
       '85': "Banka je potvrdila autorizaciju."
       '86': "Upotrijebite drugu karticu ili se obratite svojoj banci."
@@ -208,6 +209,7 @@ hr:
       'Q2': "Pogreška sustava stjecatelja."
       'N1': "Mrežni token kartice nije dostupan i cijeli broj kartice više nije pohranjen."
       'N2': "Mreža kartice nije dostupna."
+      'E6': "Država kartice ni podprta."
     targeted:
       merchant:
         <<: *issuer_response_code
