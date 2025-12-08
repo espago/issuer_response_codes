@@ -1,302 +1,302 @@
 en:
   tds_status_codes:
-    suggestion: 'Suggestion'
-    fraud_notice: 'Transactions with this code may be considered fraudulent.'
+    suggestion: "Suggestion"
+    fraud_notice: "Transactions with this code may be considered fraudulent."
     behaviour:
-      unknown: 'Please contact our support team.'
-      '01': Please try again.
-      '02': Please try again using a different device.
-      '03': Please try again using a different device.
-      '04': Please use a different card or contact your card issuer.
-      '05': Please use a different card.
-      '06': Please use a different card or check the card number.
-      '07': Please use a different card.
-      '08': Please use a different card.
-      '09': Please use a different card or contact issuer.
-      '10': Please use a different card or contact issuer.
-      '11': Please use a different card or contact issuer.
-      '12': Please use a different card or contact issuer.
-      '13': Please use a different card or contact issuer.
-      '14': Please try again or use a different card.
-      '15': Please use a different card or contact issuer.
-      '16': Please use a different card or contact issuer.
-      '17': Please use a different card or contact issuer.
-      '18': Please use a different card or contact issuer.
-      '19': Please use a different card or contact issuer.
-      '20': Please use a different card.
-      '21': Please use a different card.
-      '22': Please try again or use a different card.
-      '23': Please use a different card or contact issuer.
-      '24': Please try again or use a different card.
-      '25': Please try again or use a different card.
-      '26': Please try again or use a different card.
-      '80': Please use a different card.
-      '81': Please try again or use a different card.
-      '82': Please use a different card.
-      '83': Please use a different card.
-      '84': Please try again or use a different card.
-      '85': Please use a different card.
-      '86': Please use a different card.
-      '87': Please use a different card.
-      '88': Please use a different card.
+      unknown: "Please contact our support team."
+      "01": Please try again.
+      "02": Please try again using a different device.
+      "03": Please try again using a different device.
+      "04": Please use a different card or contact your card issuer.
+      "05": Please use a different card.
+      "06": Please use a different card or check the card number.
+      "07": Please use a different card.
+      "08": Please use a different card.
+      "09": Please use a different card or contact issuer.
+      "10": Please use a different card or contact issuer.
+      "11": Please use a different card or contact issuer.
+      "12": Please use a different card or contact issuer.
+      "13": Please use a different card or contact issuer.
+      "14": Please try again or use a different card.
+      "15": Please use a different card or contact issuer.
+      "16": Please use a different card or contact issuer.
+      "17": Please use a different card or contact issuer.
+      "18": Please use a different card or contact issuer.
+      "19": Please use a different card or contact issuer.
+      "20": Please use a different card.
+      "21": Please use a different card.
+      "22": Please try again or use a different card.
+      "23": Please use a different card or contact issuer.
+      "24": Please try again or use a different card.
+      "25": Please try again or use a different card.
+      "26": Please try again or use a different card.
+      "80": Please use a different card.
+      "81": Please try again or use a different card.
+      "82": Please use a different card.
+      "83": Please use a different card.
+      "84": Please try again or use a different card.
+      "85": Please use a different card.
+      "86": Please use a different card.
+      "87": Please use a different card.
+      "88": Please use a different card.
     universal: &universal_tds_status_codes
       unknown: "Unknown reason."
-      '01': Card authentication failed.
-      '02': Unknown Device.
-      '03': Unsupported Device.
-      '04': Exceeds authentication frequency limit.
-      '05': Expired card.
-      '06': Invalid card number.
-      '07': Invalid transaction.
-      '08': No Card record.
-      '15': Low confidence.
-      '16': Medium confidence.
-      '17': High confidence.
-      '18': Very High confidence.
-      '19': Exceeds ACS maximum challenges.
-      '20': Non-Payment transaction not supported.
+      "01": Card authentication failed.
+      "02": Unknown Device.
+      "03": Unsupported Device.
+      "04": Exceeds authentication frequency limit.
+      "05": Expired card.
+      "06": Invalid card number.
+      "07": Invalid transaction.
+      "08": No Card record.
+      "15": Low confidence.
+      "16": Medium confidence.
+      "17": High confidence.
+      "18": Very High confidence.
+      "19": Exceeds ACS maximum challenges.
+      "20": Non-Payment transaction not supported.
     targeted:
       merchant:
         <<: *universal_tds_status_codes
-        '09': Security failure.
-        '10': Stolen card.
-        '11': Suspected fraud.
-        '12': Transaction not permitted to cardholder.
-        '13': Cardholder not enrolled in service.
-        '14': Transaction timed out at the ACS.
-        '21': 3RI transaction not supported.
-        '22': ACS technical issue.
-        '23': Decoupled Authentication required by ACS but not requested by 3DS Requestor.
-        '24': 3DS Requestor Decoupled Max Expiry Time exceeded.
-        '25': Decoupled Authentication was provided insufficient time to authenticate cardholder. ACS will not make attempt.
-        '26': Authentication attempted but not performed by the cardholder.
-        '80': Error Connecting to ACS.
-        '81': ACS Timed Out.
-        '82': Invalid Response from ACS.
-        '83': System Error Response from ACS.
-        '84': Internal Error While Generating CAVV.
-        '85': VMID not eligible for requested program.
-        '86': Protocol Version Not Supported by ACS.
-        '87': Transaction is excluded from Attempts Processing (includes non- reloadable pre-paid cards and Non- Payments (NPA)).
-        '88': Requested program not supported by the ACS.
+        "09": Security failure.
+        "10": Stolen card.
+        "11": Suspected fraud.
+        "12": Transaction not permitted to cardholder.
+        "13": Cardholder not enrolled in service.
+        "14": Transaction timed out at the ACS.
+        "21": 3RI transaction not supported.
+        "22": ACS technical issue.
+        "23": Decoupled Authentication required by ACS but not requested by 3DS Requestor.
+        "24": 3DS Requestor Decoupled Max Expiry Time exceeded.
+        "25": Decoupled Authentication was provided insufficient time to authenticate cardholder. ACS will not make attempt.
+        "26": Authentication attempted but not performed by the cardholder.
+        "80": Error Connecting to ACS.
+        "81": ACS Timed Out.
+        "82": Invalid Response from ACS.
+        "83": System Error Response from ACS.
+        "84": Internal Error While Generating CAVV.
+        "85": VMID not eligible for requested program.
+        "86": Protocol Version Not Supported by ACS.
+        "87": Transaction is excluded from Attempts Processing (includes non- reloadable pre-paid cards and Non- Payments (NPA)).
+        "88": Requested program not supported by the ACS.
       cardholder:
         <<: *universal_tds_status_codes
-        '09': Card authentication failed. # Security failure
-        '10': Card authentication failed. # Stolen card
-        '11': Card authentication failed. # Suspected fraud
-        '12': Transaction not permitted to cardholder.
-        '13': Cardholder not enrolled in service.
-        '14': Card authentication failed.
-        '21': Card authentication failed.
-        '22': Issuer technical issue.
-        '23': Card authentication failed
-        '24': Card authentication failed
-        '25': Card authentication failed.
-        '26': Card authentication failed.
-        '80': Card authentication failed.
-        '81': Card authentication failed.
-        '82': Card authentication failed.
-        '83': Card authentication failed.
-        '84': Card authentication failed.
-        '85': Card authentication failed.
-        '86': Card authentication failed.
-        '87': Card authentication failed.
-        '88': Card authentication failed.
+        "09": Card authentication failed. # Security failure
+        "10": Card authentication failed. # Stolen card
+        "11": Card authentication failed. # Suspected fraud
+        "12": Transaction not permitted to cardholder.
+        "13": Cardholder not enrolled in service.
+        "14": Card authentication failed.
+        "21": Card authentication failed.
+        "22": Issuer technical issue.
+        "23": Card authentication failed
+        "24": Card authentication failed
+        "25": Card authentication failed.
+        "26": Card authentication failed.
+        "80": Card authentication failed.
+        "81": Card authentication failed.
+        "82": Card authentication failed.
+        "83": Card authentication failed.
+        "84": Card authentication failed.
+        "85": Card authentication failed.
+        "86": Card authentication failed.
+        "87": Card authentication failed.
+        "88": Card authentication failed.
 
   issuer_response_codes:
-    suggestion: 'Suggestion'
-    fraud_notice: 'IMPORTANT NOTICE: It is forbidden to retry transactions that ended with this code. It may be recognized as a fraud attempt!'
+    suggestion: "Suggestion"
+    fraud_notice: "IMPORTANT NOTICE: It is forbidden to retry transactions that ended with this code. It may be recognized as a fraud attempt!"
     behaviour:
       unknown: Please contact our support team.
-      '00': "Please try again or contact the seller."
-      '1A': "Please try again or contact the issuer for clarification."
-      'B1A': "Please try again or contact the issuer for clarification."
-      '01': "Please use a different card or contact the issuer for clarification."
-      '02': "Please use a different card or contact the issuer for clarification."
-      '03': "Please use a different card or contact the issuer for clarification.."
-      '04': "Please use a different card or contact the issuer for clarification."
-      'B04': "Please use a different card or contact the issuer for clarification."
-      '05': "Please use a different card or contact the issuer to check the ecommerce payment settings."
-      '06': "Please use a different card or contact the issuer for clarification."
-      '07': "Please use a different card or contact the issuer for clarification."
-      '12': "Please use a different card or contact the issuer for clarification."
-      '13': "Please use a different card or contact the issuer to check the ecommerce payment settings."
-      '14': "Please use a different card or contact the issuer for clarification."
-      'B14': "Please use a different card or contact the issuer for clarification."
-      '15': "Please use a different card or contact the issuer for clarification."
-      'B15': "Please use a different card or contact the issuer for clarification."
-      '19': "Please use a different card or contact the issuer for clarification."
-      '21': "Please use a different card or contact the issuer for clarification."
-      '30': "Please use a different card or contact the issuer for clarification."
-      '39': "Please use a different card or contact the issuer for clarification."
-      '41': "Please use a different card or contact the issuer for clarification."
-      'B41': "Please use a different card or contact the issuer for clarification."
-      '43': "Please use a different card or contact the issuer for clarification."
-      'B43': "Please use a different card or contact the issuer for clarification."
-      '51': "Please verify your payments limit, use a different card or contact the issuer for clarification."
-      '52': "Please use a different card or contact the issuer for clarification."
-      '53': "Please use a different card or contact the issuer for clarification."
-      '54': "Please use a different card or contact the issuer for clarification."
-      'B54': "Please use a different card or contact the issuer for clarification."
-      '55': "Please use a different card or verify your CVV/CVC or contact the issuer for clarification."
-      '57': "Please use a different card or contact the issuer to check the ecommerce payment settings."
-      '58': "Please use a different card or contact the issuer to check the ecommerce payment settings."
-      '59': "Please use a different card or contact the issuer for clarification."
-      '61': "Please verify your payments limit, use a different card or contact the issuer for clarification."
-      '62': "Please use a different card or contact the issuer for clarification."
-      '63': "Please use a different card or contact the issuer for clarification."
-      '65': "Please use a different card or contact the issuer for clarification."
-      'B65': "Please use a different card or contact the issuer for clarification."
-      '70': "Please use a different card or contact the issuer to check the ecommerce payment settings."
-      '76': "Please use a different card or contact the issuer for clarification."
-      '77': "Please use a different card or contact the issuer for clarification."
-      '78': "Please try again or contact the issuer for card activation."
-      '82': "Please use a different card or contact the issuer for clarification."
-      'N7': "Please try again and check the CVV/CVC or contact the issuer for clarification."
-      'R0': "Please use a different card or contact the issuer for clarification."
-      'R1': "Please use a different card or contact the issuer for clarification."
-      'R3': "Please use a different card or contact the issuer for clarification."
-      'E1': "Please use a different card or contact the Merchant."
-      'E3': "Please try again or contact the issuer for clarification."
-      'E4': "Please try again or contact the issuer for clarification."
-      'E5': "Please try again or contact the issuer for clarification."
-      'Q2': "Please try again or use a different card."
-      'N1': "Please use a different card or contact the Merchant."
-      'N2': "Please use a different card."
-      'E6': "Please use a different card."
-      '75': "Please try again and check the CVV/CVC or contact the issuer for clarification."
-      '85': "The issuer has confirmed this transaction."
-      '86': "Please use a different card or contact the issuer for clarification."
-      '91': "Please use a different card or try again later"
-      '92': "Please use a different card or contact the issuer for clarification."
-      '93': "Please use a different card or contact the issuer for clarification."
-      '94': "Please use a different card or contact the issuer for clarification."
-      '96': "Please use a different card or contact the issuer for clarification."
-      '98': "Please use a different card or contact the issuer for clarification."
-      'N3': "Please use a different card or contact the issuer for clarification."
-      'P5': "Please use a different card or contact the issuer for clarification."
-      'R2': "Please use a different card or contact the issuer for clarification."
+      "00": "Try again later or contact the service provider."
+      "1A": "Please try again or contact the issuer for clarification."
+      "B1A": "Please try again or contact the issuer for clarification."
+      "01": "Please use a different card or contact the issuer for clarification."
+      "02": "Please use a different card or contact the issuer for clarification."
+      "03": "Please use a different card or contact the issuer for clarification.."
+      "04": "Please use a different card or contact the issuer for clarification."
+      "B04": "Please use a different card or contact the issuer for clarification."
+      "05": "Please use a different card or contact the issuer to check the ecommerce payment settings."
+      "06": "Please use a different card or contact the issuer for clarification."
+      "07": "Please use a different card or contact the issuer for clarification."
+      "12": "Please use a different card or contact the issuer for clarification."
+      "13": "Please use a different card or contact the issuer to check the ecommerce payment settings."
+      "14": "Please use a different card or contact the issuer for clarification."
+      "B14": "Please use a different card or contact the issuer for clarification."
+      "15": "Please use a different card or contact the issuer for clarification."
+      "B15": "Please use a different card or contact the issuer for clarification."
+      "19": "Please use a different card or contact the issuer for clarification."
+      "21": "Please use a different card or contact the issuer for clarification."
+      "30": "Please use a different card or contact the issuer for clarification."
+      "39": "Please use a different card or contact the issuer for clarification."
+      "41": "Please use a different card or contact the issuer for clarification."
+      "B41": "Please use a different card or contact the issuer for clarification."
+      "43": "Please use a different card or contact the issuer for clarification."
+      "B43": "Please use a different card or contact the issuer for clarification."
+      "51": "Please verify your payments limit, use a different card or contact the issuer for clarification."
+      "52": "Please use a different card or contact the issuer for clarification."
+      "53": "Please use a different card or contact the issuer for clarification."
+      "54": "Please use a different card or contact the issuer for clarification."
+      "B54": "Please use a different card or contact the issuer for clarification."
+      "55": "Please use a different card or verify your CVV/CVC or contact the issuer for clarification."
+      "57": "Please use a different card or contact the issuer to check the ecommerce payment settings."
+      "58": "Please use a different card or contact the issuer to check the ecommerce payment settings."
+      "59": "Please use a different card or contact the issuer for clarification."
+      "61": "Please verify your payments limit, use a different card or contact the issuer for clarification."
+      "62": "Please use a different card or contact the issuer for clarification."
+      "63": "Please use a different card or contact the issuer for clarification."
+      "65": "Please use a different card or contact the issuer for clarification."
+      "B65": "Please use a different card or contact the issuer for clarification."
+      "70": "Please use a different card or contact the issuer to check the ecommerce payment settings."
+      "76": "Please use a different card or contact the issuer for clarification."
+      "77": "Please use a different card or contact the issuer for clarification."
+      "78": "Please try again or contact the issuer for card activation."
+      "82": "Please use a different card or contact the issuer for clarification."
+      "N7": "Please try again and check the CVV/CVC or contact the issuer for clarification."
+      "R0": "Please use a different card or contact the issuer for clarification."
+      "R1": "Please use a different card or contact the issuer for clarification."
+      "R3": "Please use a different card or contact the issuer for clarification."
+      "E1": "Use another card or contact the service provider."
+      "E3": "Please try again or contact the issuer for clarification."
+      "E4": "Please try again or contact the issuer for clarification."
+      "E5": "Please try again or contact the issuer for clarification."
+      "Q2": "Please try again or use a different card."
+      "N1": "Use another card or contact the service provider."
+      "N2": "Please use a different card."
+      "E6": "Please use a different card."
+      "75": "Please try again and check the CVV/CVC or contact the issuer for clarification."
+      "85": "The issuer has confirmed this transaction."
+      "86": "Please use a different card or contact the issuer for clarification."
+      "91": "Please use a different card or try again later"
+      "92": "Please use a different card or contact the issuer for clarification."
+      "93": "Please use a different card or contact the issuer for clarification."
+      "94": "Please use a different card or contact the issuer for clarification."
+      "96": "Please use a different card or contact the issuer for clarification."
+      "98": "Please use a different card or contact the issuer for clarification."
+      "N3": "Please use a different card or contact the issuer for clarification."
+      "P5": "Please use a different card or contact the issuer for clarification."
+      "R2": "Please use a different card or contact the issuer for clarification."
     universal: &issuer_response_code
       unknown: "Unknown reason."
-      '75': "Allowable number of PIN entry tries exceeded."
-      '86': "Cannot verify PIN."
-      '91': "Issuer not available."
-      '92': "Financial institution or intermediate network facility cannot be found for routing (receiving institution ID is invalid)."
-      '93': "Transaction cannot be completed - violation of law."
-      '94': "Temporary issuer error."
-      '96': "Temporary issuer error."
-      '98': "Temporary issuer error."
-      'N3': "Cash service not available."
-      'P5': "Denied PIN unblock - PIN change or unblock request declined by issuer."
-      'R2': "Payment rejected by the issuer - Transaction does not qualify for Visa PIN."
-      'E1': "Refusal limit exceeded."
-      'E3': "Transaction not executed due to a 3D-Secure error."
-      'E4': "Transaction not executed due to a negative 3D-Secure confirmation from your bank."
-      'E5': "Temporary 3D-Secure error."
-      'Q2': "Acquirer system error."
-      'N1': "Card network token is unavailable and the full card number is no longer stored."
-      'N2': "Card network is unavailable."
-      'E6': "Card country is unsupported."
+      "75": "Allowable number of PIN entry tries exceeded."
+      "86": "Cannot verify PIN."
+      "91": "Issuer not available."
+      "92": "Financial institution or intermediate network facility cannot be found for routing (receiving institution ID is invalid)."
+      "93": "Transaction cannot be completed - violation of law."
+      "94": "Temporary issuer error."
+      "96": "Temporary issuer error."
+      "98": "Temporary issuer error."
+      "N3": "Cash service not available."
+      "P5": "Denied PIN unblock - PIN change or unblock request declined by issuer."
+      "R2": "Payment rejected by the issuer - Transaction does not qualify for Visa PIN."
+      "E1": "Refusal limit exceeded."
+      "E3": "Transaction not executed due to a 3D-Secure error."
+      "E4": "Transaction not executed due to a negative 3D-Secure confirmation from your bank."
+      "E5": "Temporary 3D-Secure error."
+      "Q2": "Acquirer system error."
+      "N1": "Card network token is unavailable and the full card number is no longer stored."
+      "N2": "Card network is unavailable."
+      "E6": "Card country is unsupported."
     targeted:
       merchant:
         <<: *issuer_response_code
-        '00': "Transaction rejected due to no response from issuer/bank, inactive Merchant account, used not supported card or incorrect card data."
-        '1A': "Soft decline."
-        'B1A': "Soft decline."
-        '01': "Refer to card issuer."
-        '02': "Refer to card issuer, special condition."
-        '03': "Invalid merchant."
-        '04': "Pick up card (no fraud)."
-        'B04': "Pick up card (no fraud)."
-        '05': "Do not honor."
-        '06': "Error."
-        '07': "Pick up card, special condition (fraud account)."
-        '12': "Invalid transaction."
-        '13': "Invalid amount or currency conversion field overflow."
-        '14': "Invalid account number (no such number)."
-        'B14': "Invalid account number (no such number)."
-        '15': "No such issuer."
-        'B15': "No such issuer."
-        '19': "Re-enter transaction."
-        '21': "No action taken."
-        '30': "Format error."
-        '39': "No credit account."
-        '41': "Lost card, pick up (fraud account)."
-        'B41': "Lost card, pick up (fraud account)."
-        '43': "Stolen card, pick up (fraud account)."
-        'B43': "Stolen card, pick up (fraud account)."
-        '51': "Not sufficient funds."
-        '52': "No checking account."
-        '53': "No savings account."
-        '54': "Expired card or expiration date is missing."
-        'B54': "Expired card or expiration date is missing."
-        '55': "Incorrect PIN or PIN missing."
-        '57': "Transaction not permitted to cardholder."
-        '58': "Transaction not allowed at terminal."
-        '59': "Suspected fraud."
-        '61': "Exceeds approval amount limit."
-        '62': "Restricted card (card invalid in this region or country)."
-        '63': "Security Violation."
-        '65': "Exceeds withdrawal frequency limit."
-        'B65': "Exceeds withdrawal frequency limit."
-        '70': "PIN data required."
-        '76': "Unsolicited reversal."
-        '77': "Duplicate reversal or duplicate transaction."
-        '78': "Blocked, first used."
-        '82': "(Visa) Negative CAM, dCVV, iCVV, or CVV results. (Mastercard) Policy decline."
-        '85': "Not declined."
-        'N7': "Decline for CVV2 failure."
-        'R0': "Stop Payment Order."
-        'R1': "Revocation of authorization order."
-        'R3': "Revocation of all authorizations order."
+        "00": "Transaction rejected due to no response from issuer/bank, inactive Merchant account, used not supported card or incorrect card data."
+        "1A": "Soft decline."
+        "B1A": "Soft decline."
+        "01": "Refer to card issuer."
+        "02": "Refer to card issuer, special condition."
+        "03": "Invalid merchant."
+        "04": "Pick up card (no fraud)."
+        "B04": "Pick up card (no fraud)."
+        "05": "Do not honor."
+        "06": "Error."
+        "07": "Pick up card, special condition (fraud account)."
+        "12": "Invalid transaction."
+        "13": "Invalid amount or currency conversion field overflow."
+        "14": "Invalid account number (no such number)."
+        "B14": "Invalid account number (no such number)."
+        "15": "No such issuer."
+        "B15": "No such issuer."
+        "19": "Re-enter transaction."
+        "21": "No action taken."
+        "30": "Format error."
+        "39": "No credit account."
+        "41": "Lost card, pick up (fraud account)."
+        "B41": "Lost card, pick up (fraud account)."
+        "43": "Stolen card, pick up (fraud account)."
+        "B43": "Stolen card, pick up (fraud account)."
+        "51": "Not sufficient funds."
+        "52": "No checking account."
+        "53": "No savings account."
+        "54": "Expired card or expiration date is missing."
+        "B54": "Expired card or expiration date is missing."
+        "55": "Incorrect PIN or PIN missing."
+        "57": "Transaction not permitted to cardholder."
+        "58": "Transaction not allowed at terminal."
+        "59": "Suspected fraud."
+        "61": "Exceeds approval amount limit."
+        "62": "Restricted card (card invalid in this region or country)."
+        "63": "Security Violation."
+        "65": "Exceeds withdrawal frequency limit."
+        "B65": "Exceeds withdrawal frequency limit."
+        "70": "PIN data required."
+        "76": "Unsolicited reversal."
+        "77": "Duplicate reversal or duplicate transaction."
+        "78": "Blocked, first used."
+        "82": "(Visa) Negative CAM, dCVV, iCVV, or CVV results. (Mastercard) Policy decline."
+        "85": "Not declined."
+        "N7": "Decline for CVV2 failure."
+        "R0": "Stop Payment Order."
+        "R1": "Revocation of authorization order."
+        "R3": "Revocation of all authorizations order."
       cardholder:
         <<: *issuer_response_code
-        '00': "Payment failed."
-        '1A': "Soft decline - an authentication required."
-        'B1A': "Soft decline - an authentication required."
-        '01': "Payment rejected."
-        '02': "Payment rejected."
-        '03': "This card cannot be accepted by this merchant."
-        '04': "Payment rejected by the issuer."
-        'B04': "Payment rejected by the issuer."
-        '05': "Payment rejected by the issuer."
-        '06': "Error."
-        '07': "Payment rejected by the issuer."
-        '12': "Payment rejected by the issuer - invalid transaction."
-        '13': "Payment rejected by the issuer - invalid amount or currency conversion field overflow."
-        '14': "Payment rejected by the issuer - invalid account number."
-        'B14': "Payment rejected by the issuer - invalid account number."
-        '15': "Payment rejected - no such issuer."
-        'B15': "Payment rejected - no such issuer."
-        '19': "Payment rejected by the issuer."
-        '21': "Payment rejected by the issuer."
-        '30': "Payment rejected by the issuer - format error."
-        '39': "Payment rejected by the issuer - no credit account."
-        '41': "Payment rejected by the issuer."
-        'B41': "Payment rejected by the issuer."
-        '43': "Payment rejected by the issuer."
-        'B43': "Payment rejected by the issuer."
-        '51': "Payment rejected by the issuer - no sufficient funds.."
-        '52': "Payment rejected by the issuer."
-        '53': "Payment rejected by the issuer."
-        '54': "Payment rejected by the issuer - expired card."
-        'B54': "Payment rejected by the issuer - expired card."
-        '55': "Payment rejected by the issuer - Incorrect PIN or PIN missing."
-        '57': "Payment rejected by the issuer - transaction not permitted to cardholder."
-        '58': "Payment rejected by the issuer - transaction not allowed at terminal."
-        '59': "Payment rejected by the issuer."
-        '61': "Payment rejected by the issuer - exceeds approval amount limit."
-        '62': "Payment rejected by the issuer - card invalid in this region or country."
-        '63': "Payment rejected by the issuer"
-        '65': "Payment rejected by the issuer - exceeds withdrawal frequency limit."
-        'B65': "Payment rejected by the issuer - exceeds withdrawal frequency limit."
-        '70': "Strong authentication required (SCA)."
-        '76': "Payment rejected by the issuer - unsolicited reversal."
-        '77': "Payment declined by the issuer."
-        '78': "Payment rejected by the issuer - card used for the first time."
-        '82': "Payment rejected by the issuer - (Visa) negative CAM, dCVV, iCVV, or CVV results; (Mastercard) policy decline."
-        '85': "Authorization succeeded."
-        'N7': "Payment rejected by the issuer - decline for CVV2 failure."
-        'R0': "Payment rejected by the issuer - Stop Payment Order."
-        'R1': "Payment rejected by the issuer - Revocation of authorization order."
-        'R3': "Payment rejected by the issuer - Revocation of all authorizations order."
+        "00": "Payment failed."
+        "1A": "Soft decline - an authentication required."
+        "B1A": "Soft decline - an authentication required."
+        "01": "Payment rejected."
+        "02": "Payment rejected."
+        "03": "Payment with this card cannot be processed in this service."
+        "04": "Payment rejected by the issuer."
+        "B04": "Payment rejected by the issuer."
+        "05": "Payment rejected by the issuer."
+        "06": "Error."
+        "07": "Payment rejected by the issuer."
+        "12": "Payment rejected by the issuer - invalid transaction."
+        "13": "Payment rejected by the issuer - invalid amount or currency conversion field overflow."
+        "14": "Payment rejected by the issuer - invalid account number."
+        "B14": "Payment rejected by the issuer - invalid account number."
+        "15": "Payment rejected - no such issuer."
+        "B15": "Payment rejected - no such issuer."
+        "19": "Payment rejected by the issuer."
+        "21": "Payment rejected by the issuer."
+        "30": "Payment rejected by the issuer - format error."
+        "39": "Payment rejected by the issuer - no credit account."
+        "41": "Payment rejected by the issuer."
+        "B41": "Payment rejected by the issuer."
+        "43": "Payment rejected by the issuer."
+        "B43": "Payment rejected by the issuer."
+        "51": "Payment rejected by the issuer - no sufficient funds.."
+        "52": "Payment rejected by the issuer."
+        "53": "Payment rejected by the issuer."
+        "54": "Payment rejected by the issuer - expired card."
+        "B54": "Payment rejected by the issuer - expired card."
+        "55": "Payment rejected by the issuer - Incorrect PIN or PIN missing."
+        "57": "Payment rejected by the issuer - transaction not permitted to cardholder."
+        "58": "Payment rejected by the issuer - transaction not allowed at terminal."
+        "59": "Payment rejected by the issuer."
+        "61": "Payment rejected by the issuer - exceeds approval amount limit."
+        "62": "Payment rejected by the issuer - card invalid in this region or country."
+        "63": "Payment rejected by the issuer"
+        "65": "Payment rejected by the issuer - exceeds withdrawal frequency limit."
+        "B65": "Payment rejected by the issuer - exceeds withdrawal frequency limit."
+        "70": "Strong authentication required (SCA)."
+        "76": "Payment rejected by the issuer - unsolicited reversal."
+        "77": "Payment declined by the issuer."
+        "78": "Payment rejected by the issuer - card used for the first time."
+        "82": "Payment rejected by the issuer - (Visa) negative CAM, dCVV, iCVV, or CVV results; (Mastercard) policy decline."
+        "85": "Authorization succeeded."
+        "N7": "Payment rejected by the issuer - decline for CVV2 failure."
+        "R0": "Payment rejected by the issuer - Stop Payment Order."
+        "R1": "Payment rejected by the issuer - Revocation of authorization order."
+        "R3": "Payment rejected by the issuer - Revocation of all authorizations order."
