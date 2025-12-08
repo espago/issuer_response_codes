@@ -11,7 +11,7 @@ module IssuerResponseCodes
       assert_equal :en, code.locale
       assert code.fraud_notice
       assert !code.fraudulent_code?
-      assert_equal 'Transaction rejected due to no response from issuer/bank, inactive Merchant account, used not supported card or incorrect card data. Please try again or contact the seller.',
+      assert_equal 'Transaction rejected due to no response from issuer/bank, inactive Merchant account, used not supported card or incorrect card data. Try again later or contact the service provider.',
                    code.humanize
 
       code = IssuerResponseCodes::Code.new(id: '12')
@@ -60,7 +60,7 @@ module IssuerResponseCodes
       assert_equal :merchant, code.target
       assert_equal :en, code.locale
       assert code.fraud_notice
-      assert_equal 'Transaction rejected due to no response from issuer/bank, inactive Merchant account, used not supported card or incorrect card data. Please try again or contact the seller.',
+      assert_equal 'Transaction rejected due to no response from issuer/bank, inactive Merchant account, used not supported card or incorrect card data. Try again later or contact the service provider.',
                    code.description
 
       code = IssuerResponseCodes::Code.new(id: '12')
@@ -126,7 +126,7 @@ module IssuerResponseCodes
       assert_equal :en, code.locale
       assert code.fraud_notice
       assert !code.fraudulent_code?
-      assert_equal 'Please try again or contact the seller.', code.behaviour
+      assert_equal 'Try again later or contact the service provider.', code.behaviour
 
       code = IssuerResponseCodes::Code.new(id: '12')
       assert_equal :merchant, code.target
