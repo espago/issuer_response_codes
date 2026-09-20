@@ -8,7 +8,7 @@ gemspec
 gem 'bundler', '~> 2.6' # library manager
 gem 'byebug', '~> 12.0' # debugger
 gem 'minitest', '~> 5.25' # test framework
-gem 'rake', '~> 12.3' # automation
+gem 'rake', '~> 13.4' # automation
 gem 'rubocop', '~> 1.77' # linter
 gem 'rubocop-espago', '~> 1.1' # linter config
 gem 'rubocop-sorbet', '~> 0.10' # linter config for sorbet
