@@ -2,7 +2,7 @@ inherit_gem:
   rubocop-espago: sorbet.yml
 
 AllCops:
-  TargetRubyVersion: 3.2
+  TargetRubyVersion: 4.0
 
 Sorbet/EnforceSignatures:
   Enabled: false
