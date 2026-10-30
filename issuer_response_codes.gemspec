@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
     'A simple Ruby gem which provides Issuer Response Code descriptions and suggestions for cardholders and merchants'
   spec.homepage      = 'https://github.com/espago/issuer_response_codes'
   spec.license       = 'MIT'
-  spec.required_ruby_version = Gem::Requirement.new('>= 4.0')
+  spec.required_ruby_version = Gem::Requirement.new('>= 3.3')
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/espago/issuer_response_codes'
