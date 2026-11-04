@@ -15,7 +15,7 @@ module IssuerResponseCodes
 
       end
 
-      abort_behaviour %w[46 R0 R1 R3 B1A B04 B14 B15 B41 B43 B54 B65]
+      abort_behaviour %w[46 B46 R0 R1 R3 B1A B04 B14 B15 B41 B43 B54 B65]
       retry_later_behaviour %w[22 24 25 26 81 84 00 E3 E4 E5 Q2 91]
       sca_required_behaviour %w[1A 65 O5]
       invalid_card_behaviour %w[04 07 12 14 15 41 43 57]
